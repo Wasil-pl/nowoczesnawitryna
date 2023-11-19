@@ -1,0 +1,66 @@
+.aboutMe-container {
+  margin: 100px 0;
+  display: flex;
+  justify-content: space-between;
+
+  .first-column {
+    flex: 1;
+    max-width: 400px;
+    position: relative;
+
+    .background-text {
+      font-family: $font-title;
+      font-size: 26rem;
+      color: #cf383e;
+      font-weight: $font-super-bold;
+      text-transform: uppercase;
+      opacity: 10%;
+      position: absolute;
+      top: -131px;
+      left: -130px;
+      text-wrap: nowrap;
+      z-index: -1;
+    }
+
+    .button-box {
+      margin-top: 50px;
+      margin-left: auto;
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
+  .second-column {
+    flex: 1;
+    position: relative;
+    max-width: 550px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: -15px;
+      height: 100%;
+      bottom: -15px;
+      width: 100%;
+      background: #cf383e;
+      opacity: 40%;
+      border-radius: 5px;
+      z-index: -1;
+    }
+  }
+}
+
+.quote-of-the-day {
+  background-color: $color-background-lighter;
+
+  .wrapper {
+    height: 400px;
+  }
+}

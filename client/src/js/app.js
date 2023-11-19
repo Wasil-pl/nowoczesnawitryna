@@ -1,3 +1,6 @@
+import AboutMe from "./components/AboutMe.js";
+import Home from "./components/Home.js";
+import Portfolio from "./components/Portfolio.js";
 import { select, classNames } from "./settings.js";
 
 const app = {
@@ -6,7 +9,7 @@ const app = {
 
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
-    const idFromHash = window.location.hash;
+    const idFromHash = window.location.hash.replace("#/", "");
 
     let pageMatchingHash = thisApp.pages[0].id;
     for (let page of thisApp.pages) {
@@ -28,8 +31,8 @@ const app = {
 
         thisApp.activatePage(id);
 
-        window.history.pushState({}, "", id);
-        // window.location.hash = "/" + id;
+        // window.history.pushState({}, "", id);
+        window.location.hash = "#/" + id;
       });
     }
   },
@@ -45,15 +48,30 @@ const app = {
     for (let link of thisApp.navLinks) {
       link.classList.toggle(
         classNames.active,
-        link.getAttribute("href") == "#" + pageId
+        link.getAttribute("href") == "#/" + pageId
       );
     }
+  },
+
+  initHome: function () {
+    new Home();
+  },
+
+  initAboutMe: function () {
+    new AboutMe();
+  },
+
+  initPortfolio: function () {
+    new Portfolio();
   },
 
   init: function () {
     const thisApp = this;
 
     thisApp.initPages();
+    thisApp.initHome();
+    thisApp.initAboutMe();
+    thisApp.initPortfolio();
   },
 };
 

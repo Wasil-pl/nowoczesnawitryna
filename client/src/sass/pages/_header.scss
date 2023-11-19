@@ -1,14 +1,23 @@
 .header {
-  height: 100vh;
-  background-image: linear-gradient(
-    rgba($color-dark, 0),
-    rgba($color-dark, 1.2)
-  ),
-    url("../../images/young-man-freelancer-working-online-with-computer-laptop-while-sitting-with-his-cat-home.jpg");
-  background-repeat: no-repeat;
+  height: 90vh;
+  background-image: url("../../images/header.jpg");
+  background-position: center;
   background-size: cover;
   margin: auto;
   position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $color-dark;
+    opacity: 55%;
+  }
 
   .navbar .nav-item {
     text-transform: uppercase;
@@ -28,7 +37,7 @@
     }
   }
 
-  .logo {
+  .title_box {
     position: absolute;
     left: 50%;
     top: 45%;
@@ -36,22 +45,25 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    width: max-content;
+    padding: 50px;
+    width: 100%;
 
-    .logo_title {
+    .title {
+      font-family: $font-title;
+      letter-spacing: 10px;
       color: $color-light;
-      font-size: 2.8rem;
+      font-size: 3.5rem;
       font-weight: 700;
-      margin-bottom: 1rem;
-      letter-spacing: 2px;
-      margin-bottom: 30px;
+      margin-top: 0;
+      margin-bottom: 3rem;
 
       span {
         color: $color-primary;
+        white-space: nowrap;
       }
     }
 
-    .logo_subtitle {
+    .subtitle {
       color: $color-light;
       font-size: 1.5rem;
       font-weight: 400;
@@ -63,9 +75,31 @@
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
-    bottom: 20px;
+    bottom: 40px;
     color: $color-primary;
     font-size: 2rem;
     margin-top: 100px;
+  }
+
+  .triangles {
+    width: 100%; /* Szerokość kontenera - dostosuj według potrzeb */
+    height: 10%; /* Wysokość kontenera - dostosuj według potrzeb */
+    display: flex;
+    margin-top: auto;
+
+    .triangle-one {
+      border-right: 60vw solid transparent; /* Prawa krawędź trójkąta */
+      border-bottom: 7vh solid $color-background-light; /* Dolna krawędź trójkąta */
+      position: absolute;
+      bottom: 0;
+    }
+
+    .triangle-two {
+      border-left: 40vw solid transparent; /* Prawa krawędź trójkąta */
+      border-bottom: 10vh solid $color-background-light; /* Dolna krawędź trójkąta */
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
   }
 }
