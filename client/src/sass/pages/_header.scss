@@ -1,5 +1,5 @@
 .header {
-  height: 90vh;
+  height: 100vh;
   background-image: url("../../images/header.jpg");
   background-position: center;
   background-size: cover;
@@ -16,90 +16,87 @@
     bottom: 0;
     left: 0;
     background: $color-dark;
-    opacity: 55%;
+    opacity: 70%;
   }
 
-  .navbar .nav-item {
-    text-transform: uppercase;
-    text-shadow: 0 0 10px rgba($color-dark, 0.5);
-    letter-spacing: 2px;
-    margin-right: 1rem;
+  .navbar {
+    // background-color: $color-background-dark;
 
-    a {
-      color: $color-light;
-      font-size: 1.2rem;
-      font-weight: 400;
-      transition: all 0.3s ease-in-out;
+    .nav-item {
+      text-transform: uppercase;
+      text-shadow: 0 0 10px rgba($color-dark, 0.5);
+      letter-spacing: 2px;
+      margin-right: 1rem;
 
-      &:hover {
-        color: $color-primary;
+      a {
+        color: $color-light;
+        font-size: 1.2rem;
+        font-weight: 400;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: $color-primary;
+        }
       }
     }
   }
 
   .title_box {
     position: absolute;
-    left: 50%;
+    left: 33%;
     top: 45%;
     transform: translate(-50%, -50%);
     text-align: center;
     display: flex;
     flex-direction: column;
     padding: 50px;
-    width: 100%;
+    align-items: flex-start;
+
+    .welcome-text {
+      color: $color-light;
+    }
 
     .title {
       font-family: $font-title;
       letter-spacing: 10px;
       color: $color-light;
-      font-size: 3.5rem;
+      font-size: 5rem;
       font-weight: 700;
       margin-top: 0;
       margin-bottom: 3rem;
 
-      span {
+      .first-letter {
         color: $color-primary;
-        white-space: nowrap;
+        font-size: 6rem;
       }
     }
 
     .subtitle {
       color: $color-light;
       font-size: 1.5rem;
-      font-weight: 400;
       letter-spacing: 2px;
+
+      span {
+        color: $color-primary;
+      }
     }
   }
 
-  i {
+  .arrow {
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
     bottom: 40px;
-    color: $color-primary;
-    font-size: 2rem;
-    margin-top: 100px;
-  }
-
-  .triangles {
-    width: 100%; /* Szerokość kontenera - dostosuj według potrzeb */
-    height: 10%; /* Wysokość kontenera - dostosuj według potrzeb */
     display: flex;
-    margin-top: auto;
+    flex-direction: column;
+    align-items: center;
+    color: $color-primary;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 
-    .triangle-one {
-      border-right: 60vw solid transparent; /* Prawa krawędź trójkąta */
-      border-bottom: 7vh solid $color-background-light; /* Dolna krawędź trójkąta */
-      position: absolute;
-      bottom: 0;
-    }
-
-    .triangle-two {
-      border-left: 40vw solid transparent; /* Prawa krawędź trójkąta */
-      border-bottom: 10vh solid $color-background-light; /* Dolna krawędź trójkąta */
-      position: absolute;
-      bottom: 0;
-      right: 0;
+    i {
+      color: $color-primary;
+      font-size: 2rem;
     }
   }
 }

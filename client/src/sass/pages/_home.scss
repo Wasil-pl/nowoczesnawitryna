@@ -1,66 +1,89 @@
-.aboutMe-container {
-  margin: 100px 0;
-  display: flex;
-  justify-content: space-between;
+.about-me {
+  .wrapper {
+    flex-direction: column;
 
-  .first-column {
-    flex: 1;
-    max-width: 400px;
-    position: relative;
-
-    .background-text {
-      font-family: $font-title;
-      font-size: 26rem;
-      color: #cf383e;
-      font-weight: $font-super-bold;
-      text-transform: uppercase;
-      opacity: 10%;
-      position: absolute;
-      top: -131px;
-      left: -130px;
-      text-wrap: nowrap;
-      z-index: -1;
-    }
-
-    .button-box {
-      margin-top: 50px;
-      margin-left: auto;
+    .aboutMe-container {
       display: flex;
-      flex-direction: row-reverse;
-    }
-  }
+      margin-top: 100px;
 
-  .second-column {
-    flex: 1;
-    position: relative;
-    max-width: 550px;
+      .image {
+        flex: 1;
+        position: relative;
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 5px;
-    }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
 
-    &::after {
-      position: absolute;
-      content: "";
-      left: -15px;
-      height: 100%;
-      bottom: -15px;
-      width: 100%;
-      background: #cf383e;
-      opacity: 40%;
-      border-radius: 5px;
-      z-index: -1;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 55%;
+          left: 55%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: 100%;
+          border: 5px solid #cf383e;
+          z-index: -1;
+        }
+      }
+
+      .text {
+        flex: 2;
+        padding: 75px;
+        margin-left: 50px;
+
+        h3,
+        p {
+          color: $color-light;
+        }
+
+        h3 {
+          font-size: 2.5rem;
+          font-weight: $font-bold;
+          margin-bottom: 25px;
+        }
+
+        p {
+          font-size: 1.2rem;
+          line-height: 1.5;
+        }
+      }
     }
   }
 }
 
-.quote-of-the-day {
-  background-color: $color-background-lighter;
+.mySkills {
+  margin-top: 200px;
+  background-color: $color-background-darker;
 
   .wrapper {
-    height: 400px;
+    flex-direction: column;
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 100px;
+
+      .row {
+        display: flex;
+
+        .icons {
+          flex: 1;
+          display: flex;
+          justify-content: space-between;
+          margin-right: 50px;
+        }
+
+        p {
+          color: $color-grey;
+          font-size: 1.2rem;
+          line-height: 1.5;
+          flex: 5;
+        }
+      }
+    }
   }
 }
