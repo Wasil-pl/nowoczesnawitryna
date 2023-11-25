@@ -44,7 +44,7 @@ body {
 
 .background-text {
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 12rem;
+  font-size: 9rem;
   letter-spacing: 5px;
   color: $color-background-text;
   font-weight: $font-super-bold;
@@ -80,7 +80,21 @@ body {
   h3 {
     font-size: 2.8rem;
     font-weight: $font-bold;
-    margin-left: 20px;
     color: $color-primary;
+  }
+}
+.animate {
+  opacity: 0;
+  transform: translateY(300px);
+  transition: all 1s ease-in-out;
+
+  &.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &.fade-in {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

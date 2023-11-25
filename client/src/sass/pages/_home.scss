@@ -58,6 +58,10 @@
   margin-top: 200px;
   background-color: $color-background-darker;
 
+  .container {
+    position: relative;
+  }
+
   .wrapper {
     flex-direction: column;
 
@@ -67,21 +71,120 @@
       justify-content: space-between;
       margin-top: 100px;
 
+      &::after {
+        content: "";
+        position: absolute;
+        top: 41%;
+        right: -10%;
+        transform: translateY(-50%);
+        height: 71%;
+        width: 60%;
+        background-color: #cf383e;
+      }
+
       .row {
         display: flex;
+        margin-bottom: 50px;
+        width: 100%;
 
-        .icons {
+        .pictures {
           flex: 1;
           display: flex;
-          justify-content: space-between;
-          margin-right: 50px;
+          align-items: center;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+
+          img {
+            max-width: 45%;
+            max-height: 45%;
+            object-fit: contain;
+            margin: 5px;
+            z-index: 1;
+            padding: 5px;
+          }
         }
 
-        p {
-          color: $color-grey;
-          font-size: 1.2rem;
-          line-height: 1.5;
-          flex: 5;
+        .last-picture img {
+          max-width: 80%;
+          max-height: 80%;
+          object-fit: contain;
+          margin: 5px;
+          z-index: 1;
+          padding: 5px;
+        }
+
+        .text {
+          background-color: $color-background-dark;
+          flex: 3;
+          padding: 50px;
+          border-radius: 5px;
+          z-index: 1;
+
+          p {
+            color: $color-grey;
+            font-size: 1.2rem;
+            line-height: 2;
+          }
+        }
+      }
+
+      .left {
+        flex-direction: row;
+
+        .text {
+          text-align: right;
+        }
+      }
+
+      .right {
+        flex-direction: row-reverse;
+
+        .text {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+.myService {
+  background-image: url("../../images/shutterstock.png");
+  min-height: 700px;
+  position: relative;
+  background-size: cover;
+
+  .background-text {
+    color: $color-dark;
+    opacity: 13%;
+  }
+
+  .wrapper {
+    flex-direction: column;
+
+    .carts-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 100px;
+
+      .cart {
+        background-color: $color-background-cart;
+        padding: 20px;
+        margin: 20px;
+        flex: 1;
+        border-radius: 5px;
+        color: $color-light;
+
+        .picture {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            width: 60%;
+            height: 60%;
+            object-fit: contain;
+          }
         }
       }
     }
