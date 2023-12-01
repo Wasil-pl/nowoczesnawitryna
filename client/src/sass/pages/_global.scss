@@ -5,7 +5,7 @@
 }
 
 body {
-  font-size: 18px;
+  font-size: $font-size-normal;
   font-family: $font-main;
   color: $color-dark;
   background-color: $color-background-dark;
@@ -85,16 +85,40 @@ body {
 }
 .animate {
   opacity: 0;
-  transform: translateY(300px);
+  transform: translateY(200px);
   transition: all 1s ease-in-out;
 
   &.fade-in {
     opacity: 1;
     transform: translateY(0);
   }
+}
 
-  &.fade-in {
-    opacity: 1;
-    transform: translateY(0);
+.button-arrow {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: -5%;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #cf383e;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+
+  a {
+    rotate: -90deg;
+  }
+
+  i {
+    margin-top: 30px;
+    color: $color-primary;
+    font-size: 1.5rem;
+
+    .text {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
   }
 }
