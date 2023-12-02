@@ -355,3 +355,114 @@
     }
   }
 }
+
+.contact {
+  padding-bottom: 200px;
+
+  .container {
+    position: relative;
+  }
+
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .contact-container {
+    margin-top: 100px;
+    text-align: center;
+
+    .contact-box {
+      display: flex;
+      justify-content: space-evenly;
+
+      .contact-info {
+        text-align: center;
+
+        .icon {
+          font-size: 2.5rem;
+          color: $color-primary;
+          margin-bottom: 10px;
+        }
+
+        h3 {
+          font-size: 1.2rem;
+          font-weight: $font-bold;
+          color: $color-primary;
+          margin-bottom: 10px;
+        }
+
+        p {
+          line-height: 1.5;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .contact-form {
+      margin-top: 100px;
+
+      p {
+        margin-bottom: 30px;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        label {
+          font-size: 1.2rem;
+          font-weight: $font-bold;
+          margin-bottom: 10px;
+        }
+
+        input,
+        textarea {
+          background-color: $color-background-darker;
+          border: none;
+          border-radius: 5px;
+          padding: 10px;
+          color: $color-light;
+          font-size: 1rem;
+          font-weight: $font-normal;
+          margin: auto;
+          width: 500px;
+        }
+
+        textarea {
+          height: 200px;
+        }
+      }
+
+      .submit-button {
+        background-color: $color-primary;
+        color: $color-light;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        transition: all 0.5s ease-in-out;
+        width: fit-content;
+        margin: auto;
+
+        &:hover {
+          background-color: $color-light;
+          color: $color-dark;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $color-background-darker;
+  padding: 10px 0;
+
+  .container {
+    text-align: center;
+  }
+
+  .box-text .text {
+    font-size: 0.7rem;
+  }
+}

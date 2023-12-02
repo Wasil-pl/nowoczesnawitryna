@@ -7,7 +7,7 @@
 body {
   font-size: $font-size-normal;
   font-family: $font-main;
-  color: $color-dark;
+  color: $color-light;
   background-color: $color-background-dark;
 
   a {
@@ -58,16 +58,6 @@ body {
   z-index: 0;
 }
 
-#pages {
-  > * {
-    display: none;
-  }
-
-  > .active {
-    display: block;
-  }
-}
-
 .section-title {
   margin: 100px auto;
 
@@ -83,6 +73,7 @@ body {
     color: $color-primary;
   }
 }
+
 .animate {
   opacity: 0;
   transform: translateY(200px);

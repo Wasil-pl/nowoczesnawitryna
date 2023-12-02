@@ -3,10 +3,6 @@
 }
 
 .modal {
-  .modal-dialog {
-    max-width: fit-content;
-  }
-
   .modal-content {
     background-color: $color-background-cart;
     color: $color-light;
@@ -14,13 +10,11 @@
     .modal-body {
       .image-box {
         background-color: $color-dark;
-        display: flex;
 
         img {
           height: 100%;
           width: 100%;
           object-fit: contain;
-          margin-right: 10px;
         }
       }
     }

@@ -155,7 +155,6 @@
           </i>
         </a>
       </div>
-
     </div>
   </section>
 
@@ -295,31 +294,30 @@
 
       <div class="modal fade" tabindex="-1" role="dialog" id="first-modal" >
         <div class="modal-dialog" role="img">
-            <div class="modal-content">
-              <div class="modal-body">
-                <div class="image-box">
-                  <img src="images/projekty/fotografia1.jpeg" alt="fotografia">
-                  <img src="images/projekty/fotografia2.jpeg" alt="fotografia">
-                </div>
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="image-box">
+                <img src="images/projekty/fotografia1.jpeg" alt="fotografia">
               </div>
             </div>
+          </div>
         </div>
       </div>
 
       <div class="modal fade" tabindex="-1" role="dialog" id="second-modal" >
         <div class="modal-dialog" role="img">
-            <div class="modal-content">
-              <div class="modal-body">
-                <div class="image-box">
-                  <img src="images/projekty/serwis muzyczny.jpeg" alt="serwis muzyczny">
-                </div>
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="image-box">
+                <img src="images/projekty/serwis muzyczny.jpeg" alt="serwis muzyczny">
               </div>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="modal fade" tabindex="-1" role="dialog" id="third-modal" >
-      <div class="modal-dialog" role="img">
+      <div class="modal fade" tabindex="-1" role="dialog" id="third-modal" >
+        <div class="modal-dialog" role="img">
           <div class="modal-content">
             <div class="modal-body">
               <div class="image-box">
@@ -327,16 +325,86 @@
               </div>
             </div>
           </div>
+        </div>
       </div>
+
+      <div class="button-arrow">
+        <a href="#contact">
+          <i class="bi bi-arrow-left">
+            <span class="text">Kontakt</span>
+          </i>
+        </a>
+      </div>
+    </div>
   </section>
 
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="wrapper">
+        <div class="section-title">
+          <h3>Kontakt</h3>
+          <div class="background-text">Kontakt</div>
+        </div>
+        <div class="contact-container">
+          <div class="contact-box">
+            <div class="contact-info">
+              <div class="icon">
+                <i class="bi bi-telephone-fill"></i>
+              </div>
+              <div class="text">
+                <h3>Telefon</h3>
+                <p>+48 533 892 874</p>
+              </div>
+            </div>
+            <div class="contact-info">
+              <div class="icon">
+                <i class="bi bi-envelope-fill"></i>
+              </div>
+              <div class="text">
+                <h3>Email</h3>
+                <p>dariusz.wasilewski@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form>
+              <p>Jeśli nie odbieram telefonu, albo masz jakieś pytania, napisz...</p>
+              <div class="form-group">
+                <label for="inputTitle">Tytuł</label>
+                <input type="text" id="inputTitle" placeholder="Tytuł"  required>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail">Email</label>
+                <input type="text" id="inputEmail" placeholder="Email" required>
+              </div>
+              <div class="form-group">
+                <label for="inputTextArea">Wiadomość</label>
+                <textarea id="inputTextArea" placeholder="Wiadomość" required></textarea>
+              </div>
+              <div class="form-group">
+                <button class="submit-button" type="submit" >
+                  Wyślij
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <footer class="footer">
+    <div class="container">
+      <div class="box-text">
+          <span class="text">© Copyright 2023 nowoczesnawitryna.pl</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="js/app.js" type="module"></script>
-  <script src="js/scroll.js"></script>
+  <script src="js/scroll.js" type="module"></script>
+
 </body>
 
 </html>
