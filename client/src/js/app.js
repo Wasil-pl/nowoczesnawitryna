@@ -1,4 +1,4 @@
-import { emailRegex } from "./settings.js";
+import { API_URL, emailRegex } from "./settings.js";
 
 const app = {
   initContactForm: function () {
@@ -15,12 +15,12 @@ const app = {
   },
 
   isValid: function () {
-    const name = document.querySelector("#inputName").value;
+    const title = document.querySelector("#inputTitle").value;
     const email = document.querySelector("#inputEmail").value;
     const message = document.querySelector("#inputTextArea").value;
 
-    if (name === "") {
-      alert("Please enter your name");
+    if (title === "") {
+      alert("Please enter your title");
       return false;
     }
 
@@ -45,12 +45,27 @@ const app = {
 
   sendEmail: function () {
     const data = {
-      name: document.querySelector("#inputName").value,
+      title: document.querySelector("#inputTitle").value,
       email: document.querySelector("#inputEmail").value,
       message: document.querySelector("#inputTextArea").value,
     };
 
-    return console.log("data:", data);
+    fetch(`${API_URL}/email`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((response) => {
+      if (response.status === 200) {
+        alert("Your message has been sent");
+        document.querySelector("#inputTitle").value = "";
+        document.querySelector("#inputEmail").value = "";
+        document.querySelector("#inputTextArea").value = "";
+      } else {
+        alert("An error occurred");
+      }
+    });
   },
 
   init: function () {

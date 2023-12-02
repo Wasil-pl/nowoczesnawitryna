@@ -17,6 +17,7 @@
   },
   "globals": {
     "Handlebars": false,
-    "GreenAudioPlayer": false
+    "GreenAudioPlayer": false,
+    "process": "readonly"
   }
 }
