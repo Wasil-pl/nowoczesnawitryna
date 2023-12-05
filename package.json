@@ -4,8 +4,8 @@
   "main": "server.js",
   "license": "MIT",
   "scripts": {
-    "start-server": "nodemon server.js",
-    "start-client": "cd client && yarn watch",
+    "start:server": "nodemon server.js",
+    "start:client": "cd client && yarn watch",
     "start": "npm-run-all --parallel start-server start-client"
   },
   "dependencies": {

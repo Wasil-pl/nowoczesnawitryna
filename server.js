@@ -2,9 +2,11 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
-require("dotenv").config();
 
 const app = express();
+const server = app.listen(process.env.PORT || 8000, () => {
+  console.log("Server is running...");
+});
 
 app.use(express.static(path.join(__dirname, "/client/dist")));
 app.use(express.static(path.join(__dirname, "/public")));
@@ -13,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "client/dist/index.html"));
+  res.sendFile(path.join(__dirname + "/client/dist/index.html"));
 });
 
 let transporter = nodemailer.createTransport({
@@ -53,7 +55,3 @@ app.post("/email", (req, res) => {
 });
 
 app.use((req, res) => res.status(404).send("404 not found..."));
-
-app.listen(process.env.PORT, () =>
-  console.log(`Server is running on port ${process.env.PORT}...`)
-);
