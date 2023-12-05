@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
-const e = require("express");
+require("dotenv").config();
 
 const app = express();
 
@@ -17,10 +17,10 @@ app.get("*", function (req, res) {
 });
 
 let transporter = nodemailer.createTransport({
-  service: "gmail",
+  service: process.env.SERVICE,
   auth: {
-    user: "dariusz.wasilewski.86@gmail.com",
-    pass: "psxc icai shdm pqup",
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_PASSWORD,
   },
 });
 
@@ -33,8 +33,8 @@ app.post("/email", (req, res) => {
 
   console.log("email:", email);
   const mailOptions = {
-    from: "dariusz.wasilewski.86@gmail.com",
-    to: "dariusz.wasilewski.86@gmail.com",
+    from: process.env.GMAIL_USER,
+    to: process.env.GMAIL_USER,
     replyTo: email,
     subject: title,
     text: message,
@@ -54,4 +54,6 @@ app.post("/email", (req, res) => {
 
 app.use((req, res) => res.status(404).send("404 not found..."));
 
-app.listen(8000, () => console.log("Server is running on port 8000"));
+app.listen(process.env.PORT, () =>
+  console.log(`Server is running on port ${process.env.PORT}...`)
+);

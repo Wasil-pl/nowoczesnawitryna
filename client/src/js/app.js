@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { API_URL, emailRegex } from "./settings.js";
 
 const app = {
@@ -20,23 +21,42 @@ const app = {
     const message = document.querySelector("#inputTextArea").value;
 
     if (title === "") {
-      alert("Please enter your title");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Proszę wpisać tytuł wiadomości",
+      });
+
       return false;
     }
 
     if (email === "") {
-      alert("Please enter your email");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Proszę wpisać adres email",
+      });
+
       return false;
     }
 
     if (!emailRegex.test(email)) {
-      console.log("email:", email);
-      alert("Please enter a valid email");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Proszę wpisać poprawny adres email",
+      });
+
       return false;
     }
 
     if (message === "") {
-      alert("Please enter your message");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Proszę wpisać treść wiadomości",
+      });
+
       return false;
     }
 
@@ -58,12 +78,20 @@ const app = {
       body: JSON.stringify(data),
     }).then((response) => {
       if (response.status === 200) {
-        alert("Your message has been sent");
+        Swal.fire({
+          icon: "success",
+          title: "Wysłano",
+          text: "Wiadomość została wysłana",
+        });
         document.querySelector("#inputTitle").value = "";
         document.querySelector("#inputEmail").value = "";
         document.querySelector("#inputTextArea").value = "";
       } else {
-        alert("An error occurred");
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong",
+        });
       }
     });
   },

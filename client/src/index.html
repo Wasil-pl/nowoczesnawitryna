@@ -7,7 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Roboto+Slab:wght@100;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
@@ -27,9 +29,6 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#home">Home</a>
-              </li>
               <li class="nav-item">
                 <a class="nav-link" href="#aboutMe">O mnie</a>
               </li>
@@ -244,23 +243,27 @@
               <img type="button" data-bs-toggle="modal" data-bs-target="#second-modal" src="images/projekty/serwis muzyczny.jpeg" alt="serwis muzyczny">
             </div>
             <div class="text-box">
-              <h3>Strona dla Fotografa</h3>
+              <h3>Strona Muzyczna</h3>
               <p>
-                Witamy na stronie fotografa, gdzie każde zdjęcie opowiada historię i przenosi Cię w świat niezapomnianych chwil. Nasza strona to nie tylko portfolio pełne zapierających dech w piersiach obrazów, ale także innowacyjne narzędzie, które łączy pasję fotograficzną z najnowszymi technologiami.
+                <strong>Cel projektu:</strong>
+                Rozwój prostej strony internetowej z trzema podstronami (Home, Search, Discover) według specyficznego projektu dostarczonego przez klienta. Kluczowym celem było osiągnięcie wysokiej zgodności z zaproponowanym designem, z zachowaniem podejścia "pixel perfect".
               </p>
-              <h4>Dla Administratorów</h4>
+              <h4>Wykonanie:</h4>
               <p>
-                <strong>Panel Administracyjny:</strong> Jako administrator, masz pełną kontrolę nad treścią strony. Łatwo dodawaj nowe zdjęcia, tworząc dynamiczne i aktualne portfolio.
-              </p>
-              <p>
-                <strong>Zarządzanie Zdjęciami:</strong> Proces selekcji zdjęć do obróbki i druku nigdy nie był prostszy. Dzięki intuicyjnemu interfejsowi, możesz szybko i efektywnie zarządzać galeriami, zapewniając klientom tylko najlepsze prace.
-              </p>
-              <h4>Dla Klientów</h4>
-              <p>
-                <strong>Interaktywna Galeria:</strong>  Przeglądaj nasze portfolio i zanurz się w świecie profesjonalnej fotografii. Odkryj różnorodność stylów i tematów, które idealnie oddają emocje każdej chwili.
+                <strong>Przyszła Rozszerzalność:</strong> Zaprojektowałem stronę z myślą o łatwej rozbudowie w przyszłości, szczególnie z funkcjonalnością rejestracji artystów i dodawania utworów. Dane o utworach są przechowywane na serwerze, co umożliwia łatwą modyfikację i rozbudowę.
               </p>
               <p>
-                <strong>Personalizacja Wyboru:</strong> Wybierz zdjęcia, które najbardziej do Ciebie przemawiają. Nasz system umożliwia łatwe zaznaczanie i wybieranie fotografii do dalszej obróbki i druku, zapewniając personalizowane doświadczenie.
+                <strong>Single Page Application (SPA):</strong> Zaimplementowałem funkcjonalność SPA, dzięki czemu nawigacja między podstronami nie wymaga przeładowania całej strony, co zapewnia płynne i szybkie przejścia.
+              </p>
+              <p>
+                <strong>Odtwarzacze Muzyczne:</strong>  Zintegrowałem działające odtwarzacze muzyczne dla każdej piosenki, korzystając z odpowiednich paczek zewnętrznych, aby zaspokoić potrzeby klienta dotyczące funkcjonalności i designu.
+              </p>
+              <p>
+                <strong>Funkcjonalność Wyszukiwania:</strong> Wyszukiwarka na stronie Search działa w taki sposób, że po wprowadzeniu słów kluczowych wyświetla wszystkie pasujące utwory, co zwiększa użyteczność strony.
+              </p>
+              <h4>Wynik:</h4>
+              <p>
+                Projekt zakończyłem z sukcesem, tworząc stronę, która nie tylko spełnia wymagania klienta, ale również oferuje płynne i angażujące doświadczenie użytkownika. Moje rozwiązania technologiczne zapewniają łatwość dalszego rozwoju strony i dodawania nowych funkcji w przyszłości.
               </p>
             </div>
           </div>
@@ -269,23 +272,32 @@
               <img type="button" data-bs-toggle="modal" data-bs-target="#third-modal" src="images/projekty/sklep z grami1.jpeg" alt="sklep z grami">
             </div>
             <div class="text-box">
-              <h3>Strona dla Fotografa</h3>
+              <h3>Sklep Internetowy</h3>
               <p>
-                Witamy na stronie fotografa, gdzie każde zdjęcie opowiada historię i przenosi Cię w świat niezapomnianych chwil. Nasza strona to nie tylko portfolio pełne zapierających dech w piersiach obrazów, ale także innowacyjne narzędzie, które łączy pasję fotograficzną z najnowszymi technologiami.
+                Rozwój aplikacji e-commerce z front-endem React i back-endem Nest.js. Aplikacja składa się z czterech głównych podstron: strony głównej, szczegółów produktu, koszyka, oraz formularza zamówienia.
               </p>
-              <h4>Dla Administratorów</h4>
+              <h4>Front-end:</h4>
               <p>
-                <strong>Panel Administracyjny:</strong> Jako administrator, masz pełną kontrolę nad treścią strony. Łatwo dodawaj nowe zdjęcia, tworząc dynamiczne i aktualne portfolio.
-              </p>
-              <p>
-                <strong>Zarządzanie Zdjęciami:</strong> Proces selekcji zdjęć do obróbki i druku nigdy nie był prostszy. Dzięki intuicyjnemu interfejsowi, możesz szybko i efektywnie zarządzać galeriami, zapewniając klientom tylko najlepsze prace.
-              </p>
-              <h4>Dla Klientów</h4>
-              <p>
-                <strong>Interaktywna Galeria:</strong>  Przeglądaj nasze portfolio i zanurz się w świate profesjonalnej fotografii. Odkryj różnorodność stylów i tematów, które idealnie oddają emocje każdej chwili.
+                <strong>Strona Główna:</strong> Zawiera pełne informacje, dodatkowe zdjęcia, opis, oraz funkcję dodawania do koszyka z opcją wyboru ilości.
               </p>
               <p>
-                <strong>Personalizacja Wyboru:</strong> Wybierz zdjęcia, które najbardziej do Ciebie przemawiają. Nasz system umożliwia łatwe zaznaczanie i wybieranie fotografii do dalszej obróbki i druku, zapewniając personalizowane doświadczenie.
+                <strong>Szczegóły Produktu:</strong> Proces selekcji zdjęć do obróbki i druku nigdy nie był prostszy. Dzięki intuicyjnemu interfejsowi, możesz szybko i efektywnie zarządzać galeriami, zapewniając klientom tylko najlepsze prace.
+              </p>
+              <p>
+                <strong>Koszyk:</strong>  Prezentuje wybrane produkty z możliwością zmiany ilości, usunięcia oraz dodania specjalnych życzeń do każdego produktu.
+              </p>
+              <p>
+                <strong>Zarządzanie przez Administratora:</strong> Implementacja panelu admina do zarządzania produktami i zamówieniami, umożliwiająca dodawanie, edycję i usuwanie produktów oraz przeglądanie i zarządzanie zamówieniami.
+              </p>
+              <p>
+                <strong>System logowania:</strong> Autorski system logowania dla użytkowników i administratorów, zapewniający bezpieczny dostęp do funkcjonalności zarządzania.
+              </p>
+              <h4>Back-end:</h4>
+              <p>
+                <strong>Nest.js i MySQL:</strong>  Budowa bazy danych i serwera API do zarządzania produktami i zamówieniami.
+              </p>
+              <p>
+                <strong>Autoryzacja i Autentykacja:</strong>  Implementacja systemu autoryzacji i autentykacji, który zapewnia bezpieczny dostęp do funkcjonalności zarządzania.
               </p>
             </div>
           </div>
@@ -362,7 +374,7 @@
               </div>
               <div class="text">
                 <h3>Email</h3>
-                <p>dariusz.wasilewski@gmail.com</p>
+                <p>dariusz.wasilewski.86@gmail.com</p>
               </div>
             </div>
           </div>
@@ -393,6 +405,24 @@
     </div>
   </section>
 
+  <!-- Modal -->
+<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="infoModalLabel">Message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Treść wiadomości zostanie tutaj wstawiona -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
   <footer class="footer">
     <div class="container">
       <div class="box-text">
@@ -402,6 +432,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="js/app.js" type="module"></script>
   <script src="js/scroll.js" type="module"></script>
 

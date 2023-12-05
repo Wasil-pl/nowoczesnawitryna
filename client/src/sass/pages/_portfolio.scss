@@ -1,0 +1,139 @@
+.portfolio {
+  background-color: $color-background-darker;
+  padding-bottom: 200px;
+
+  .container {
+    position: relative;
+  }
+
+  .wrapper {
+    flex-direction: column;
+
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      margin-top: 100px;
+
+      .row {
+        display: flex;
+        position: relative;
+        margin-bottom: 120px;
+
+        .image-box {
+          overflow: hidden;
+          transition: transform 0.5s ease-in-out;
+          z-index: 1;
+          max-height: 700px;
+          width: 600px;
+          position: relative;
+
+          img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+          }
+
+          .button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-background-dark;
+            color: $color-light;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: $font-bold;
+            transition: all 0.5s ease-in-out;
+            z-index: 1;
+
+            &:hover {
+              background-color: $color-light;
+              color: $color-dark;
+            }
+          }
+        }
+      }
+
+      .text-box {
+        flex: 2;
+        padding: 40px;
+        border-radius: 5px;
+        background-color: $color-background-dark;
+        color: $color-light;
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        z-index: 1;
+        position: absolute;
+
+        h3 {
+          font-size: 1.3rem;
+          font-weight: $font-bold;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+
+        h4 {
+          font-size: 1.1rem;
+          font-weight: $font-bold;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .left {
+      flex-direction: row;
+
+      .image-box {
+        margin-left: 50px;
+      }
+
+      .text-box {
+        text-align: left;
+        right: 15%;
+        bottom: -14%;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -60%;
+        left: 10%;
+        transform: translate(-50%, -50%);
+        width: 20%;
+        height: 100%;
+        background-color: #cf383e;
+      }
+    }
+
+    .right {
+      flex-direction: row-reverse;
+
+      .image-box {
+        margin-right: 50px;
+      }
+
+      .text-box {
+        text-align: right;
+        left: 15%;
+        bottom: -14%;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -30%;
+        right: -10%;
+        transform: translate(-50%, -50%);
+        width: 20%;
+        height: 100%;
+        background-color: #cf383e;
+      }
+    }
+  }
+}
