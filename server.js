@@ -2,10 +2,11 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
+require("dotenv").config();
 
 const app = express();
 const server = app.listen(process.env.PORT || 8000, () => {
-  console.log("Server is running...");
+  console.log(`Server is running... ${server.address().port}`);
 });
 
 app.use(express.static(path.join(__dirname, "/client/dist")));
@@ -19,7 +20,7 @@ app.get("*", function (req, res) {
 });
 
 let transporter = nodemailer.createTransport({
-  service: process.env.SERVICE,
+  service: process.env.EMAIL_SERVICE,
   auth: {
     user: process.env.GMAIL_USER,
     pass: process.env.GMAIL_PASSWORD,
@@ -33,7 +34,6 @@ app.post("/email", (req, res) => {
     return res.status(422).json({ error: "All fields are required" });
   }
 
-  console.log("email:", email);
   const mailOptions = {
     from: process.env.GMAIL_USER,
     to: process.env.GMAIL_USER,

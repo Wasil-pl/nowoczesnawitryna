@@ -1,8 +1,0 @@
-{
-  "env": {
-    "PORT": "8000",
-    "EMAIL_SERVICE": "gmail",
-    "GMAIL_USER": "dariusz.wasilewski.86@gmail.com",
-    "GMAIL_PASSWORD": "psxc icai shdm pqup"
-  }
-}
