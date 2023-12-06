@@ -78,16 +78,16 @@ const app = {
       body: JSON.stringify(data),
     }).then((response) => {
       if (response.status === 200) {
-        Swal.fire({
+        document.querySelector("#inputTitle").value = "";
+        document.querySelector("#inputEmail").value = "";
+        document.querySelector("#inputTextArea").value = "";
+        return Swal.fire({
           icon: "success",
           title: "Wysłano",
           text: "Wiadomość została wysłana",
         });
-        document.querySelector("#inputTitle").value = "";
-        document.querySelector("#inputEmail").value = "";
-        document.querySelector("#inputTextArea").value = "";
       } else {
-        Swal.fire({
+        return Swal.fire({
           icon: "error",
           title: "Oops...",
           text: "Something went wrong",

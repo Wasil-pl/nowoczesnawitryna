@@ -48,10 +48,9 @@ app.post("/email", (req, res) => {
       return res.status(500).json({ error: "Internal error" });
     } else {
       console.log("Email sent: " + info.response);
+      return res.json({ message: "Email has been sent" });
     }
   });
-
-  res.json({ message: "Message received" });
 });
 
 app.use((req, res) => res.status(404).send("404 not found..."));
