@@ -107,28 +107,35 @@
 }
 
 @media (max-width: 768px) {
-  .mySkills .wrapper .skills-container {
-    .row {
-      flex-direction: column;
-      align-items: center;
+  .mySkills {
+    margin-top: 100px;
+    padding-bottom: 100px;
 
-      .pictures {
+    .wrapper .skills-container {
+      margin-top: 50px;
+
+      .row {
+        flex-direction: column;
         align-items: center;
 
-        img {
-          max-width: 20%;
+        .pictures {
+          align-items: center;
+
+          img {
+            max-width: 20%;
+          }
+        }
+
+        .text {
+          padding: 25px;
         }
       }
 
-      .text {
-        padding: 25px;
+      &::after {
+        top: 51%;
+        height: 82%;
+        width: 69%;
       }
-    }
-
-    &::after {
-      top: 51%;
-      height: 82%;
-      width: 69%;
     }
   }
 }
