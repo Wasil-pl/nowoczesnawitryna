@@ -95,3 +95,26 @@
     }
   }
 }
+
+@media (max-width: 550px) {
+  .contact {
+    .contact-container {
+      .contact-box {
+        flex-direction: column;
+
+        .contact-info {
+          margin-bottom: 50px;
+        }
+      }
+
+      .contact-form {
+        .form-group {
+          input,
+          textarea {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

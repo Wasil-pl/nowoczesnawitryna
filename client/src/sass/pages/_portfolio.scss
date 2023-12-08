@@ -18,13 +18,13 @@
       .row {
         display: flex;
         position: relative;
-        margin-bottom: 120px;
+        margin-bottom: 150px;
 
         .image-box {
           overflow: hidden;
           transition: transform 0.5s ease-in-out;
           z-index: 1;
-          max-height: 700px;
+          max-height: 800px;
           width: 600px;
           position: relative;
 
@@ -57,7 +57,6 @@
       }
 
       .text-box {
-        flex: 2;
         padding: 40px;
         border-radius: 5px;
         background-color: $color-background-dark;
@@ -67,6 +66,10 @@
         max-width: 600px;
         z-index: 1;
         position: absolute;
+
+        .hidden-image {
+          display: none;
+        }
 
         h3 {
           font-size: 1.3rem;
@@ -133,6 +136,121 @@
         width: 20%;
         height: 100%;
         background-color: #cf383e;
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .portfolio {
+    .wrapper {
+      .projects-container {
+        .row {
+          .text-box {
+            padding: 30px;
+          }
+        }
+      }
+
+      .left {
+        .text-box {
+          right: 10%;
+          bottom: -10%;
+        }
+      }
+
+      .right {
+        .text-box {
+          left: 10%;
+          bottom: -10%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .portfolio {
+    .wrapper {
+      .projects-container {
+        .row {
+          .image-box {
+            display: none;
+          }
+
+          .text-box {
+            position: unset;
+            max-width: unset;
+            display: block;
+            margin: 10px;
+
+            .hidden-image {
+              display: block;
+              width: 30%;
+            }
+          }
+        }
+
+        .left {
+          .text-box {
+            .hidden-image {
+              float: left;
+              margin: 0 20px 20px 0;
+            }
+          }
+
+          &::before {
+            width: 40%;
+            left: 19%;
+          }
+        }
+
+        .right {
+          .text-box {
+            .hidden-image {
+              float: right;
+              margin: 0 0 20px 20px;
+            }
+          }
+
+          &::before {
+            width: 30%;
+            right: -16%;
+            bottom: -42%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    .wrapper {
+      .projects-container {
+        .row {
+          .text-box {
+            .hidden-image {
+              width: 60%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .portfolio {
+    .wrapper {
+      .projects-container {
+        .row {
+          .text-box {
+            .hidden-image {
+              width: 100%;
+            }
+          }
+        }
       }
     }
   }

@@ -67,3 +67,44 @@
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .myService {
+    .wrapper {
+      .carts-container .cart {
+        .text {
+          h3 {
+            font-size: 1.2rem;
+          }
+
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .myService {
+    .wrapper {
+      .carts-container {
+        flex-direction: column;
+
+        .cart {
+          margin: 0;
+          margin-bottom: 20px;
+
+          .picture {
+            margin-bottom: 20px;
+            img {
+              width: 20%;
+              height: 20%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

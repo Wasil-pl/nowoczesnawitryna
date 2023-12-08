@@ -56,3 +56,73 @@
     }
   }
 }
+
+@media (max-width: 1400px) {
+  .about-me {
+    .wrapper {
+      .aboutMe-container {
+        .text {
+          padding: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .about-me {
+    .wrapper {
+      .aboutMe-container {
+        .text {
+          padding: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .about-me {
+    .wrapper {
+      .aboutMe-container {
+        flex-direction: column;
+
+        .image {
+          margin-bottom: 50px;
+          max-width: 90%;
+        }
+
+        .text {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .about-me {
+    .wrapper {
+      .aboutMe-container {
+        margin-top: 50px;
+        .text {
+          padding: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-me {
+    .wrapper {
+      .aboutMe-container {
+        .text {
+          h3 {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

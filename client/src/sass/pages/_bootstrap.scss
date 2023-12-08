@@ -12,7 +12,7 @@
         background-color: $color-dark;
 
         img {
-          height: 100%;
+          width: -webkit-fill-available;
           object-fit: contain;
         }
       }
