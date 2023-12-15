@@ -5,6 +5,7 @@ const nodemailer = require("nodemailer");
 require("dotenv").config();
 
 const app = express();
+
 const server = app.listen(process.env.PORT || 8000, () => {
   console.log(`Server is running... ${server.address().port}`);
 });
