@@ -1,0 +1,119 @@
+.myService {
+  background-image: url("../../images/shutterstock.png");
+  min-height: 700px;
+  position: relative;
+  background-size: cover;
+  padding-bottom: 100px;
+
+  .background-text {
+    color: $color-dark;
+    opacity: 13%;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .wrapper {
+    flex-direction: column;
+
+    .carts-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 100px;
+
+      .cart {
+        background-color: $color-background-cart;
+        padding: 20px;
+        margin: 20px;
+        flex: 1;
+        border-radius: 5px;
+        color: $color-light;
+        display: flex;
+        flex-direction: column;
+
+        .picture {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex: 1;
+
+          img {
+            width: 60%;
+            height: 60%;
+            object-fit: contain;
+          }
+        }
+
+        .text {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          flex: 2;
+
+          h3 {
+            font-size: 1.5rem;
+            font-weight: $font-bold;
+            flex: 1;
+          }
+
+          p {
+            line-height: 1.8;
+            font-size: 1rem;
+            flex: 2;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .myService {
+    background-image: url("../../images/shutterstock1600.png");
+    .wrapper {
+      .carts-container .cart {
+        .text {
+          h3 {
+            font-size: 1.2rem;
+          }
+
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .myService {
+    background-image: url("../../images/shutterstock900.png");
+    .wrapper {
+      .carts-container {
+        flex-direction: column;
+        margin-top: 50px;
+
+        .cart {
+          margin: 0;
+          margin-bottom: 20px;
+
+          .picture {
+            margin-bottom: 20px;
+            img {
+              width: 20%;
+              height: 20%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .myService {
+    background-image: url("../../images/shutterstock720.png");
+  }
+}

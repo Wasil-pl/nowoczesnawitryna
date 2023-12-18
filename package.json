@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start:server": "nodemon server.js",
-    "start:client": "cd client && yarn watch",
+    "start:client": "cd public && yarn watch",
     "build": "cd client && yarn build",
     "start": "npm-run-all --parallel start:server start:client"
   },

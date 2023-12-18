@@ -10,14 +10,14 @@ const server = app.listen(process.env.PORT || 8000, () => {
   console.log(`Server is running... ${server.address().port}`);
 });
 
-app.use(express.static(path.join(__dirname, "/client/dist")));
+app.use(express.static(path.join(__dirname, "/public/dist")));
 app.use(express.static(path.join(__dirname, "/public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 app.use(express.json());
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname + "/client/dist/index.html"));
+  res.sendFile(path.join(__dirname + "/public/dist/index.html"));
 });
 
 let transporter = nodemailer.createTransport({
