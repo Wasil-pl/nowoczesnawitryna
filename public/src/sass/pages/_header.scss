@@ -1,6 +1,6 @@
 .header {
   height: 100vh;
-  background-image: url("../../images/header.jpg");
+  background-image: url("../../images/header_4k.webp");
   background-position: center;
   background-size: cover;
   margin: auto;
@@ -90,9 +90,21 @@
   }
 }
 
+@media (max-width: 2600px) {
+  .header {
+    background-image: url("../../images/header_2k.webp");
+  }
+}
+
+@media (max-width: 1920px) {
+  .header {
+    background-image: url("../../images/header_1920.webp");
+  }
+}
+
 @media (max-width: 1600px) {
   .header {
-    background-image: url("../../images/header1920.jpg");
+    background-image: url("../../images/header_1600.webp");
     .navbar {
       .navbar-brand img {
         width: 100px;
@@ -101,9 +113,15 @@
   }
 }
 
+@media (max-width: 1280px) {
+  .header {
+    background-image: url("../../images/header_1280.webp");
+  }
+}
+
 @media (max-width: 1000px) {
   .header {
-    background-image: url("../../images/header1600.jpg");
+    background-image: url("../../images/header_mobile.webp");
     .title_box {
       left: 50%;
       top: 50%;
@@ -119,6 +137,7 @@
 
 @media (max-width: 768px) {
   .header {
+    background-image: url("../../images/header_mobile_720.webp");
     .navbar {
       .navbar-brand img {
         width: 80px;
