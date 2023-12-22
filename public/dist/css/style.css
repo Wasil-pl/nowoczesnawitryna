@@ -563,7 +563,7 @@ template {
   font-size: 1.5rem;
   letter-spacing: 2px;
 }
-.header .title_box .subtitle span {
+.header .title_box .subtitle .skill-style {
   color: #fed7a5;
 }
 .header .container {

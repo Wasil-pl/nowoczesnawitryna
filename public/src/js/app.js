@@ -96,10 +96,86 @@ const app = {
     });
   },
 
+  typeWriter: function () {
+    const name = "Dariusz Wasilewski";
+    let nameIndex = 0;
+
+    const baseText = "i specjalizuję się w ";
+    let baseTextIndex = 0;
+    const skills = [
+      "tworzeniu stron internetowych",
+      "tworzeniu aplikacji frontend",
+      "projektowaniu backendu",
+      "integracji baz danych",
+      "rozwoju full-stack",
+      "automatyzacji i testowaniu",
+    ];
+    let skillIndex = 0;
+    let isDeleting = false;
+    let descriptionIndex = 0;
+
+    function typeWriterName() {
+      if (nameIndex < name.length) {
+        let currentChar = name.charAt(nameIndex);
+        if (currentChar === "D" || currentChar === "W") {
+          currentChar = `<span class="first-letter">${currentChar}</span>`;
+        }
+        document.getElementById("name").innerHTML += currentChar;
+        nameIndex++;
+        setTimeout(typeWriterName, 100); // Szybkość pisania imienia i nazwiska
+      } else {
+        // Gdy imię i nazwisko zostanie wypisane, zacznij wypisywać bazowy tekst
+        setTimeout(typeWriterBaseText, 500);
+      }
+    }
+
+    function typeWriterBaseText() {
+      if (baseTextIndex < baseText.length) {
+        document.getElementById("description").innerHTML +=
+          baseText.charAt(baseTextIndex);
+        baseTextIndex++;
+        setTimeout(typeWriterBaseText, 100); // Szybkość pisania bazowego tekstu
+      } else {
+        // Gdy bazowy tekst zostanie wypisany, zacznij wypisywać umiejętności
+        setTimeout(typeWriterSkills, 500);
+      }
+    }
+
+    function typeWriterSkills() {
+      let currentPart = `<span class="skill-style">${skills[
+        skillIndex
+      ].substring(0, descriptionIndex)}</span>`;
+
+      if (isDeleting) {
+        if (descriptionIndex > 0) {
+          descriptionIndex--;
+          setTimeout(typeWriterSkills, 50); // Szybkość usuwania
+        } else {
+          isDeleting = false;
+          skillIndex = (skillIndex + 1) % skills.length;
+          setTimeout(typeWriterSkills, 500); // Opóźnienie przed pisaniem nowego słowa
+        }
+      } else {
+        if (descriptionIndex < skills[skillIndex].length) {
+          descriptionIndex++;
+          setTimeout(typeWriterSkills, 100); // Szybkość pisania
+        } else {
+          isDeleting = true;
+          setTimeout(typeWriterSkills, 1000); // Opóźnienie przed usunięciem
+        }
+      }
+
+      document.getElementById("description").innerHTML = baseText + currentPart;
+    }
+
+    typeWriterName();
+  },
+
   init: function () {
     const thisApp = this;
 
     thisApp.initContactForm();
+    thisApp.typeWriter();
   },
 };
 
