@@ -96,7 +96,34 @@ const app = {
     });
   },
 
+  initTitleBox: function () {
+    const thisApp = this;
+
+    thisApp.titleBox = document.querySelector(".title_box");
+
+    const p = document.createElement("p");
+    p.classList.add("welcome-text");
+    p.innerHTML = "Cześć, nazywam się";
+
+    const h1 = document.createElement("h1");
+    h1.classList.add("title");
+    h1.setAttribute("id", "name");
+
+    const h2 = document.createElement("h2");
+    h2.classList.add("subtitle");
+    h2.setAttribute("id", "description");
+
+    thisApp.titleBox.appendChild(p);
+    thisApp.titleBox.appendChild(h1);
+    thisApp.titleBox.appendChild(h2);
+
+    thisApp.typeWriter();
+  },
+
   typeWriter: function () {
+    const nameContainer = document.getElementById("name");
+    const descriptionContainer = document.getElementById("description");
+
     const name = "Dariusz Wasilewski";
     let nameIndex = 0;
 
@@ -107,7 +134,7 @@ const app = {
       "tworzeniu aplikacji frontend",
       "projektowaniu backendu",
       "integracji baz danych",
-      "rozwoju full-stack",
+      "programowaniu full-stack",
       "automatyzacji i testowaniu",
     ];
     let skillIndex = 0;
@@ -120,7 +147,7 @@ const app = {
         if (currentChar === "D" || currentChar === "W") {
           currentChar = `<span class="first-letter">${currentChar}</span>`;
         }
-        document.getElementById("name").innerHTML += currentChar;
+        nameContainer.innerHTML += currentChar;
         nameIndex++;
         setTimeout(typeWriterName, 100); // Szybkość pisania imienia i nazwiska
       } else {
@@ -131,8 +158,7 @@ const app = {
 
     function typeWriterBaseText() {
       if (baseTextIndex < baseText.length) {
-        document.getElementById("description").innerHTML +=
-          baseText.charAt(baseTextIndex);
+        descriptionContainer.innerHTML += baseText.charAt(baseTextIndex);
         baseTextIndex++;
         setTimeout(typeWriterBaseText, 100); // Szybkość pisania bazowego tekstu
       } else {
@@ -175,7 +201,7 @@ const app = {
     const thisApp = this;
 
     thisApp.initContactForm();
-    thisApp.typeWriter();
+    thisApp.initTitleBox();
   },
 };
 
