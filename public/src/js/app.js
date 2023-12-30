@@ -96,39 +96,9 @@ const app = {
     });
   },
 
-  initTitleBox: function () {
-    const thisApp = this;
-
-    thisApp.titleBox = document.querySelector(".title_box");
-
-    const p = document.createElement("p");
-    p.classList.add("welcome-text");
-    p.innerHTML = "Cześć, nazywam się";
-
-    const h1 = document.createElement("h1");
-    h1.classList.add("title");
-    h1.setAttribute("id", "name");
-
-    const h2 = document.createElement("h2");
-    h2.classList.add("subtitle");
-    h2.setAttribute("id", "description");
-
-    thisApp.titleBox.appendChild(p);
-    thisApp.titleBox.appendChild(h1);
-    thisApp.titleBox.appendChild(h2);
-
-    thisApp.typeWriter();
-  },
-
   typeWriter: function () {
-    const nameContainer = document.getElementById("name");
     const descriptionContainer = document.getElementById("description");
 
-    const name = "Dariusz Wasilewski";
-    let nameIndex = 0;
-
-    const baseText = "i specjalizuję się w ";
-    let baseTextIndex = 0;
     const skills = [
       "tworzeniu stron internetowych",
       "tworzeniu aplikacji frontend",
@@ -140,32 +110,6 @@ const app = {
     let skillIndex = 0;
     let isDeleting = false;
     let descriptionIndex = 0;
-
-    function typeWriterName() {
-      if (nameIndex < name.length) {
-        let currentChar = name.charAt(nameIndex);
-        if (currentChar === "D" || currentChar === "W") {
-          currentChar = `<span class="first-letter">${currentChar}</span>`;
-        }
-        nameContainer.innerHTML += currentChar;
-        nameIndex++;
-        setTimeout(typeWriterName, 100); // Szybkość pisania imienia i nazwiska
-      } else {
-        // Gdy imię i nazwisko zostanie wypisane, zacznij wypisywać bazowy tekst
-        setTimeout(typeWriterBaseText, 500);
-      }
-    }
-
-    function typeWriterBaseText() {
-      if (baseTextIndex < baseText.length) {
-        descriptionContainer.innerHTML += baseText.charAt(baseTextIndex);
-        baseTextIndex++;
-        setTimeout(typeWriterBaseText, 100); // Szybkość pisania bazowego tekstu
-      } else {
-        // Gdy bazowy tekst zostanie wypisany, zacznij wypisywać umiejętności
-        setTimeout(typeWriterSkills, 500);
-      }
-    }
 
     function typeWriterSkills() {
       let currentPart = `<span class="skill-style">${skills[
@@ -191,17 +135,17 @@ const app = {
         }
       }
 
-      document.getElementById("description").innerHTML = baseText + currentPart;
+      descriptionContainer.innerHTML = currentPart;
     }
 
-    typeWriterName();
+    typeWriterSkills();
   },
 
   init: function () {
     const thisApp = this;
 
     thisApp.initContactForm();
-    thisApp.initTitleBox();
+    thisApp.typeWriter();
   },
 };
 

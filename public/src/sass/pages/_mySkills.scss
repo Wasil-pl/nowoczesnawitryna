@@ -188,8 +188,13 @@
     margin-top: 30px;
     padding-bottom: 30px;
 
+    .wrapper .skills-container .row .pictures {
+      margin-bottom: 20px;
+    }
+
     .wrapper .skills-container .row .pictures img {
       max-width: 25%;
+      max-height: 80%;
     }
 
     .wrapper .skills-container .row .last-picture img {
