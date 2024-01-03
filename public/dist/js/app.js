@@ -141,11 +141,27 @@ const app = {
     typeWriterSkills();
   },
 
+  scroll: function () {
+    window.addEventListener("scroll", () => {
+      const elements = document.querySelectorAll(".animate");
+      const windowHeight = window.innerHeight;
+
+      elements.forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight) {
+          element.classList.add("fade-in");
+        }
+      });
+    });
+  },
+
   init: function () {
     const thisApp = this;
 
     thisApp.initContactForm();
     thisApp.typeWriter();
+    thisApp.scroll();
   },
 };
 
