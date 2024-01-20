@@ -99,6 +99,10 @@ const app = {
   typeWriter: function () {
     const descriptionContainer = document.getElementById("description");
 
+    if (!descriptionContainer) {
+      return;
+    }
+
     const skills = [
       "tworzeniu stron internetowych",
       "tworzeniu aplikacji frontend",

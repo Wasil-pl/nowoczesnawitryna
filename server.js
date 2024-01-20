@@ -20,6 +20,10 @@ app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname + "/public/dist/index.html"));
 });
 
+app.get("/oferta", function (req, res) {
+  res.sendFile(path.join(__dirname + "/public/dist/oferta.html"));
+});
+
 let transporter = nodemailer.createTransport({
   service: process.env.EMAIL_SERVICE,
   auth: {
