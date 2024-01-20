@@ -4,6 +4,7 @@ $color-background-dark: #26252f;
 $color-background-darker: #211f29;
 $color-background-cart: #211f293d;
 $color-background-text: #ffffff87;
+$color-background-text-2: #040404cb;
 
 $color-dark: #131313;
 $color-light: #fff;
@@ -21,3 +22,6 @@ $font-super-bold: 900;
 
 $font-title: "Montserrat", sans-serif;
 $font-main: "Roboto Slab", serif;
+
+$transition: all 0.3s ease-in-out;
+$transition_left: opacity 0.5s, left 0.5s;

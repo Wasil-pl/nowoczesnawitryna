@@ -1,135 +1,123 @@
-.site-creation-info {
+.myService {
   position: relative;
   background-size: cover;
   padding-bottom: 100px;
+  background-image: url("../../images/shutterstock_4k.webp");
+  background-position: right 50% top 0;
 
   .container {
     position: relative;
+
+    .section-title .background-text {
+      color: $color-background-text-2;
+    }
   }
 
   .wrapper {
     flex-direction: column;
 
-    .services-container {
+    .myService-title {
       margin-top: 100px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      text-align: center;
 
-      .service {
-        padding: 40px;
-        margin: 20px;
-        flex: 1;
-        border-radius: 5px;
-        color: $color-light;
-
-        h3 {
-          font-size: 1.8rem;
-          font-weight: $font-bold;
-          flex: 1;
-          color: $color-primary;
-          text-align: center;
-          margin: 10px 0 40px 0;
-        }
-
-        p {
-          line-height: 1.8;
-          font-size: 1rem;
-          flex: 2;
-        }
-
-        p:nth-of-type(2) {
-          margin-top: 30px;
-          text-align: center;
-          font-size: 1.2rem;
-        }
-
-        p:nth-of-type(3) {
-          margin-top: 50px;
-          text-align: center;
-          font-size: 1.2rem;
-        }
-
-        p:last-of-type {
-          margin-top: 50px;
-          text-align: center;
-          font-size: 1.2rem;
-          color: $color-primary;
-        }
-
-        ul {
-          margin-top: 20px;
-          list-style: none;
-          padding: 0;
-          display: flex;
-          flex-direction: column;
-
-          li {
-            margin-bottom: 10px;
-            align-items: center;
-            display: flex;
-
-            .list_title {
-              flex: 1;
-              font-weight: $font-bold;
-              font-size: 1.2rem;
-              margin-right: 30px;
-            }
-
-            .list_descryption {
-              flex: 2;
-            }
-          }
-        }
+      h2 {
+        font-size: 2rem;
+        font-weight: 400;
+        color: $color-primary;
+        text-transform: uppercase;
       }
     }
 
-    .carts-container {
-      margin-top: 20px;
+    .myService-container {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-      .cart {
-        background-color: $color-background-cart;
-        padding: 20px;
-        margin: 20px;
-        flex: 1;
-        border-radius: 5px;
-        color: $color-light;
+    .myService-cart {
+      background-color: $color-background-cart;
+      padding: 30px;
+      margin: 10px;
+      flex-basis: calc(33.33% - 40px);
+      border-radius: 5px;
+      color: $color-light;
+      min-height: 300px;
+      min-width: 300px;
+      position: relative;
+      transition: $transition_left;
+      border: $color-background-cart 1px solid;
+
+      &:hover {
+        @extend .hovered;
+        border: $color-primary 1px solid;
+      }
+
+      &.hovered {
+        .hovered-box {
+          opacity: 1;
+        }
+      }
+
+      .content {
         display: flex;
-        min-height: 700px;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        position: relative;
+        z-index: 1;
 
-        .picture {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex: 1;
-
-          img {
-            width: 60%;
-            height: 60%;
-            object-fit: contain;
-          }
+        h3 {
+          font-size: 1.9rem;
+          font-weight: 400;
+          color: $color-primary;
+          text-align: center;
+          text-transform: uppercase;
+          margin-bottom: 30px;
         }
 
-        .text {
-          text-align: center;
-          display: flex;
-          flex-direction: column;
-          flex: 2;
+        button {
+          margin-top: auto;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+          background-color: $color-primary;
+          border: $color-primary 1px solid;
+          border-radius: 5px;
+          padding: 10px 20px;
+          color: $color-dark;
+          font-size: 1rem;
+          font-weight: 400;
+          cursor: pointer;
+          transition: $transition;
 
-          h3 {
-            font-size: 1.5rem;
-            font-weight: $font-bold;
-            flex: 1;
+          &:hover {
+            background-color: rgba(0, 0, 0, 0);
+            border: $color-primary 1px solid;
             color: $color-primary;
-            text-align: center;
-            margin: 10px 0 20px 0;
           }
+        }
+      }
 
-          p {
-            line-height: 1.8;
-            font-size: 1rem;
-            flex: 2;
-          }
+      .hovered-box {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        transition: $transition;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba($color-dark, 0.5);
+          border-radius: 5px;
+          transition: $transition;
         }
       }
     }
@@ -151,12 +139,14 @@
 @media (max-width: 1600px) {
   .myService {
     background-image: url("../../images/shutterstock_1600.webp");
+    background-position: right 50% top 0;
   }
 }
 
 @media (max-width: 1200px) {
   .myService {
     background-image: url("../../images/shutterstock_1280.webp");
+    background-position: right 50% top 0;
     .wrapper {
       .carts-container .cart {
         .text {

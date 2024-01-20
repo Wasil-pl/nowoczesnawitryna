@@ -16,12 +16,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 app.use(express.json());
 
-app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname + "/public/dist/index.html"));
-});
-
 app.get("/oferta", function (req, res) {
   res.sendFile(path.join(__dirname + "/public/dist/oferta.html"));
+});
+
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname + "/public/dist/index.html"));
 });
 
 let transporter = nodemailer.createTransport({

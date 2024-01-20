@@ -160,12 +160,27 @@ const app = {
     });
   },
 
+  hover: function () {
+    const elements = document.querySelectorAll(".myService-cart");
+
+    elements.forEach((element) => {
+      element.addEventListener("mouseover", () => {
+        element.classList.add("hovered");
+      });
+
+      element.addEventListener("mouseout", () => {
+        element.classList.remove("hovered");
+      });
+    });
+  },
+
   init: function () {
     const thisApp = this;
 
     thisApp.initContactForm();
     thisApp.typeWriter();
     thisApp.scroll();
+    thisApp.hover();
   },
 };
 
