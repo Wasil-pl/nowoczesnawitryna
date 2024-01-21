@@ -1,4 +1,6 @@
 .about-me {
+  margin-bottom: 200px;
+
   .container {
     position: relative;
   }
@@ -51,6 +53,10 @@
 
         p {
           line-height: 1.8;
+        }
+
+        button {
+          margin-left: auto;
         }
       }
     }

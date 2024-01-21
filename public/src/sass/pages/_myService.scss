@@ -4,6 +4,7 @@
   padding-bottom: 100px;
   background-image: url("../../images/shutterstock_4k.webp");
   background-position: right 50% top 0;
+  background-attachment: fixed;
 
   .container {
     position: relative;
@@ -51,6 +52,18 @@
       &:hover {
         @extend .hovered;
         border: $color-primary 1px solid;
+
+        .content {
+          h3 {
+            color: $color-primary;
+          }
+
+          button {
+            background-color: rgba(0, 0, 0, 0);
+            border: $color-primary 1px solid;
+            color: $color-primary;
+          }
+        }
       }
 
       &.hovered {
@@ -70,7 +83,6 @@
         h3 {
           font-size: 1.9rem;
           font-weight: 400;
-          color: $color-primary;
           text-align: center;
           text-transform: uppercase;
           margin-bottom: 30px;
@@ -79,23 +91,6 @@
         button {
           margin-top: auto;
           margin-left: auto;
-          margin-right: auto;
-          display: block;
-          background-color: $color-primary;
-          border: $color-primary 1px solid;
-          border-radius: 5px;
-          padding: 10px 20px;
-          color: $color-dark;
-          font-size: 1rem;
-          font-weight: 400;
-          cursor: pointer;
-          transition: $transition;
-
-          &:hover {
-            background-color: rgba(0, 0, 0, 0);
-            border: $color-primary 1px solid;
-            color: $color-primary;
-          }
         }
       }
 

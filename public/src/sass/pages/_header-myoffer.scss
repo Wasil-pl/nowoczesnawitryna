@@ -3,6 +3,7 @@
   background-image: url("../../images/header_4k.webp");
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   margin: auto;
   position: relative;
   display: flex;
@@ -25,11 +26,19 @@
       width: 150px;
     }
 
+    .collapse {
+      justify-content: flex-end;
+      margin-left: 200px;
+    }
+
     .nav-item {
       text-transform: uppercase;
       text-shadow: 0 0 10px rgba($color-dark, 0.5);
       letter-spacing: 2px;
       margin-right: 1rem;
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: auto;
 
       a {
         color: $color-light;
@@ -46,12 +55,11 @@
 
   .title_box {
     position: absolute;
-    left: 33%;
+    left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    padding: 50px;
     align-items: flex-start;
 
     .welcome-text {
@@ -121,7 +129,6 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      padding: 50px;
 
       .subtitle {
         font-size: 1.5rem;
