@@ -1,0 +1,47 @@
+.site-creation-title {
+  .container {
+    position: relative;
+
+    .wrapper {
+      flex-direction: column;
+
+      .content-box {
+        margin-top: 100px;
+        display: flex;
+
+        .text {
+          display: flex;
+          flex-direction: column;
+          flex: 2;
+          padding-right: 50px;
+
+          p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-bottom: 50px;
+          }
+
+          p:last-of-type {
+            color: $color-primary;
+          }
+        }
+
+        .picture {
+          flex: 1;
+          border-radius: 5px;
+          position: relative;
+          height: fit-content;
+          margin-top: auto;
+          margin-bottom: auto;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}

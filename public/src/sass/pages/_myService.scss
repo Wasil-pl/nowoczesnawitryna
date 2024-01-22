@@ -38,7 +38,7 @@
 
     .myService-cart {
       background-color: $color-background-cart;
-      padding: 30px;
+      padding: 20px;
       margin: 10px;
       flex-basis: calc(33.33% - 40px);
       border-radius: 5px;
@@ -46,12 +46,14 @@
       min-height: 300px;
       min-width: 300px;
       position: relative;
-      transition: $transition_left;
+      transition: $transition;
       border: $color-background-cart 1px solid;
 
       &:hover {
         @extend .hovered;
-        border: $color-primary 1px solid;
+        transition: $transition;
+        border: $color-primary 2px solid;
+        transform: scale(1.05);
 
         .content {
           h3 {
@@ -88,6 +90,11 @@
           margin-bottom: 30px;
         }
 
+        p {
+          text-align: center;
+          margin-bottom: 30px;
+        }
+
         button {
           margin-top: auto;
           margin-left: auto;
@@ -110,7 +117,7 @@
           left: 0;
           right: 0;
           bottom: 0;
-          background-color: rgba($color-dark, 0.5);
+          background-color: rgba($color-dark, 0.7);
           border-radius: 5px;
           transition: $transition;
         }

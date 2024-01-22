@@ -3,7 +3,9 @@
 @import "pages/normalize";
 @import "pages/bootstrap";
 
-@import "pages/header-myOffer";
-@import "pages/myService-myOffer";
+@import "pages/myOffer/header";
+@import "pages/myOffer/siteCreationInfo";
+@import "pages/myOffer/siteCreationTitle";
+
 @import "pages/contact";
 @import "pages/footer";
