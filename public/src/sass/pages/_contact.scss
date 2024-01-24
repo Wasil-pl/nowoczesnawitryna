@@ -88,23 +88,8 @@
   }
 }
 
-@media (max-width: 728px) {
-  .contact {
-    .section-title {
-      .background-text {
-        font-size: 4rem;
-      }
-    }
-  }
-}
-
 @media (max-width: 550px) {
   .contact {
-    .section-title {
-      .background-text {
-        font-size: 4rem;
-      }
-    }
     .contact-container {
       .contact-box {
         flex-direction: column;
@@ -121,16 +106,6 @@
             width: 100%;
           }
         }
-      }
-    }
-  }
-}
-
-@media (max-width: 450px) {
-  .contact {
-    .section-title {
-      .background-text {
-        font-size: 3rem;
       }
     }
   }

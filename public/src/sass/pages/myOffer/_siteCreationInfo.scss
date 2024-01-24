@@ -1,8 +1,7 @@
 .site-creation-info {
-  position: relative;
-  background-size: cover;
   margin-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 0;
+  background-color: $color-background-darker;
 
   .container {
     position: relative;
@@ -64,9 +63,6 @@
 
       .left {
         flex-direction: row;
-
-        .text {
-        }
       }
     }
   }
