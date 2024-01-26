@@ -160,16 +160,28 @@ const app = {
     });
   },
 
-  hover: function () {
-    const elements = document.querySelectorAll(".myService-cart");
+  accordion: function () {
+    const accordionItems = document.querySelectorAll(".accordion");
 
-    elements.forEach((element) => {
-      element.addEventListener("mouseover", () => {
-        element.classList.add("hovered");
-      });
+    accordionItems.forEach((item) => {
+      item.addEventListener("mouseenter", () => {
+        // Check if the item already has the "active" class
+        const isActive = item.classList.contains("active");
+        console.log("isActive:", isActive);
 
-      element.addEventListener("mouseout", () => {
-        element.classList.remove("hovered");
+        // Remove "active" class from all accordion items
+        accordionItems.forEach((otherItem) => {
+          console.log("jestes tutaj:", otherItem);
+
+          if (otherItem !== item) {
+            otherItem.classList.remove("active");
+          }
+        });
+
+        // Add "active" class only if it wasn't already active
+        if (!isActive) {
+          item.classList.add("active");
+        }
       });
     });
   },
@@ -180,7 +192,7 @@ const app = {
     thisApp.initContactForm();
     thisApp.typeWriter();
     thisApp.scroll();
-    thisApp.hover();
+    thisApp.accordion();
   },
 };
 
