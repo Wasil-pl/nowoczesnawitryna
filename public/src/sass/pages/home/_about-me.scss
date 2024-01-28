@@ -1,5 +1,5 @@
 .about-me {
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 
   .container {
     position: relative;
@@ -13,7 +13,7 @@
       margin-top: 100px;
 
       .image {
-        flex: 1;
+        flex: 40%;
         position: relative;
 
         img {
@@ -36,7 +36,7 @@
       }
 
       .text {
-        flex: 2;
+        flex: 60%;
         padding: 75px;
         margin-left: 50px;
 
@@ -54,11 +54,11 @@
         p {
           line-height: 1.8;
         }
-
-        button {
-          margin-left: auto;
-        }
       }
+    }
+
+    button {
+      margin: 150px auto 0;
     }
   }
 }

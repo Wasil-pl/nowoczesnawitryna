@@ -12,95 +12,96 @@
     .section-title .background-text {
       color: $color-background-text-2;
     }
-  }
 
-  .wrapper {
-    flex-direction: column;
+    .wrapper {
+      flex-direction: column;
 
-    .myService-title {
-      margin-top: 50px;
-      text-align: center;
+      .myService-title {
+        margin-top: 50px;
+        text-align: center;
 
-      h2 {
-        font-size: 2rem;
-        font-weight: 400;
-        color: $color-primary;
-        text-transform: uppercase;
+        h2 {
+          font-size: 2rem;
+          font-weight: 400;
+          color: $color-primary;
+          text-transform: uppercase;
+        }
       }
-    }
 
-    .myService-container {
-      margin-top: 50px;
-      display: flex;
-      flex-wrap: nowrap;
-
-      .myService-cart {
+      .myService-container {
+        margin-top: 50px;
         display: flex;
+        flex-wrap: nowrap;
 
-        .cart-header {
-          background-color: $color-background-cart;
-          min-height: 350px;
-          width: 100px;
+        .myService-cart {
           display: flex;
-          justify-content: center;
-          align-items: center;
-          border: 1px solid $color-background-cart;
-          cursor: pointer;
-          transition: background-color 0.3s, border 0.3s;
 
-          h3 {
-            transform: rotate(-90deg);
-            white-space: nowrap; /* Aby uniknąć zawijania tekstu */
+          .cart-header {
+            background-color: $color-background-cart;
+            min-height: 350px;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $color-background-cart;
+            cursor: pointer;
+            transition: background-color 0.3s, border 0.3s;
 
-            .number {
-              font-size: 2rem;
+            h3 {
+              transform: rotate(-90deg);
+              white-space: nowrap; /* Aby uniknąć zawijania tekstu */
+
+              .number {
+                font-size: 2rem;
+                font-weight: 400;
+                color: $color-primary;
+                margin-right: 10px;
+              }
+            }
+          }
+
+          .content {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            width: 0;
+            height: 450px;
+            opacity: 0;
+            background-color: $color-background-cart;
+            transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            justify-content: space-between;
+
+            h3 {
+              font-size: 5rem;
               font-weight: 400;
               color: $color-primary;
-              margin-right: 10px;
+              text-transform: uppercase;
+              margin-bottom: 20px;
+            }
+
+            p {
+              margin-left: 50%;
+              font-weight: 400;
+            }
+
+            button {
+              width: fit-content;
+              margin-left: auto;
             }
           }
         }
 
-        .content {
-          display: flex;
-          flex-direction: column;
-          overflow: hidden;
-          width: 0;
-          height: 450px;
-          opacity: 0;
-          background-color: $color-background-cart;
-          transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
-          justify-content: space-between;
-
-          h3 {
-            font-size: 5rem;
-            font-weight: 400;
-            color: $color-primary;
-            text-transform: uppercase;
-            margin-bottom: 20px;
+        .active {
+          .content {
+            width: auto;
+            opacity: 1;
+            padding: 30px;
           }
 
-          p {
-            margin-left: 50%;
+          .cart-header {
+            background-color: rgba($color-primary, 0.2);
+            border: 1px solid $color-primary;
           }
-
-          button {
-            width: fit-content;
-            margin-left: auto;
-          }
-        }
-      }
-
-      .active {
-        .content {
-          width: auto;
-          opacity: 1;
-          padding: 30px;
-        }
-
-        .cart-header {
-          background-color: rgba($color-primary, 0.2);
-          border: 1px solid $color-primary;
         }
       }
     }

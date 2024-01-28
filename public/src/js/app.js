@@ -167,12 +167,9 @@ const app = {
       item.addEventListener("mouseenter", () => {
         // Check if the item already has the "active" class
         const isActive = item.classList.contains("active");
-        console.log("isActive:", isActive);
 
         // Remove "active" class from all accordion items
         accordionItems.forEach((otherItem) => {
-          console.log("jestes tutaj:", otherItem);
-
           if (otherItem !== item) {
             otherItem.classList.remove("active");
           }
@@ -186,6 +183,28 @@ const app = {
     });
   },
 
+  showSection: function () {
+    const section = document.getElementById("mySkills");
+
+    if (!section) {
+      return;
+    }
+
+    const button = document.getElementById("showSection");
+    const buttonName = button.innerHTML;
+
+    button.addEventListener("click", () => {
+      section.classList.toggle("show");
+      button.innerHTML = button.innerHTML === buttonName ? "Ukryj" : buttonName;
+
+      if (section.classList.contains("show")) {
+        section.classList.remove("hide");
+      } else {
+        section.classList.add("hide");
+      }
+    });
+  },
+
   init: function () {
     const thisApp = this;
 
@@ -193,6 +212,7 @@ const app = {
     thisApp.typeWriter();
     thisApp.scroll();
     thisApp.accordion();
+    thisApp.showSection();
   },
 };
 
