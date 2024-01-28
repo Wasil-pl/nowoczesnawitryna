@@ -3,10 +3,10 @@
 @import "pages/normalize";
 @import "pages/bootstrap";
 
-@import "pages/header";
-@import "pages/about-me";
-@import "pages/mySkills";
-@import "pages/myService";
-@import "pages/portfolio";
-@import "pages/contact";
-@import "pages/footer";
+@import "pages/shared/header";
+@import "pages/home/about-me";
+@import "pages/home/mySkills";
+@import "pages/home/myService";
+@import "pages/home/portfolio";
+@import "pages/shared/contact";
+@import "pages/shared/footer";

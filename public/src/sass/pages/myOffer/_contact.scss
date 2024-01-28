@@ -1,0 +1,48 @@
+.contact {
+  background-color: $color-background-darker;
+
+  .contact-container {
+    margin-top: 100px;
+    text-align: center;
+
+    .contact-box {
+      display: flex;
+      justify-content: space-evenly;
+
+      .contact-info {
+        text-align: center;
+
+        &:hover {
+          color: $color-primary;
+        }
+
+        .icon {
+          font-size: 2.5rem;
+          color: $color-primary;
+          margin-bottom: 10px;
+        }
+
+        h3 {
+          font-size: 1.2rem;
+          font-weight: $font-bold;
+          color: $color-primary;
+          margin-bottom: 10px;
+        }
+
+        p {
+          line-height: 1.5;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .contact-form {
+      .form-group {
+        input,
+        textarea {
+          background-color: $color-background-dark;
+        }
+      }
+    }
+  }
+}
