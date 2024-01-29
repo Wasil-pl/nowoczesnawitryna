@@ -45,3 +45,24 @@
     }
   }
 }
+
+@media (max-width: 770px) {
+  .site-creation-title {
+    .container {
+      .wrapper {
+        .content-box {
+          flex-direction: column;
+
+          .text {
+            padding-right: 0;
+            padding-bottom: 50px;
+          }
+
+          .picture {
+            margin-top: 50px;
+          }
+        }
+      }
+    }
+  }
+}

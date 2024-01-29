@@ -194,13 +194,12 @@ const app = {
     const buttonName = button.innerHTML;
 
     button.addEventListener("click", () => {
-      section.classList.toggle("show");
       button.innerHTML = button.innerHTML === buttonName ? "Ukryj" : buttonName;
 
-      if (section.classList.contains("show")) {
-        section.classList.remove("hide");
+      if (section.style.maxHeight) {
+        section.style.maxHeight = null;
       } else {
-        section.classList.add("hide");
+        section.style.maxHeight = section.scrollHeight + "px";
       }
     });
   },

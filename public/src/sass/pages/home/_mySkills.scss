@@ -1,8 +1,8 @@
 .mySkills {
   background-color: $color-background-darker;
-  overflow: hidden;
-  opacity: 0;
   max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
 
   .container {
     position: relative;
@@ -15,7 +15,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin-top: 100px;
+      margin: 100px 0;
 
       &::after {
         content: "";
@@ -91,23 +91,6 @@
       }
     }
   }
-}
-
-.show {
-  opacity: 1;
-  padding-bottom: 200px;
-  max-height: fit-content;
-}
-
-.hide {
-  opacity: 0;
-  max-height: 0;
-  padding-bottom: 0;
-}
-
-.show,
-.hide {
-  transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 @media (max-width: 1200px) {

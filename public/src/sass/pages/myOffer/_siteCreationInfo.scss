@@ -65,3 +65,58 @@
     }
   }
 }
+
+@media (max-width: 992px) {
+  .site-creation-info {
+    .wrapper {
+      .benefits-container {
+        .benefit {
+          .picture {
+            flex: 30%;
+            margin: auto;
+
+            img {
+              height: 60%;
+              object-fit: cover;
+            }
+          }
+          .text {
+            flex: 70%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .site-creation-info {
+    .wrapper {
+      .benefits-container {
+        .benefit {
+          flex-direction: column;
+          max-height: none;
+          border-bottom: 2px solid $color-primary;
+          margin-bottom: 50px;
+
+          .picture {
+            height: 300px;
+            text-align: center;
+
+            img {
+              width: 60%;
+              object-fit: cover;
+            }
+          }
+          .text {
+            padding: 50px 0;
+          }
+        }
+
+        .left {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
