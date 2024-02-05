@@ -112,3 +112,17 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .services {
+    .container {
+      .wrapper {
+        .carts-container {
+          .cart:hover {
+            transform: none;
+          }
+        }
+      }
+    }
+  }
+}

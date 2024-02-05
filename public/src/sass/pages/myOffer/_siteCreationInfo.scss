@@ -36,6 +36,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 5px;
           }
         }
 
@@ -80,6 +81,7 @@
               object-fit: cover;
             }
           }
+
           .text {
             flex: 70%;
           }
@@ -102,11 +104,14 @@
           .picture {
             height: 300px;
             text-align: center;
+            margin: unset;
 
             img {
               object-fit: cover;
+              max-width: 70%;
             }
           }
+
           .text {
             padding: 50px 0;
           }
@@ -114,6 +119,20 @@
 
         .left {
           flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .site-creation-info {
+    .wrapper {
+      .benefits-container {
+        .benefit {
+          .picture {
+            height: 200px;
+          }
         }
       }
     }

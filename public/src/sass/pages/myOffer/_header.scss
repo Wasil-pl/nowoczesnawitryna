@@ -1,6 +1,6 @@
 .header {
   height: 700px;
-  background-image: url("../../images/header_4k.webp");
+  background-image: url("../../../images/oferta/background.svg") !important;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -89,6 +89,10 @@
       .skill-style {
         color: $color-primary;
       }
+    }
+
+    .secondary-subtitle {
+      color: $color-primary;
     }
   }
 
@@ -183,6 +187,14 @@
       .subtitle {
         font-size: 1rem;
       }
+    }
+
+    .triangle {
+      height: 70px;
+    }
+
+    .triangle2 {
+      height: 70px;
     }
   }
 }

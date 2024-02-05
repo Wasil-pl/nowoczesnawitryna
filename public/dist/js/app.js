@@ -104,11 +104,10 @@ const app = {
     }
 
     const skills = [
-      "tworzeniu stron internetowych",
-      "tworzeniu aplikacji frontend",
-      "projektowaniu backendu",
+      "projektowaniu i programowaniu stron internetowych",
+      "tworzeniu responsywnych i z optymalizowanych stron internetowych",
+      "realizowaniu indywidualnych projektów webowych",
       "integracji baz danych",
-      "programowaniu full-stack",
       "automatyzacji i testowaniu",
     ];
     let skillIndex = 0;
@@ -164,7 +163,7 @@ const app = {
     const accordionItems = document.querySelectorAll(".accordion");
 
     accordionItems.forEach((item) => {
-      item.addEventListener("mouseenter", () => {
+      item.addEventListener("click", () => {
         // Check if the item already has the "active" class
         const isActive = item.classList.contains("active");
 
