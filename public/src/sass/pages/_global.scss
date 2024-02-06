@@ -88,6 +88,28 @@ button {
   }
 }
 
+.animate-right {
+  opacity: 0;
+  transform: translateX(200px);
+  transition: all 1s ease-in-out;
+
+  &.fade-in-right {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-left {
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: all 1s ease-in-out;
+
+  &.fade-in-left {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @media (max-width: 1200px) {
   .background-text {
     font-size: 4.5rem;

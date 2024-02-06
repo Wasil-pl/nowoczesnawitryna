@@ -147,6 +147,10 @@ const app = {
   scroll: function () {
     window.addEventListener("scroll", () => {
       const elements = document.querySelectorAll(".animate");
+      const elementRight = document.querySelectorAll(".animate-right");
+      const elementLeft = document.querySelectorAll(".animate-left");
+
+      const offset = 300;
       const windowHeight = window.innerHeight;
 
       elements.forEach((element) => {
@@ -154,6 +158,22 @@ const app = {
 
         if (elementTop < windowHeight) {
           element.classList.add("fade-in");
+        }
+      });
+
+      elementRight.forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - offset) {
+          element.classList.add("fade-in-right");
+        }
+      });
+
+      elementLeft.forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - offset) {
+          element.classList.add("fade-in-left");
         }
       });
     });
