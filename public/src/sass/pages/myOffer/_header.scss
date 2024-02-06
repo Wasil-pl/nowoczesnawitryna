@@ -26,9 +26,11 @@
       width: 150px;
     }
 
-    .collapse {
-      justify-content: flex-end;
-      margin-left: 200px;
+    .navbar-collapse {
+      background-color: $color-background-collapse;
+      padding: 0 20px;
+      z-index: 1;
+      border-radius: 5px;
     }
 
     .nav-item {
