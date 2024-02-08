@@ -253,6 +253,9 @@
 
     .container .wrapper .myService-container {
       flex-direction: column;
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
 
       .myService-cart {
         flex-direction: column;
@@ -285,7 +288,7 @@
           }
 
           button {
-            margin: 0 auto;
+            margin: 30px auto 0;
           }
         }
       }
