@@ -1,4 +1,4 @@
-.portfolio {
+.portfolio-section {
   background-color: $color-background-darker;
   padding-bottom: 200px;
 
@@ -124,7 +124,7 @@
 }
 
 @media (max-width: 1400px) {
-  .portfolio {
+  .portfolio-section {
     .wrapper {
       .projects-container {
         .row {
@@ -152,7 +152,7 @@
 }
 
 @media (max-width: 1200px) {
-  .portfolio {
+  .portfolio-section {
     .wrapper {
       .projects-container {
         .row {
@@ -212,7 +212,7 @@
 }
 
 @media (max-width: 992px) {
-  .portfolio {
+  .portfolio-section {
     .wrapper {
       .projects-container {
         .right {
@@ -229,7 +229,7 @@
 }
 
 @media (max-width: 992px) {
-  .portfolio {
+  .portfolio-section {
     .wrapper {
       .projects-container {
         .right {
@@ -243,7 +243,7 @@
 }
 
 @media (max-width: 768px) {
-  .portfolio {
+  .portfolio-section {
     .wrapper {
       .projects-container {
         margin-top: 50px;
@@ -278,7 +278,7 @@
 }
 
 @media (max-width: 550px) {
-  .portfolio {
+  .portfolio-section {
     .wrapper {
       .projects-container {
         .row {

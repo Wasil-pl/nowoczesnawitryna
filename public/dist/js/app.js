@@ -181,22 +181,48 @@ const app = {
 
   accordion: function () {
     const accordionItems = document.querySelectorAll(".accordion");
+    const container = document.querySelector(".myService-container");
+
+    const sectionNames = [
+      "one-page",
+      "multi-page",
+      "firmowe",
+      "portfolio",
+      "zaawansowane",
+    ];
 
     accordionItems.forEach((item) => {
       item.addEventListener("click", () => {
         // Check if the item already has the "active" class
         const isActive = item.classList.contains("active");
+        const hasSectionName = sectionNames.some((sectionName) =>
+          item.classList.contains(sectionName)
+        );
+
+        const h3Element = item.querySelector("h3");
+        const sectionNameWithNumber = h3Element.textContent.trim();
+        const sectionName = sectionNameWithNumber.slice(2).toLowerCase();
 
         // Remove "active" class from all accordion items
         accordionItems.forEach((otherItem) => {
           if (otherItem !== item) {
             otherItem.classList.remove("active");
           }
+
+          sectionNames.forEach((name) => {
+            if (!otherItem.classList.contains(name)) {
+              container.classList.remove(name);
+            }
+          });
         });
 
         // Add "active" class only if it wasn't already active
         if (!isActive) {
           item.classList.add("active");
+        }
+
+        if (!hasSectionName) {
+          container.classList.add(sectionName);
         }
       });
     });
