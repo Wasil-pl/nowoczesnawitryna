@@ -94,16 +94,32 @@
 }
 
 @media (max-width: 1200px) {
-  .mySkills .wrapper .skills-container .row .pictures img {
-    max-width: 30%;
-    max-height: 30%;
+  .mySkills .wrapper .skills-container .row {
+    .pictures {
+      img {
+        max-width: 30%;
+        max-height: 30%;
+      }
+    }
+
+    .last-picture img {
+      max-width: 60%;
+      max-height: 60%;
+    }
   }
 }
 
 @media (max-width: 992px) {
-  .mySkills .wrapper .skills-container .row .pictures img {
-    max-width: 50%;
-    max-height: 50%;
+  .mySkills .wrapper .skills-container .row {
+    .pictures img {
+      max-width: 50%;
+      max-height: 50%;
+    }
+
+    .last-picture img {
+      max-width: 70%;
+      max-height: 70%;
+    }
   }
 }
 
