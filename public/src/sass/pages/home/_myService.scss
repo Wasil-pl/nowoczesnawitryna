@@ -48,6 +48,40 @@
         flex-wrap: nowrap;
         position: relative;
 
+        img {
+          width: 100%;
+          height: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+
+        #one-page-img {
+          opacity: 0;
+          transition: opacity 1s;
+        }
+
+        #multi-page-img {
+          opacity: 0;
+          transition: opacity 1s;
+        }
+
+        #firmowe-img {
+          opacity: 0;
+          transition: opacity 1s;
+        }
+
+        #portfolio-img {
+          opacity: 0;
+          transition: opacity 1s;
+        }
+
+        #zaawansowane-img {
+          opacity: 0;
+          transition: opacity 1s;
+        }
+
         .myService-cart {
           display: flex;
 
@@ -79,10 +113,12 @@
               transform: rotate(-90deg);
               white-space: nowrap; /* Aby uniknąć zawijania tekstu */
               text-transform: uppercase;
+              font-weight: 600;
+              letter-spacing: 5px;
 
               .number {
                 font-size: 2rem;
-                font-weight: 400;
+                font-weight: 600;
                 color: $color-primary;
                 margin-right: 10px;
               }
@@ -155,28 +191,33 @@
       }
 
       .one-page {
-        background-image: url("../../../images/one-page-background.webp");
-        background-size: cover;
+        #one-page-img {
+          opacity: 1;
+        }
       }
 
       .multi-page {
-        background-image: url("../../../images/multi-page-background.webp");
-        background-size: cover;
+        #multi-page-img {
+          opacity: 1;
+        }
       }
 
       .firmowe {
-        background-image: url("../../../images/firmowe-background.webp");
-        background-size: cover;
+        #firmowe-img {
+          opacity: 1;
+        }
       }
 
       .portfolio {
-        background-image: url("../../../images/portfolio-background.webp");
-        background-size: cover;
+        #portfolio-img {
+          opacity: 1;
+        }
       }
 
       .zaawansowane {
-        background-image: url("../../../images/zaawansowane-background.webp");
-        background-size: cover;
+        #zaawansowane-img {
+          opacity: 1;
+        }
       }
     }
   }
@@ -218,37 +259,37 @@
     background-image: url("../../../images/shutterstock_1280.webp");
     background-position: right 50% top 0;
 
-    .container .wrapper {
-      .one-page {
-        background-image: url("../../../images/one-page-background-mobile-90.webp");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
+    // .container .wrapper {
+    //   .one-page {
+    //     background-image: url("../../../images/one-page-background-mobile-90.webp");
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //   }
 
-      .multi-page {
-        background-image: url("../../../images/multi-page-background-mobile-90.webp");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
+    //   .multi-page {
+    //     background-image: url("../../../images/multi-page-background-mobile-90.webp");
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //   }
 
-      .firmowe {
-        background-image: url("../../../images/firmowe-background-mobile-90.webp");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
+    //   .firmowe {
+    //     background-image: url("../../../images/firmowe-background-mobile-90.webp");
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //   }
 
-      .zaawansowane {
-        background-image: url("../../../images/zaawansowane-background-mobile-90.webp");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
+    //   .zaawansowane {
+    //     background-image: url("../../../images/zaawansowane-background-mobile-90.webp");
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //   }
 
-      .portfolio {
-        background-image: url("../../../images/portfolio-background-mobile-90.webp");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-    }
+    //   .portfolio {
+    //     background-image: url("../../../images/portfolio-background-mobile-90.webp");
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //   }
+    // }
 
     .container .wrapper .myService-container {
       flex-direction: column;
@@ -308,63 +349,15 @@
     background-image: url("../../../images/shutterstock_mobile_920.webp");
     background-attachment: scroll;
 
-    .container .wrapper {
-      .one-page {
-        background-image: url("../../../images/one-page-background-mobile.webp");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-
-      .multi-page {
-        background-image: url("../../../images/multi-page-background-mobile.webp");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-
-      .firmowe {
-        background-image: url("../../../images/firmowe-background-mobile.webp");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-
-      .zaawansowane {
-        background-image: url("../../../images/zaawansowane-background-mobile.webp");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-
-      .portfolio {
-        background-image: url("../../../images/portfolio-background-mobile.webp");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
+    .container .wrapper .myService-container img {
+      width: auto;
+      height: 100%;
     }
   }
 }
 
 @media (max-width: 768px) {
   .myService {
-    .container .wrapper {
-      .one-page {
-        background-position: center;
-      }
-
-      .multi-page {
-        background-position: center;
-      }
-
-      .firmowe {
-        background-position: center;
-      }
-
-      .zaawansowane {
-        background-position: center;
-      }
-
-      .portfolio {
-        background-position: center;
-      }
-    }
     .container .wrapper {
       .myService-title {
         h2 {
@@ -392,6 +385,7 @@
         font-size: 1.3rem;
       }
     }
+
     .myService-container .myService-cart .content {
       h3 {
         font-size: 1.5rem;
@@ -403,5 +397,12 @@
         margin-bottom: 40px;
       }
     }
+  }
+}
+
+@media (max-width: 492px) {
+  .myService .container .wrapper .myService-container img {
+    width: 100%;
+    height: 100%;
   }
 }
