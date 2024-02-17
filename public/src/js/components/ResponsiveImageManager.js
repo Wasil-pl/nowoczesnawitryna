@@ -10,14 +10,16 @@ class ResponsiveImageManager {
   }
 
   addImages(src, alt, id) {
-    const thisResponsiveImageManager = this;
+    const existingImage = document.getElementById(id);
 
-    const img = document.createElement("img");
-    img.src = src;
-    img.id = id;
-    img.alt = alt;
+    if (!existingImage) {
+      const img = document.createElement("img");
+      img.src = src;
+      img.id = id;
+      img.alt = alt;
 
-    thisResponsiveImageManager.container.appendChild(img);
+      this.container.appendChild(img);
+    }
   }
 
   chooseImage(screenWidth) {
@@ -35,8 +37,6 @@ class ResponsiveImageManager {
         selectedImages.push(image);
       }
     });
-
-    console.log("selectedImages:", selectedImages);
 
     selectedImages.forEach((image) => {
       this.addImages(image.src, image.alt, image.id);
