@@ -1,262 +1,60 @@
-/* eslint-disable no-undef */
-import { API_URL, emailRegex } from "./settings.js";
+import Accordion from "./components/Accordion.js";
+import ContactForm from "./components/ContactForm.js";
+import ResponsiveImageManager from "./components/ResponsiveImageManager.js";
+import Scroll from "./components/Scrool.js";
+import showSection from "./components/SectionDisplay.js";
+import TypingWriter from "./components/TypingWriter.js";
+import { myServicePictures } from "./settings.js";
 
 const app = {
   initContactForm: function () {
     const thisApp = this;
 
-    thisApp.contactForm = document.querySelector(".contact-form");
-    thisApp.contactForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      if (thisApp.isValid()) {
-        thisApp.sendEmail();
-      }
-    });
+    thisApp.contactForm = new ContactForm();
   },
 
-  isValid: function () {
-    const title = document.querySelector("#inputTitle").value;
-    const email = document.querySelector("#inputEmail").value;
-    const message = document.querySelector("#inputTextArea").value;
+  initTypewriter: function () {
+    const thisApp = this;
 
-    if (title === "") {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Proszę wpisać tytuł wiadomości",
-      });
-
-      return false;
-    }
-
-    if (email === "") {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Proszę wpisać adres email",
-      });
-
-      return false;
-    }
-
-    if (!emailRegex.test(email)) {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Proszę wpisać poprawny adres email",
-      });
-
-      return false;
-    }
-
-    if (message === "") {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Proszę wpisać treść wiadomości",
-      });
-
-      return false;
-    }
-
-    return true;
+    thisApp.typingWriter = new TypingWriter();
   },
 
-  sendEmail: function () {
-    const data = {
-      title: document.querySelector("#inputTitle").value,
-      email: document.querySelector("#inputEmail").value,
-      message: document.querySelector("#inputTextArea").value,
-    };
+  initScroll: function () {
+    const thisApp = this;
 
-    fetch(`${API_URL}/email`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then((response) => {
-      if (response.status === 200) {
-        document.querySelector("#inputTitle").value = "";
-        document.querySelector("#inputEmail").value = "";
-        document.querySelector("#inputTextArea").value = "";
-        return Swal.fire({
-          icon: "success",
-          title: "Wysłano",
-          text: "Wiadomość została wysłana",
-        });
-      } else {
-        return Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "Something went wrong",
-        });
-      }
-    });
+    thisApp.scroll = new Scroll();
   },
 
-  typeWriter: function () {
-    const descriptionContainer = document.getElementById("description");
+  initAccordion: function () {
+    const thisApp = this;
 
-    if (!descriptionContainer) {
-      return;
-    }
-
-    const skills = [
-      "projektowaniu i programowaniu stron internetowych",
-      "tworzeniu responsywnych i z optymalizowanych stron internetowych",
-      "realizowaniu indywidualnych projektów webowych",
-      "integracji baz danych",
-      "automatyzacji i testowaniu",
-    ];
-    let skillIndex = 0;
-    let isDeleting = false;
-    let descriptionIndex = 0;
-
-    function typeWriterSkills() {
-      let currentPart = `<span class="skill-style">${skills[
-        skillIndex
-      ].substring(0, descriptionIndex)}</span>`;
-
-      if (isDeleting) {
-        if (descriptionIndex > 0) {
-          descriptionIndex--;
-          setTimeout(typeWriterSkills, 50); // Szybkość usuwania
-        } else {
-          isDeleting = false;
-          skillIndex = (skillIndex + 1) % skills.length;
-          setTimeout(typeWriterSkills, 500); // Opóźnienie przed pisaniem nowego słowa
-        }
-      } else {
-        if (descriptionIndex < skills[skillIndex].length) {
-          descriptionIndex++;
-          setTimeout(typeWriterSkills, 100); // Szybkość pisania
-        } else {
-          isDeleting = true;
-          setTimeout(typeWriterSkills, 1000); // Opóźnienie przed usunięciem
-        }
-      }
-
-      descriptionContainer.innerHTML = currentPart;
-    }
-
-    typeWriterSkills();
+    thisApp.accordion = new Accordion();
   },
 
-  scroll: function () {
-    window.addEventListener("scroll", () => {
-      const elements = document.querySelectorAll(".animate");
-      const elementRight = document.querySelectorAll(".animate-right");
-      const elementLeft = document.querySelectorAll(".animate-left");
+  initShowSection: function () {
+    const thisApp = this;
 
-      const offset = 300;
-      const windowHeight = window.innerHeight;
-
-      elements.forEach((element) => {
-        const elementTop = element.getBoundingClientRect().top;
-
-        if (elementTop < windowHeight) {
-          element.classList.add("fade-in");
-        }
-      });
-
-      elementRight.forEach((element) => {
-        const elementTop = element.getBoundingClientRect().top;
-
-        if (elementTop < windowHeight - offset) {
-          element.classList.add("fade-in-right");
-        }
-      });
-
-      elementLeft.forEach((element) => {
-        const elementTop = element.getBoundingClientRect().top;
-
-        if (elementTop < windowHeight - offset) {
-          element.classList.add("fade-in-left");
-        }
-      });
-    });
+    thisApp.showSection = new showSection();
   },
 
-  accordion: function () {
-    const accordionItems = document.querySelectorAll(".accordion");
-    const container = document.querySelector(".myService-container");
+  initResponsiveImage: function () {
+    const thisApp = this;
 
-    const sectionNames = [
-      "one-page",
-      "multi-page",
-      "firmowe",
-      "portfolio",
-      "zaawansowane",
-    ];
-
-    accordionItems.forEach((item) => {
-      item.addEventListener("click", () => {
-        // Check if the item already has the "active" class
-        const isActive = item.classList.contains("active");
-        const hasSectionName = sectionNames.some((sectionName) =>
-          item.classList.contains(sectionName)
-        );
-
-        const h3Element = item.querySelector("h3");
-        const sectionNameWithNumber = h3Element.textContent.trim();
-        const sectionName = sectionNameWithNumber.slice(2).toLowerCase();
-
-        // Remove "active" class from all accordion items
-        accordionItems.forEach((otherItem) => {
-          if (otherItem !== item) {
-            otherItem.classList.remove("active");
-          }
-
-          sectionNames.forEach((name) => {
-            if (!otherItem.classList.contains(name)) {
-              container.classList.remove(name);
-            }
-          });
-        });
-
-        // Add "active" class only if it wasn't already active
-        if (!isActive) {
-          item.classList.add("active");
-        }
-
-        if (!hasSectionName) {
-          container.classList.add(sectionName);
-        }
-      });
-    });
-  },
-
-  showSection: function () {
-    const section = document.getElementById("mySkills");
-
-    if (!section) {
-      return;
-    }
-
-    const button = document.getElementById("showSection");
-    const buttonName = button.innerHTML;
-
-    button.addEventListener("click", () => {
-      button.innerHTML = button.innerHTML === buttonName ? "Ukryj" : buttonName;
-
-      if (section.style.maxHeight) {
-        section.style.maxHeight = null;
-      } else {
-        section.style.maxHeight = section.scrollHeight + "px";
-      }
-    });
+    thisApp.responsiveImage = new ResponsiveImageManager(
+      ".myService-container",
+      myServicePictures
+    );
   },
 
   init: function () {
     const thisApp = this;
 
     thisApp.initContactForm();
-    thisApp.typeWriter();
-    thisApp.scroll();
-    thisApp.accordion();
-    thisApp.showSection();
+    thisApp.initTypewriter();
+    thisApp.initScroll();
+    thisApp.initAccordion();
+    thisApp.initShowSection();
+    thisApp.initResponsiveImage();
   },
 };
 
