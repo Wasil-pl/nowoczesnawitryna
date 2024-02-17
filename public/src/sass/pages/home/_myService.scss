@@ -2,9 +2,8 @@
   position: relative;
   background-size: cover;
   padding-bottom: 120px;
-  background-image: url("../../../images/shutterstock_4k.webp");
+  background-image: url("../../../images/shutterstock_4k-blurr.webp");
   background-position: right 50% top 0;
-  background-attachment: fixed;
 
   &::before {
     content: "";
@@ -223,21 +222,21 @@
   }
 }
 
-@media (max-width: 2600px) {
-  .myService {
-    background-image: url("../../../images/shutterstock_2k.webp");
-  }
-}
+// @media (max-width: 2600px) {
+//   .myService {
+//     background-image: url("../../../images/shutterstock_2k-blurr.webp");
+//   }
+// }
 
 @media (max-width: 1920px) {
   .myService {
-    background-image: url("../../../images/shutterstock_1920.webp");
+    background-image: url("../../../images/shutterstock_2k-blurr.webp");
   }
 }
 
 @media (max-width: 1600px) {
   .myService {
-    background-image: url("../../../images/shutterstock_1600.webp");
+    background-image: url("../../../images/shutterstock_1920-blurr.webp");
     background-position: right 50% top 0;
   }
 }
@@ -256,7 +255,7 @@
 
 @media (max-width: 1200px) {
   .myService {
-    background-image: url("../../../images/shutterstock_1280.webp");
+    background-image: url("../../../images/shutterstock_1600-blurr.webp");
     background-position: right 50% top 0;
 
     .container .wrapper .myService-container {
@@ -314,7 +313,7 @@
 
 @media (max-width: 992px) {
   .myService {
-    background-image: url("../../../images/shutterstock_mobile_920.webp");
+    background-image: url("../../../images/shutterstock_mobile_920-blurr.webp");
     background-attachment: scroll;
 
     .container .wrapper .myService-container img {
