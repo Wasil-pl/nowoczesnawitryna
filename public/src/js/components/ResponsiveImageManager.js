@@ -6,6 +6,10 @@ class ResponsiveImageManager {
       document.querySelector(containerSelector);
     thisResponsiveImageManager.images = images;
 
+    if (!thisResponsiveImageManager.container) {
+      return;
+    }
+
     thisResponsiveImageManager.init();
   }
 
