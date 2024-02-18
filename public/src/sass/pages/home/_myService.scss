@@ -1,9 +1,8 @@
 .myService {
   position: relative;
   background-size: cover;
-  padding-bottom: 120px;
-  background-image: url("../../../images/shutterstock_4k-blurr.webp");
-  background-position: right 50% top 0;
+  background-image: url("../../../images/tekstura-ciemna-betonowa-podloga.webp");
+  background-position: bottom 0 right 0;
 
   &::before {
     content: "";
@@ -14,6 +13,16 @@
     height: 100%;
     background: $color-dark;
     opacity: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
 
   .container {
@@ -46,8 +55,8 @@
         display: flex;
         flex-wrap: nowrap;
         position: relative;
-        border: 5px solid $color-primary;
-        border-radius: 5px;
+        z-index: 2;
+        box-shadow: 8px 8px 15px 3px rgb(18 18 18);
 
         img {
           width: 100%;
@@ -224,22 +233,15 @@
   }
 }
 
-// @media (max-width: 2600px) {
-//   .myService {
-//     background-image: url("../../../images/shutterstock_2k-blurr.webp");
-//   }
-// }
-
-@media (max-width: 1920px) {
+@media (max-width: 2600px) {
   .myService {
-    background-image: url("../../../images/shutterstock_2k-blurr.webp");
+    background-image: url("../../../images/tekstura-ciemna-betonowa-podloga-2k.webp");
   }
 }
 
 @media (max-width: 1600px) {
   .myService {
-    background-image: url("../../../images/shutterstock_1920-blurr.webp");
-    background-position: right 50% top 0;
+    background-image: url("../../../images/tekstura-ciemna-betonowa-podloga-1600.webp");
   }
 }
 
@@ -257,9 +259,6 @@
 
 @media (max-width: 1200px) {
   .myService {
-    background-image: url("../../../images/shutterstock_1600-blurr.webp");
-    background-position: right 50% top 0;
-
     .container .wrapper .myService-container {
       flex-direction: column;
       max-width: 750px;
@@ -315,8 +314,7 @@
 
 @media (max-width: 992px) {
   .myService {
-    background-image: url("../../../images/shutterstock_mobile_920-blurr.webp");
-    background-attachment: scroll;
+    background-image: url("../../../images/tekstura-ciemna-betonowa-podloga-mobile.webp");
 
     .container .wrapper .myService-container img {
       width: auto;
