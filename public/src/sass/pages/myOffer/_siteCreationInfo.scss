@@ -98,6 +98,8 @@
   .site-creation-info {
     .wrapper {
       .benefits-container {
+        padding: 0;
+
         .benefit {
           flex-direction: column;
           max-height: none;
@@ -117,6 +119,7 @@
 
           .text {
             padding: 50px 0;
+            text-align: center;
           }
         }
 
