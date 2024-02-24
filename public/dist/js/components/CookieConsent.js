@@ -1,7 +1,7 @@
 class CookiesConsent {
-  constructor(cookieConsent) {
+  constructor(cookieContent) {
     const thisCookiesConsent = this;
-    thisCookiesConsent.cookieConsent = cookieConsent;
+    thisCookiesConsent.cookieContent = cookieContent;
 
     this.initialize();
   }
@@ -88,13 +88,13 @@ class CookiesConsent {
   updateBannerContent(banner) {
     banner.innerHTML = `
       <div class="cookie-textBox">
-        <p class="title">${this.cookieConsent.main.title}</p>
-        <p class="descryption">${this.cookieConsent.main.description}</p>
+        <p class="title">${this.cookieContent.main.title}</p>
+        <p class="descryption">${this.cookieContent.main.description}</p>
       </div>
       <div class="cookies-buttons">
-        <button id='cookie-yes'>${this.cookieConsent.main.accept}</button>
-        <button id='cookie-no'>${this.cookieConsent.main.reject}</button>
-        <button id='cookie-settings'>${this.cookieConsent.main.changeSettings}</button>
+        <button id='cookie-yes'>${this.cookieContent.main.accept}</button>
+        <button id='cookie-no'>${this.cookieContent.main.reject}</button>
+        <button id='cookie-settings'>${this.cookieContent.main.changeSettings}</button>
       </div>
     `;
   }
@@ -109,14 +109,14 @@ class CookiesConsent {
       <div class="cookies-checkBox">
         <label>
           <input type="checkbox" name="analytics" value="analytics">
-          ${this.cookieConsent.purposes.analytics}
+          ${this.cookieContent.purposes.analytics}
         </label>
         <label>
           <input type="checkbox" name="necessary" value="necessary" checked disabled>
-          ${this.cookieConsent.purposes.necessary}
+          ${this.cookieContent.purposes.necessary}
         </label>
       </div>
-      <div class="cookies-buttons"><button id="confirm-choice">${this.cookieConsent.settings.save}</button></div>
+      <div class="cookies-buttons"><button id="confirm-choice">${this.cookieContent.settings.save}</button></div>
     `;
     banner.innerHTML = ""; // Usuwamy poprzednią zawartość banera
     banner.appendChild(settingsContainer);
