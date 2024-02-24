@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookie Banner</title>
+<style>
+    #cookie-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #cookie-banner button {
+        margin: 5px;
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    #cookie-content {
+        display: none;
+        background-color: #444;
+        color: #fff;
+        padding: 10px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div id="cookie-banner">
+    <p>
+        Ta strona używa plików cookie. Zgadzasz się na ich użycie?
+    </p>
+    <button id="accept-btn">Akceptuj</button>
+    <button id="reject-btn">Odrzuć</button>
+    <button id="choose-btn">Wybierz</button>
+</div>
+
+<script>
+    const acceptBtn = document.getElementById('accept-btn');
+    const rejectBtn = document.getElementById('reject-btn');
+    const chooseBtn = document.getElementById('choose-btn');
+    const cookieBanner = document.getElementById('cookie-banner');
+
+    acceptBtn.addEventListener('click', () => {
+        // Tutaj można umieścić kod akceptacji plików cookie
+        hideBanner();
+    });
+
+    rejectBtn.addEventListener('click', () => {
+        // Tutaj można umieścić kod odrzucenia plików cookie
+        hideBanner();
+    });
+
+    chooseBtn.addEventListener('click', () => {
+        showCookieOptions();
+    });
+
+    function showCookieOptions() {
+        cookieBanner.innerHTML = `
+            <p>Wybierz preferowane opcje dotyczące plików cookie:</p>
+            <label>
+                <input type="checkbox" name="necessary-cookies" checked disabled>
+                Pliki cookie niezbędne do działania strony
+            </label><br>
+            <label>
+                <input type="checkbox" name="other-cookies">
+                Inne pliki cookie
+            </label>
+            <button id="confirm-choice">Potwierdź</button>
+        `;
+        document.getElementById('confirm-choice').addEventListener('click', () => {
+            // Tutaj można umieścić kod potwierdzający wybór plików cookie
+            hideBanner();
+        });
+    }
+
+    function hideBanner() {
+        cookieBanner.style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

@@ -111,6 +111,61 @@ button {
   }
 }
 
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+
+#cookie-settings-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+#purposes {
+  text-align: left;
+}
+
+#purposes input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+#purposes label {
+  margin-right: 15px;
+}
+
+#cookie-close,
+#cookie-save {
+  margin-top: 10px;
+}
+
+#cookie-close,
+#cookie-save,
+#cookie-settings {
+  cursor: pointer;
+}
+
+#purposes {
+  text-align: left;
+  margin-top: 10px; /* Dodaj odstęp od przycisków */
+}
+
+#purposes input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+#purposes label {
+  margin-right: 15px;
+}
+
 @media (max-width: 1200px) {
   .background-text {
     font-size: 4.5rem;
