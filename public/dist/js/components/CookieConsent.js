@@ -16,7 +16,7 @@ class CookiesConsent {
     } else {
       // Jeśli użytkownik wyraził już zgodę na używanie ciasteczek i jest zapis
       // cookie-consent=true, nie wywołujemy banera, tylko aktualizujemy preferencje zgody
-      this.updateAnalyticsConsent();
+      this.updateAnalyticsConsent("granted");
     }
   }
 
@@ -33,6 +33,7 @@ class CookiesConsent {
   }
 
   updateAnalyticsConsent(data) {
+    console.log("data:", data);
     // Aktualizacja preferencji zgody na używanie ciasteczek za pomocą funkcji gtag
     // eslint-disable-next-line no-undef
     gtag("consent", "update", {
