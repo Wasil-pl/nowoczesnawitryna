@@ -105,27 +105,3 @@ export const myServicePictures = [
     maxWidth: 992,
   },
 ];
-
-export const cookieContent = {
-  main: {
-    title: "Życie jest lepsze z ciasteczkami",
-    description:
-      "Większość osób zgodziła by się, że ciasteczka sprawiają, że życie jest lepsze. Ja również. Używam ich do analizy statystyk, aby poprawić jakość mojej strony. Jeśli jednak nie lubisz ciasteczek, możesz je wyłączyć klikając w przycisk 'odrzuć'.",
-    accept: "Zgoda",
-    reject: "Odrzuć",
-    changeSettings: "Zmień ustawienia",
-  },
-
-  settings: {
-    title: "Ustawienia ciasteczek",
-    description:
-      "Wybierz, które ciasteczka chcesz zaakceptować. Twoje wybory zostaną zachowane na rok.",
-    close: "Zamknij",
-    save: "Zapisz",
-  },
-
-  purposes: {
-    analytics: "Analiza statystyk",
-    necessary: "ciasteczka niezbędne do działania strony",
-  },
-};

@@ -1,0 +1,126 @@
+#CybotCookiebotDialog {
+  background-color: $color-background-dark !important;
+
+  .CybotCookiebotDialogContentWrapper {
+    #CybotCookiebotDialogTabContent {
+      .CybotCookiebotDialogTabPanel {
+        #CybotCookiebotDialogBodyContentTitle {
+          color: $color-primary;
+        }
+      }
+    }
+
+    #CybotCookiebotDialogFooter {
+      #CybotCookiebotDialogBodyButtonsWrapper {
+        button {
+          display: block;
+          background-color: $color-primary;
+          border: $color-primary 1px solid;
+          border-radius: 5px;
+          padding: 10px 20px;
+          color: $color-dark;
+          font-size: 0.8rem !important;
+          text-transform: uppercase !important;
+          font-weight: 400;
+          cursor: pointer;
+          transition: $transition;
+          box-shadow: 8px 8px 24px 0px rgb(20, 20, 20);
+
+          &:hover {
+            transform: translateY(-3px);
+            background-color: rgba(0, 0, 0, 0);
+            border: $color-primary 1px solid;
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.CookiebotWidget-open {
+  #CookiebotWidget-widgetContent {
+    background-color: $color-background-dark !important;
+    color: $color-light !important;
+
+    .CookiebotWidget-contents {
+      .CookiebotWidget-header {
+        strong {
+          color: $color-primary;
+        }
+
+        .CookiebotWidget-close svg {
+          fill: $color-primary;
+        }
+      }
+
+      .CookiebotWidget-body {
+        .CookiebotWidget-consent-details {
+          .CookiebotWidget-show-consent-details {
+            color: $color-primary !important;
+          }
+        }
+
+        .CookiebotWidget-consents-list {
+          .CookiebotWidget-state {
+            color: $color-primary !important;
+          }
+
+          ul li {
+            color: $color-light !important;
+
+            .Cookiebotwidget-consent-icon {
+              svg {
+                fill: $color-primary;
+              }
+            }
+          }
+        }
+      }
+
+      #CookiebotWidget-buttons {
+        #CookiebotWidget-btn-withdraw {
+          background-color: $color-primary;
+          border: $color-primary 1px solid;
+          border-radius: 5px;
+          padding: 10px 20px;
+          color: $color-dark;
+          font-size: 0.8rem !important;
+          text-transform: uppercase !important;
+          font-weight: 400;
+          cursor: pointer;
+          transition: $transition;
+          box-shadow: 8px 8px 24px 0px rgb(20, 20, 20);
+
+          &:hover {
+            transform: translateY(-3px);
+            background-color: rgba(0, 0, 0, 0);
+            border: $color-primary 1px solid;
+            color: $color-primary;
+          }
+        }
+
+        #CookiebotWidget-btn-change {
+          background-color: $color-primary;
+          border: $color-primary 1px solid;
+          border-radius: 5px;
+          padding: 10px 20px;
+          color: $color-dark;
+          font-size: 0.8rem !important;
+          text-transform: uppercase !important;
+          font-weight: 400;
+          cursor: pointer;
+          transition: $transition;
+          box-shadow: 8px 8px 24px 0px rgb(20, 20, 20);
+
+          &:hover {
+            transform: translateY(-3px);
+            background-color: rgba(0, 0, 0, 0);
+            border: $color-primary 1px solid;
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+}

@@ -131,6 +131,8 @@
 @media (max-width: 1000px) {
   .header {
     background-image: url("../../../images/oferta/background_mobile.webp");
+    background-attachment: scroll;
+
     .title_box {
       left: 50%;
       top: 50%;

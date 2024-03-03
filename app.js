@@ -20,6 +20,10 @@ app.get("/oferta", function (req, res) {
   res.sendFile(path.join(__dirname + "/public/dist/oferta.html"));
 });
 
+app.get("/polityka-prywatnosci", function (req, res) {
+  res.sendFile(path.join(__dirname + "/public/dist/politykaPrywatnosci.html"));
+});
+
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname + "/public/dist/index.html"));
 });
