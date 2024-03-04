@@ -1,6 +1,6 @@
 .header {
   height: 700px;
-  background-image: url("../../../images/oferta/background_4k.webp");
+  background-image: url("../../../images/blog/biurko_z_laptopem_4k.webp");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -78,7 +78,7 @@
       letter-spacing: 2px;
       margin-top: 1.5rem;
 
-      .skill-style {
+      #description-blog {
         color: $color-primary;
       }
     }
@@ -113,13 +113,13 @@
 
 @media (max-width: 2048px) {
   .header {
-    background-image: url("../../../images/oferta/background_2k.webp");
+    background-image: url("../../../images/blog/biurko_z_laptopem_2k.webp");
   }
 }
 
 @media (max-width: 1600px) {
   .header {
-    background-image: url("../../../images/oferta/background_2k.webp");
+    background-image: url("../../../images/blog/biurko_z_laptopem_1600.webp");
     .navbar {
       .navbar-brand img {
         width: 100px;
@@ -130,7 +130,7 @@
 
 @media (max-width: 1000px) {
   .header {
-    background-image: url("../../../images/oferta/background_mobile.webp");
+    background-image: url("../../../images/blog/biurko_z_laptopem_mobile.webp");
     background-attachment: scroll;
 
     .title_box {
@@ -162,9 +162,7 @@
           right: 0;
           bottom: 0;
           left: 0;
-          background-image: url("../../../images/oferta/background_collapse.webp");
-          background-position: center;
-          background-size: cover;
+          background-image: url("../../../images/blog/biurko_z_laptopem_collapse.webp");
           border-radius: 5px;
           opacity: 70%;
         }

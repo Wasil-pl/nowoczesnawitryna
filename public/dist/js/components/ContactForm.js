@@ -12,6 +12,11 @@ class ContactForm {
     const thisForm = this;
 
     thisForm.contactForm = document.querySelector(".contact-form");
+
+    if (!thisForm.contactForm) {
+      return;
+    }
+
     thisForm.contactForm.addEventListener("submit", function (event) {
       event.preventDefault();
 

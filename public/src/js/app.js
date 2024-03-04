@@ -1,4 +1,8 @@
-import { myServicePictures } from "./settings.js";
+import {
+  blogDescriptions,
+  myServiceDescriptions,
+  myServicePictures,
+} from "./settings.js";
 import Accordion from "./components/Accordion.js";
 import ContactForm from "./components/ContactForm.js";
 import ResponsiveImageManager from "./components/ResponsiveImageManager.js";
@@ -16,7 +20,31 @@ const app = {
   initTypewriter: function () {
     const thisApp = this;
 
-    thisApp.typingWriter = new TypingWriter();
+    const descryptionContainer = document.getElementById("description-main");
+
+    if (!descryptionContainer) {
+      return;
+    }
+
+    thisApp.typingWriter = new TypingWriter(
+      descryptionContainer,
+      myServiceDescriptions
+    );
+  },
+
+  initTypewriterBlog: function () {
+    const thisApp = this;
+
+    const descryptionContainer = document.getElementById("description-blog");
+
+    if (!descryptionContainer) {
+      return;
+    }
+
+    thisApp.typingWriterBlog = new TypingWriter(
+      descryptionContainer,
+      blogDescriptions
+    );
   },
 
   initScroll: function () {
@@ -51,6 +79,7 @@ const app = {
 
     thisApp.initContactForm();
     thisApp.initTypewriter();
+    thisApp.initTypewriterBlog();
     thisApp.initScroll();
     thisApp.initAccordion();
     thisApp.initShowSection();

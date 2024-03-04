@@ -105,3 +105,18 @@ export const myServicePictures = [
     maxWidth: 992,
   },
 ];
+
+export const myServiceDescriptions = [
+  "projektowaniu i programowaniu stron internetowych",
+  "tworzeniu responsywnych i z optymalizowanych stron internetowych",
+  "realizowaniu indywidualnych projektów webowych",
+  "integracji baz danych",
+  "automatyzacji i testowaniu",
+];
+
+export const blogDescriptions = [
+  "Witaj na moim blogu!",
+  "Znajdziesz tu wiele ciekawych artykułów, które pomogą Ci w rozwoju",
+  "Są tu moje inspiracje, przemyślenia i doświadczenia",
+  "Zapraszam do lektury!",
+];

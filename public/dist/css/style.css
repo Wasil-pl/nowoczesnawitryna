@@ -557,7 +557,7 @@ template {
   letter-spacing: 2px;
   margin-top: 1.5rem;
 }
-.header .title_box .subtitle .skill-style {
+.header .title_box .subtitle #description-main {
   color: #fed7a5;
 }
 
