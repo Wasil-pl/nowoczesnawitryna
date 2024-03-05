@@ -1,91 +1,9 @@
 .header {
   height: 700px;
   background-image: url("../../../images/oferta/background_4k.webp");
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  margin: auto;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 100px;
 
   &::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: $color-dark;
     opacity: 70%;
-  }
-
-  .navbar {
-    .navbar-brand img {
-      width: 150px;
-    }
-
-    .nav-item {
-      text-transform: uppercase;
-      text-shadow: 0 0 10px rgba($color-dark, 0.5);
-      letter-spacing: 2px;
-      margin-right: 1rem;
-
-      a {
-        color: $color-light;
-        font-size: 1.2rem;
-        font-weight: 400;
-        transition: all 0.3s ease-in-out;
-
-        &:hover {
-          color: $color-primary;
-        }
-      }
-    }
-  }
-
-  .title_box {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    .welcome-text {
-      color: $color-light;
-    }
-
-    .title {
-      font-family: $font-title;
-      letter-spacing: 10px;
-      color: $color-light;
-      font-size: 5rem;
-      font-weight: 700;
-
-      .first-letter {
-        color: $color-primary;
-        font-size: 6rem;
-      }
-    }
-
-    .subtitle {
-      display: block;
-      color: $color-light;
-      font-size: 1.5rem;
-      letter-spacing: 2px;
-      margin-top: 1.5rem;
-
-      .skill-style {
-        color: $color-primary;
-      }
-    }
-
-    .secondary-subtitle {
-      color: $color-primary;
-    }
   }
 
   .triangle {
@@ -120,11 +38,6 @@
 @media (max-width: 1600px) {
   .header {
     background-image: url("../../../images/oferta/background_2k.webp");
-    .navbar {
-      .navbar-brand img {
-        width: 100px;
-      }
-    }
   }
 }
 
@@ -132,138 +45,24 @@
   .header {
     background-image: url("../../../images/oferta/background_mobile.webp");
     background-attachment: scroll;
-
-    .title_box {
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-
-      .subtitle {
-        font-size: 1.5rem;
-      }
-    }
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .header {
-    .navbar {
-      .navbar-collapse {
-        position: relative;
-        padding: 0 20px;
-        z-index: 1;
-        border-radius: 5px;
-        margin-top: 10px;
-
-        &::after {
-          position: absolute;
-          content: "";
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          background-image: url("../../../images/oferta/background_collapse.webp");
-          background-position: center;
-          background-size: cover;
-          border-radius: 5px;
-          opacity: 70%;
-        }
-
-        &::before {
-          position: absolute;
-          content: "";
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          background: $color-dark;
-          opacity: 70%;
-        }
-
-        & > ul {
-          z-index: 2;
-          position: relative;
-        }
-      }
+    .navbar-expand-lg .navbar-collapse {
     }
   }
 }
 
 @media (max-width: 768px) {
   .header {
-    .navbar {
-      .navbar-brand img {
-        width: 80px;
-      }
-    }
-
-    .title_box {
-      padding-left: 20px;
-
-      .title {
-        font-size: 4rem;
-        letter-spacing: 5px;
-
-        .first-letter {
-          font-size: 5rem;
-        }
-      }
-
-      .subtitle {
-        font-size: 1rem;
-      }
-    }
-
     .triangle {
       height: 70px;
     }
 
     .triangle2 {
       height: 70px;
-    }
-  }
-}
-
-@media (max-width: 500px) {
-  .header {
-    .navbar {
-      .navbar-brand img {
-        width: 60px;
-      }
-    }
-
-    .title_box {
-      .title {
-        font-size: 3rem;
-        letter-spacing: 5px;
-
-        .first-letter {
-          font-size: 4rem;
-        }
-      }
-
-      .subtitle {
-        font-size: 1rem;
-      }
-    }
-  }
-}
-
-@media (max-width: 400px) {
-  .header {
-    .title_box {
-      .title {
-        font-size: 2rem;
-        letter-spacing: 5px;
-
-        .first-letter {
-          font-size: 3rem;
-        }
-      }
-
-      .subtitle {
-        font-size: 1rem;
-      }
     }
   }
 }
