@@ -116,6 +116,14 @@ button {
   }
 }
 
+.active-nav-item {
+  color: $color-primary !important;
+}
+
+.invisible-text {
+  display: none !important;
+}
+
 @media (max-width: 1200px) {
   .background-text {
     font-size: 4.5rem;
