@@ -1,3 +1,62 @@
+#CybotCookiebotDialogNav
+  .CybotCookiebotDialogNavItemLink.CybotCookiebotDialogActive {
+  border-bottom: 1px solid $color-primary !important;
+  color: $color-primary !important;
+}
+
+.CybotCookiebotDialogDetailBodyContentCookieContainerButton {
+  background-color: $color-primary !important;
+  border: $color-primary 1px solid !important;
+  border-radius: 5px !important;
+  color: $color-dark !important;
+}
+
+.CybotCookiebotDialogBodyLevelButtonSlider {
+  background-color: $color-primary !important;
+  border: $color-primary 1px solid !important;
+}
+
+.CybotCookiebotDialogDetailBodyContentCookieProvider {
+  color: $color-primary !important;
+}
+
+.CybotCookiebotDialogDetailBodyContentCookieInfoTitle {
+  color: $color-primary !important;
+}
+
+.CybotCookiebotDialogDetailBodyContentCookieInfoDescription {
+  color: $color-light !important;
+}
+
+.CybotCookiebotDialogTabPanel {
+  color: $color-light !important;
+}
+
+.CybotCookiebotDialogNavItemLink {
+  color: $color-light !important;
+}
+
+.CybotCookiebotDialogDetailBodyContentCookieTypeIntro {
+  color: $color-light !important;
+}
+
+#CybotCookiebotDialogNavDetails {
+  border-bottom: 1px solid #ffffff !important;
+  color: $color-light;
+}
+
+#CybotCookiebotDialogBodyContentText {
+  color: $color-light !important;
+}
+
+.CybotCookiebotDialogBodyLevelButtonDescription {
+  color: $color-light !important;
+}
+
+.CybotCookiebotFader {
+  opacity: 0 !important;
+}
+
 #CybotCookiebotDialog {
   background-color: $color-background-dark !important;
 

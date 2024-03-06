@@ -140,6 +140,10 @@
       }
     }
 
+    #description-no-animation {
+      color: $color-primary;
+    }
+
     .secondary-subtitle {
       color: $color-primary;
     }
@@ -187,12 +191,20 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.99px) {
   .header {
+    .navbar-expand-lg .navbar-collapse {
+      margin-left: 0;
+    }
     .navbar {
+      .nav-item {
+        a {
+          text-align: start;
+        }
+      }
       .first-menu {
         .second-menu {
-          right: -36px;
+          right: -25px;
           left: -20px;
           transform: translateX(0);
           width: unset;
@@ -229,6 +241,12 @@
 @media (max-width: 768px) {
   .header {
     .navbar {
+      .nav-item {
+        a {
+          font-size: 1rem;
+        }
+      }
+
       .navbar-brand img {
         width: 80px;
       }

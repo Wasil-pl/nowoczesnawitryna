@@ -17,15 +17,21 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/oferta", function (req, res) {
-  res.sendFile(path.join(__dirname + "/public/dist/oferta.html"));
+  res.sendFile(path.join(__dirname + "/public/dist/html/oferta.html"));
+});
+
+app.get("/blog", function (req, res) {
+  res.sendFile(path.join(__dirname + "/public/dist/html/blog.html"));
 });
 
 app.get("/polityka-prywatnosci", function (req, res) {
-  res.sendFile(path.join(__dirname + "/public/dist/politykaPrywatnosci.html"));
+  res.sendFile(
+    path.join(__dirname + "/public/dist/html/politykaPrywatnosci.html")
+  );
 });
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname + "/public/dist/index.html"));
+  res.sendFile(path.join(__dirname + "/public/dist/html/index.html"));
 });
 
 let transporter = nodemailer.createTransport({
