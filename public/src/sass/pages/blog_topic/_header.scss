@@ -1,0 +1,61 @@
+.header {
+  height: 630px;
+  background-image: url("../../../images/blog/biurko_z_laptopem_4k.webp");
+
+  &::before {
+    opacity: 70%;
+  }
+
+  .triangle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 65%;
+    height: 100px;
+    background: $color-background-dark;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 0% 0%, 100% 100%, 0% 100%);
+  }
+
+  .triangle2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 35%;
+    height: 100px;
+    background: $color-background-dark;
+    -webkit-clip-path: polygon(0% 100%, 0% 100%, 100% 100%, 100% 0%);
+    clip-path: polygon(0% 100%, 0% 100%, 100% 100%, 100% 0%);
+  }
+}
+
+@media (max-width: 2048px) {
+  .header {
+    background-image: url("../../../images/blog/biurko_z_laptopem_2k.webp");
+  }
+}
+
+@media (max-width: 1600px) {
+  .header {
+    background-image: url("../../../images/blog/biurko_z_laptopem_1600.webp");
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    background-image: url("../../../images/blog/biurko_z_laptopem_mobile.webp");
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    .triangle {
+      height: 70px;
+    }
+
+    .triangle2 {
+      height: 70px;
+    }
+  }
+}

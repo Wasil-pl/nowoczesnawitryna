@@ -10,6 +10,7 @@ const server = app.listen(process.env.PORT || 8000, () => {
   console.log(`Server is running... ${server.address().port}`);
 });
 
+app.use(express.static(path.join(__dirname, "/public/dist/html")));
 app.use(express.static(path.join(__dirname, "/public/dist")));
 app.use(express.static(path.join(__dirname, "/public")));
 app.use(express.urlencoded({ extended: false }));
@@ -22,6 +23,18 @@ app.get("/oferta", function (req, res) {
 
 app.get("/blog", function (req, res) {
   res.sendFile(path.join(__dirname + "/public/dist/html/blog.html"));
+});
+
+app.get("/blog/CMS_vs_strona_pisana_od_podstaw", function (req, res) {
+  res.sendFile(
+    path.join(__dirname + "/public/dist/html/blog_cms_vs_coding.html")
+  );
+});
+
+app.get("/blog/jak_wybrac_najlepszy_hosting_oraz_domene", function (req, res) {
+  res.sendFile(
+    path.join(__dirname + "/public/dist/html/blog_hosting_domena.html")
+  );
 });
 
 app.get("/polityka-prywatnosci", function (req, res) {
