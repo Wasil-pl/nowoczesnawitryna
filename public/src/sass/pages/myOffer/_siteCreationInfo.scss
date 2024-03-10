@@ -59,6 +59,14 @@
             color: $color-light;
             text-shadow: 0 0 10px rgba($color-dark, 0.5);
             margin-bottom: 1rem;
+
+            strong {
+              color: $color-primary;
+            }
+
+            & > a:hover {
+              color: $color-primary;
+            }
           }
         }
       }

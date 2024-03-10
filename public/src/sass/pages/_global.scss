@@ -124,6 +124,10 @@ button {
   display: none !important;
 }
 
+.hidden-topic {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   .background-text {
     font-size: 4.5rem;
