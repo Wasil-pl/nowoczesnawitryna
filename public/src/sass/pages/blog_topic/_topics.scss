@@ -125,6 +125,12 @@
             margin-bottom: 20px;
           }
         }
+
+        .subtitle {
+          &:before {
+            width: 100%;
+          }
+        }
       }
     }
   }

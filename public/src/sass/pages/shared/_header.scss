@@ -208,6 +208,7 @@
           left: -20px;
           transform: translateX(0);
           width: unset;
+          display: none;
         }
       }
       .navbar-collapse {
@@ -314,10 +315,6 @@
         .first-letter {
           font-size: 3rem;
         }
-      }
-
-      .subtitle {
-        font-size: 0.8rem;
       }
     }
   }
