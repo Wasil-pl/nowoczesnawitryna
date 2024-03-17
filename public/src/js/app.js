@@ -9,6 +9,7 @@ import ResponsiveImageManager from "./components/ResponsiveImageManager.js";
 import Scroll from "./components/Scrool.js";
 import showSection from "./components/SectionDisplay.js";
 import TypingWriter from "./components/TypingWriter.js";
+import ServiceActivation from "./components/ServiceActivation.js";
 
 const app = {
   initContactForm: function () {
@@ -53,6 +54,12 @@ const app = {
     thisApp.scroll = new Scroll();
   },
 
+  initService: function () {
+    const thisApp = this;
+
+    thisApp.serviceActivation = new ServiceActivation();
+  },
+
   initAccordion: function () {
     const thisApp = this;
 
@@ -81,6 +88,7 @@ const app = {
     thisApp.initTypewriter();
     thisApp.initTypewriterBlog();
     thisApp.initScroll();
+    thisApp.initService();
     thisApp.initAccordion();
     thisApp.initShowSection();
     thisApp.initResponsiveImage();

@@ -9,7 +9,8 @@ class Accordion {
     const thisAccordion = this;
 
     thisAccordion.accordionItems = document.querySelectorAll(".accordion");
-    thisAccordion.container = document.querySelector(".myService-container");
+    thisAccordion.container_html = document.getElementById("service-html");
+    thisAccordion.container_cms = document.getElementById("service-cms");
 
     const sectionNames = [
       "one-page",
@@ -17,6 +18,11 @@ class Accordion {
       "firmowe",
       "portfolio",
       "zaawansowane",
+      "wordpress-one-page",
+      "wordpress-multi-page",
+      "wordpress-sklep",
+      "wordpress-firmowe",
+      "wordpress-zaawansowane",
     ];
 
     thisAccordion.accordionItems.forEach((item) => {
@@ -29,7 +35,11 @@ class Accordion {
 
         const h3Element = item.querySelector("h3");
         const sectionNameWithNumber = h3Element.textContent.trim();
-        const sectionName = sectionNameWithNumber.slice(2).toLowerCase();
+        let sectionName = sectionNameWithNumber.slice(2).toLowerCase();
+
+        if (sectionName.includes("wordpress")) {
+          sectionName = sectionName.replace(" ", "-");
+        }
 
         // Remove "active" class from all accordion items
         thisAccordion.accordionItems.forEach((otherItem) => {
@@ -39,7 +49,13 @@ class Accordion {
 
           sectionNames.forEach((name) => {
             if (!otherItem.classList.contains(name)) {
-              thisAccordion.container.classList.remove(name);
+              if (thisAccordion.container_html) {
+                thisAccordion.container_html.classList.remove(name);
+              }
+
+              if (thisAccordion.container_cms) {
+                thisAccordion.container_cms.classList.remove(name);
+              }
             }
           });
         });
@@ -49,8 +65,18 @@ class Accordion {
           item.classList.add("active");
         }
 
-        if (!hasSectionName) {
-          thisAccordion.container.classList.add(sectionName);
+        // Add section name to the container
+
+        if (thisAccordion.container_html) {
+          if (!hasSectionName) {
+            thisAccordion.container_html.classList.add(sectionName);
+          }
+        }
+
+        if (thisAccordion.container_cms) {
+          if (!hasSectionName) {
+            thisAccordion.container_cms.classList.add(sectionName);
+          }
         }
       });
     });

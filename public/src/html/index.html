@@ -247,84 +247,209 @@
         <div class="myService-title">
           <h2>Tworzę strony i aplikacje internetowe typu: </h2>
         </div>
-        <div class="myService-container animate one-page">
-          <div class="myService-cart accordion active">
-            <div class="cart-header">
-              <h3><span class="number">1</span> One-Page</h3>
+
+        <div class="myService-buttons">
+          <p class="button-myService active-service" id="html">
+            Strony tworzone od podstaw
+          </p>
+          <p class="button-myService" id="cms">
+            Strony oparte na CMS i szablonach
+          </p>
+        </div>
+
+        <div class="myService-explanation">
+          <p class="myService-descryption html active-service">
+            Strony tworzone od podstaw to rozwiązanie dla tych, którzy cenią sobie indywidualne podejście, unikalny
+            design.
+            <br>Niestety, są zazwyczja droższe i czasochłonne, ale za to oferują pełną swobodę w kreowaniu wyglądu i
+            funkcjonalności strony.
+            <br>Więcej o różnicach możesz przeczytać w moim artykule <strong><a
+                href="/blog/CMS_vs_strona_pisana_od_podstaw">CMS vs strona pisana od podstaw</a></strong>.
+          </p>
+
+          <p class="myService-descryption cms">
+            Strony oparte na CMS i szablonach to rozwiązanie dla tych, którzy cenią sobie szybkość i niskie koszty. Są
+            to strony, które
+            korzystają z gotowych szablonów, co pozwala na szybkie i tanie stworzenie strony. Niestety, są one mniej
+            unikalne i
+            mniej elastyczne.
+            Więcej o różnicach możesz przeczytać w moim artykule <strong><a
+                href="/blog/CMS_vs_strona_pisana_od_podstaw">CMS vs strona pisana od podstaw</a></strong>.
+          </p>
+        </div>
+
+        <div class="myService-wrapper service-html active-service html">
+          <div class="myService-container animate one-page" id="service-html">
+            <div class="myService-cart accordion active">
+              <div class="cart-header">
+                <h3><span class="number">1</span> One-Page</h3>
+              </div>
+              <div class="content">
+                <ul>
+                  <li>Dynamiczne i zwięzłe strony, doskonałe dla tych, którzy chcą szybko i efektywnie przekazać
+                    kluczowe
+                    informacje, eliminując konieczność nawigacji po dodatkowych podstronach.</li>
+                  <li>Idealne dla stron wizytówek, landing page'ów, stron promocyjnych itp.</li>
+                  <li>Zapewniają wysoką szybkość ładowania, prostotę obsługi i atrakcyjny wygląd.</li>
+                </ul>
+                <button type="button" onclick="location.href='/oferta'">
+                  Zobacz szczegóły </button>
+              </div>
             </div>
-            <div class="content">
-              <ul>
-                <li>Dynamiczne i zwięzłe strony, doskonałe dla tych, którzy chcą szybko i efektywnie przekazać kluczowe
-                  informacje, eliminując konieczność nawigacji po dodatkowych podstronach.</li>
-                <li>Idealne dla stron wizytówek, landing page'ów, stron promocyjnych itp.</li>
-                <li>Zapewniają wysoką szybkość ładowania, prostotę obsługi i atrakcyjny wygląd.</li>
-              </ul>
-              <button type="button" onclick="location.href='/oferta'">
-                Zobacz szczegóły </button>
+            <div class="myService-cart accordion">
+              <div class="cart-header">
+                <h3><span class="number">2</span> Multi-Page</h3>
+              </div>
+              <div class="content">
+                <ul>
+                  <li>Strony z wieloma podstronami, idealne dla rozbudowanych projektów. Pozwalają na szczegółowe
+                    przedstawienie różnych aspektów działalności, doskonałe dla firm prezentujących obszerną ofertę.
+                  </li>
+                  <li>Idealne dla stron firmowych, sklepów internetowych, blogów, portali informacyjnych itp.</li>
+                  <li>Zapewniają bogatą nawigację, wysoką funkcjonalność i atrakcyjny wygląd.</li>
+                </ul>
+                <button type="button" onclick="location.href='/oferta'">
+                  Zobacz szczegóły </button>
+              </div>
+            </div>
+            <div class="myService-cart accordion">
+              <div class="cart-header">
+                <h3><span class="number">3</span> Firmowe</h3>
+              </div>
+              <div class="content">
+                <ul>
+                  <li>Profesjonalne strony firmowe, stworzone specjalnie dla małych i średnich przedsiębiorstw. Pomagają
+                    w
+                    skutecznej prezentacji oferty i zdobywaniu nowych klientów.</li>
+                  <li>Idealne dla firm, które chcą zbudować silną markę i wyróżnić się na tle konkurencji.</li>
+                  <li>Zapewniają wysoką jakość, dopasowanie do branży i oczekiwań klientów, oraz optymalizację pod kątem
+                    SEO.</li>
+                </ul>
+                <button type="button" onclick="location.href='/oferta'">
+                  Zobacz szczegóły </button>
+              </div>
+            </div>
+            <div class="myService-cart accordion">
+              <div class="cart-header">
+                <h3><span class="number">4</span> Portfolio</h3>
+              </div>
+              <div class="content">
+                <ul>
+                  <li>Strony portfolio, doskonałe dla osób pragnących zaprezentować swoje unikalne umiejętności i zdobyć
+                    uznanie w świecie online.</li>
+                  <li>Idealne dla freelancerów, artystów, fotografów, programistów, pisarzy itp.</li>
+                  <li>Zapewniają atrakcyjną prezentację prac, łatwy kontakt i możliwość komentowania.</li>
+                </ul>
+                <button type="button" onclick="location.href='/oferta'">
+                  Zobacz szczegóły
+                </button>
+              </div>
+            </div>
+            <div class="myService-cart accordion">
+              <div class="cart-header">
+                <h3><span class="number">5</span> Zaawansowane</h3>
+              </div>
+              <div class="content">
+                <ul>
+                  <li>Zaawansowane aplikacje webowe, które łączą w sobie funkcjonalności strony internetowej i aplikacji
+                    desktopowej. Pozwalają na tworzenie złożonych rozwiązań, które spełniają najbardziej wymagające
+                    potrzeby.</li>
+                  <li>Idealne dla stron z systemem rezerwacji, płatnościami online, grami, edukacją, analizą danych itp.
+                  </li>
+                  <li>Zapewniają wysoką interaktywność, bezpieczeństwo i wydajność.</li>
+                </ul>
+                <button type="button" onclick="location.href='/oferta'">
+                  Zobacz szczegóły </button>
+              </div>
             </div>
           </div>
-          <div class="myService-cart accordion">
-            <div class="cart-header">
-              <h3><span class="number">2</span> Multi-Page</h3>
+        </div>
+
+        <div class="myService-wrapper service-cms cms">
+          <div class="myService-container animate" id="service-cms">
+            <div class="myService-cart accordion active">
+              <div class="cart-header">
+                <h3><span class="number">1</span> WordPress One-Page</h3>
+              </div>
+              <div class="content">
+                <ul>
+                  <li>Dynamiczne i zwięzłe strony, doskonałe dla tych, którzy chcą szybko i efektywnie przekazać
+                    kluczowe
+                    informacje, eliminując konieczność nawigacji po dodatkowych podstronach.</li>
+                  <li>Idealne dla stron wizytówek, landing page'ów, stron promocyjnych itp.</li>
+                  <li>Możliwość edycji treści za pomocą intuicyjnego panelu administracyjnego.</li>
+                </ul>
+                <button type="button" onclick="location.href='/oferta'">
+                  Zobacz szczegóły
+                </button>
+              </div>
             </div>
-            <div class="content">
-              <ul>
-                <li>Strony z wieloma podstronami, idealne dla rozbudowanych projektów. Pozwalają na szczegółowe
-                  przedstawienie różnych aspektów działalności, doskonałe dla firm prezentujących obszerną ofertę.</li>
-                <li>Idealne dla stron firmowych, sklepów internetowych, blogów, portali informacyjnych itp.</li>
-                <li>Zapewniają bogatą nawigację, wysoką funkcjonalność i atrakcyjny wygląd.</li>
-              </ul>
-              <button type="button" onclick="location.href='/oferta'">
-                Zobacz szczegóły </button>
+            <div class="myService-cart accordion">
+              <div class="cart-header">
+                <h3><span class="number">2</span> WordPress Multi-Page</h3>
+              </div>
+              <div class="content">
+                <ul>
+                  <li>Strony z wieloma podstronami, idealne dla rozbudowanych projektów. Pozwalają na szczegółowe
+                    przedstawienie różnych aspektów działalności, doskonałe dla firm prezentujących obszerną ofertę.
+                  </li>
+                  <li>Idealne dla stron firmowych, blogów, portali informacyjnych itp.</li>
+                  <li>Możliwość edycji treści za pomocą intuicyjnego panelu administracyjnego.</li>
+                </ul>
+                <button type="button" onclick="location.href='/oferta'">
+                  Zobacz szczegóły
+                </button>
+              </div>
             </div>
-          </div>
-          <div class="myService-cart accordion">
-            <div class="cart-header">
-              <h3><span class="number">3</span> Firmowe</h3>
+            <div class="myService-cart accordion">
+              <div class="cart-header">
+                <h3><span class="number">3</span> WordPress Sklep</h3>
+              </div>
+              <div class="content">
+                <ul>
+                  <li>Sklepy internetowe oparte na WordPressie, doskonałe dla tych, którzy chcą szybko i efektywnie
+                    sprzedawać swoje produkty online.</li>
+                  <li>Idealne dla małych i średnich firm, które chcą zbudować skuteczną platformę sprzedażową.</li>
+                  <li>Możliwość edycji treści za pomocą intuicyjnego panelu administracyjnego.</li>
+                </ul>
+                <button type="button" onclick="location.href='/oferta'">
+                  Zobacz szczegóły
+                </button>
+              </div>
             </div>
-            <div class="content">
-              <ul>
-                <li>Profesjonalne strony firmowe, stworzone specjalnie dla małych i średnich przedsiębiorstw. Pomagają w
-                  skutecznej prezentacji oferty i zdobywaniu nowych klientów.</li>
-                <li>Idealne dla firm, które chcą zbudować silną markę i wyróżnić się na tle konkurencji.</li>
-                <li>Zapewniają wysoką jakość, dopasowanie do branży i oczekiwań klientów, oraz optymalizację pod kątem
-                  SEO.</li>
-              </ul>
-              <button type="button" onclick="location.href='/oferta'">
-                Zobacz szczegóły </button>
+            <div class="myService-cart accordion">
+              <div class="cart-header">
+                <h3><span class="number">4</span> WordPress Firmowe</h3>
+              </div>
+              <div class="content">
+                <ul>
+                  <li>Profesjonalne strony firmowe oparte na WordPressie, stworzone specjalnie dla małych i średnich
+                    przedsiębiorstw. Pomagają w skutecznej prezentacji oferty i zdobywaniu nowych klientów.</li>
+                  <li>Idealne dla firm, które chcą zbudować silną markę i wyróżnić się na tle konkurencji.</li>
+                  <li>Możliwość edycji treści za pomocą intuicyjnego panelu administracyjnego.</li>
+                </ul>
+                <button type="button" onclick="location.href='/oferta'">
+                  Zobacz szczegóły
+                </button>
+              </div>
             </div>
-          </div>
-          <div class="myService-cart accordion">
-            <div class="cart-header">
-              <h3><span class="number">4</span> Portfolio</h3>
-            </div>
-            <div class="content">
-              <ul>
-                <li>Strony portfolio, doskonałe dla osób pragnących zaprezentować swoje unikalne umiejętności i zdobyć
-                  uznanie w świecie online.</li>
-                <li>Idealne dla freelancerów, artystów, fotografów, programistów, pisarzy itp.</li>
-                <li>Zapewniają atrakcyjną prezentację prac, łatwy kontakt i możliwość komentowania.</li>
-              </ul>
-              <button type="button" onclick="location.href='/oferta'">
-                Zobacz szczegóły
-              </button>
-            </div>
-          </div>
-          <div class="myService-cart accordion">
-            <div class="cart-header">
-              <h3><span class="number">5</span> Zaawansowane</h3>
-            </div>
-            <div class="content">
-              <ul>
-                <li>Zaawansowane aplikacje webowe, które łączą w sobie funkcjonalności strony internetowej i aplikacji
-                  desktopowej. Pozwalają na tworzenie złożonych rozwiązań, które spełniają najbardziej wymagające
-                  potrzeby.</li>
-                <li>Idealne dla stron z systemem rezerwacji, płatnościami online, grami, edukacją, analizą danych itp.
-                </li>
-                <li>Zapewniają wysoką interaktywność, bezpieczeństwo i wydajność.</li>
-              </ul>
-              <button type="button" onclick="location.href='/oferta'">
-                Zobacz szczegóły </button>
+            <div class="myService-cart accordion">
+              <div class="cart-header">
+                <h3><span class="number">4</span> WordPress Zaawansowane</h3>
+              </div>
+              <div class="content">
+                <ul>
+                  <li>Zaawansowane aplikacje webowe oparte na WordPressie, które łączą w sobie funkcjonalności strony
+                    internetowej i aplikacji desktopowej. Pozwalają na tworzenie złożonych rozwiązań, które spełniają
+                    najbardziej wymagające potrzeby.</li>
+                  <li>Idealne dla stron z systemem rezerwacji, płatnościami online, grami, edukacją, analizą danych itp.
+                  </li>
+                  <li>Możliwość edycji treści za pomocą intuicyjnego panelu administracyjnego.</li>
+                </ul>
+                <button type="button" onclick="location.href='/oferta'">
+                  Zobacz szczegóły
+                </button>
+              </div>
             </div>
           </div>
         </div>
