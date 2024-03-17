@@ -111,7 +111,6 @@ export const myServiceDescriptions = [
   "tworzeniu responsywnych i z optymalizowanych stron internetowych",
   "realizowaniu indywidualnych projektów webowych",
   "integracji baz danych",
-  "automatyzacji i testowaniu",
 ];
 
 export const blogDescriptions = [

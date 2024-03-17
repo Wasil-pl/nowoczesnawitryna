@@ -16,9 +16,9 @@ class TypingWriter {
     let timeoutId = null;
 
     function typeWriterSkills() {
-      let typingSpeed = 100; // Szybkość pisania
+      let typingSpeed = 50; // Szybkość pisania
       let deletingSpeed = 50; // Szybkość usuwania
-      let newWordDelay = 500; // Opóźnienie przed pisaniem nowego słowa
+      let newWordDelay = 1000; // Opóźnienie przed pisaniem nowego słowa
       let deleteDelay = 1000; // Opóźnienie przed usunięciem
 
       let currentPart = `${thisTypeWriter.descriptions[skillIndex].substring(
