@@ -1,15 +1,9 @@
-import {
-  blogDescriptions,
-  myServiceDescriptions,
-  myServicePictures,
-} from "./settings.js";
-import Accordion from "./components/Accordion.js";
+import { blogDescriptions, myServiceDescriptions } from "./settings.js";
 import ContactForm from "./components/ContactForm.js";
-import ResponsiveImageManager from "./components/ResponsiveImageManager.js";
 import Scroll from "./components/Scrool.js";
 import showSection from "./components/SectionDisplay.js";
 import TypingWriter from "./components/TypingWriter.js";
-import ServiceActivation from "./components/ServiceActivation.js";
+import ShowText from "./components/ShowText.js";
 
 const app = {
   initContactForm: function () {
@@ -54,31 +48,16 @@ const app = {
     thisApp.scroll = new Scroll();
   },
 
-  initService: function () {
-    const thisApp = this;
-
-    thisApp.serviceActivation = new ServiceActivation();
-  },
-
-  initAccordion: function () {
-    const thisApp = this;
-
-    thisApp.accordion = new Accordion();
-  },
-
   initShowSection: function () {
     const thisApp = this;
 
     thisApp.showSection = new showSection();
   },
 
-  initResponsiveImage: function () {
+  initShowText: function () {
     const thisApp = this;
 
-    thisApp.responsiveImageManager = new ResponsiveImageManager(
-      ".myService-container",
-      myServicePictures
-    );
+    thisApp.showText = new ShowText();
   },
 
   init: function () {
@@ -88,10 +67,8 @@ const app = {
     thisApp.initTypewriter();
     thisApp.initTypewriterBlog();
     thisApp.initScroll();
-    thisApp.initService();
-    thisApp.initAccordion();
     thisApp.initShowSection();
-    thisApp.initResponsiveImage();
+    thisApp.initShowText();
   },
 };
 

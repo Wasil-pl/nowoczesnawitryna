@@ -1,33 +1,17 @@
-class showSection {
+import utils from "../utils.js";
+
+class ShowSection {
   constructor() {
     const thisSection = this;
 
-    thisSection.showSection();
+    thisSection.showSectionToggle();
   }
 
-  showSection() {
+  showSectionToggle() {
     const thisSection = this;
 
-    thisSection.section = document.getElementById("mySkills");
-
-    if (!thisSection.section) {
-      return;
-    }
-
-    const button = document.getElementById("showSection");
-    const buttonName = button.innerHTML;
-
-    button.addEventListener("click", () => {
-      button.innerHTML = button.innerHTML === buttonName ? "Ukryj" : buttonName;
-
-      if (thisSection.section.style.maxHeight) {
-        thisSection.section.style.maxHeight = null;
-      } else {
-        thisSection.section.style.maxHeight =
-          thisSection.section.scrollHeight + "px";
-      }
-    });
+    thisSection.show = utils.showContent("showSection", "mySkills", "Ukryj");
   }
 }
 
-export default showSection;
+export default ShowSection;

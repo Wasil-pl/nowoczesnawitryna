@@ -1,415 +1,144 @@
 .myService {
   position: relative;
-  background-size: cover;
-  background-image: url("../../../images/tekstura-ciemna-betonowa-podloga.webp");
-  background-position: bottom 0 right 0;
+  background-color: $color-background-darker;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: $color-dark;
-    opacity: 50%;
-  }
+  .wrapper {
+    flex-direction: column;
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  }
+    .service-info {
+      display: flex;
+      justify-content: space-between;
+      padding: 50px 0;
 
-  .container {
-    position: relative;
+      .service-info-title {
+        flex: 1;
 
-    .section-title .background-text {
-      color: $color-background-text-2;
-      opacity: 30%;
-    }
-
-    .wrapper {
-      flex-direction: column;
-
-      .myService-title {
-        margin-top: 50px;
-        text-align: center;
-
-        h2 {
-          font-size: 1.8rem;
-          font-weight: 400;
-          color: $color-primary;
-          text-transform: uppercase;
-          text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-          letter-spacing: 2px;
-        }
-      }
-
-      .myService-buttons {
-        margin-top: 50px;
-        display: flex;
-        gap: 20px;
-        justify-content: space-evenly;
-        align-items: center;
-        z-index: 2;
-
-        p {
-          font-size: 1rem;
-          font-weight: 400;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          cursor: pointer;
-          transition: color 0.3s;
-          flex: 1;
-          text-align: center;
-          margin-bottom: 0;
-
-          &:hover {
-            color: $color-primary;
-          }
-        }
-
-        & > .active-service {
-          color: $color-primary;
-          font-size: 1.3rem;
-          position: relative;
-
-          &::before {
-            content: "";
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: $color-primary;
-          }
-        }
-      }
-
-      .myService-explanation {
-        z-index: 2;
-        margin-top: 3px;
-
-        p {
-          font-size: 1rem;
-          letter-spacing: 2px;
-          display: none;
-          padding-top: 20px;
-        }
-
-        p:nth-child(1) {
-          text-align: start;
-          padding-left: 20px;
-          border-left: solid 2px $color-primary;
-        }
-
-        p:nth-child(2) {
-          text-align: end;
-          padding-right: 20px;
-          border-right: solid 2px $color-primary;
-        }
-
-        & > .active-service {
-          display: block;
-        }
-      }
-
-      .service-html,
-      .service-cms {
-        display: none;
-
-        .myService-container {
-          margin-top: 50px;
-          display: flex;
-          flex-wrap: nowrap;
-          position: relative;
-          z-index: 2;
-          box-shadow: 8px 8px 15px 3px rgb(18 18 18);
-          margin-bottom: 20px;
-
-          img {
-            width: 100%;
-            height: auto;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-          }
-
-          #one-page-img {
-            opacity: 0;
-            transition: opacity 1s;
-          }
-
-          #multi-page-img {
-            opacity: 0;
-            transition: opacity 1s;
-          }
-
-          #firmowe-img {
-            opacity: 0;
-            transition: opacity 1s;
-          }
-
-          #portfolio-img {
-            opacity: 0;
-            transition: opacity 1s;
-          }
-
-          #zaawansowane-img {
-            opacity: 0;
-            transition: opacity 1s;
-          }
-
-          .myService-cart {
-            display: flex;
-
-            .cart-header {
-              background-color: $color-background-cart;
-              min-height: 350px;
-              width: 100px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              border: 1px solid $color-background-cart;
-              cursor: pointer;
-              transition: background-color 0.3s, border 0.3s;
-
-              &:hover {
-                background-color: rgba($color-primary, 0.5);
-                border: 1px solid $color-primary;
-
-                h3 {
-                  color: $color-dark;
-
-                  .number {
-                    color: $color-dark;
-                  }
-                }
-              }
-
-              h3 {
-                transform: rotate(-90deg);
-                white-space: nowrap; /* Aby uniknąć zawijania tekstu */
-                text-transform: uppercase;
-                font-weight: 600;
-                letter-spacing: 5px;
-
-                .number {
-                  font-size: 2rem;
-                  font-weight: 600;
-                  color: $color-primary;
-                  margin-right: 10px;
-                }
-              }
-            }
-
-            .content {
-              display: flex;
-              flex-direction: column;
-              overflow: hidden;
-              width: 0;
-              height: 450px;
-              opacity: 0;
-              background-color: $color-background-cart-active;
-              justify-content: space-between;
-
-              h3 {
-                font-size: 5rem;
-                font-weight: 400;
-                color: $color-primary;
-                text-transform: uppercase;
-                margin-bottom: 20px;
-              }
-
-              ul {
-                list-style: none;
-
-                li {
-                  margin-top: 10px;
-
-                  &::before {
-                    content: "•";
-                    color: $color-primary;
-                    display: inline-block;
-                    width: 1em;
-                    margin-left: -1em;
-                    font-size: 1.2rem;
-                  }
-                }
-              }
-
-              button {
-                width: fit-content;
-                margin-left: auto;
-              }
-            }
-          }
-
-          .active {
-            .content {
-              width: auto;
-              opacity: 1;
-              padding: 30px;
-              background-color: $color-background-cart-active;
-            }
-
-            .cart-header {
-              background-color: rgba($color-primary, 0.5);
-              border: 1px solid $color-primary;
-
-              h3 {
-                color: $color-dark;
-
-                .number {
-                  color: $color-dark;
-                }
-              }
-            }
-          }
-        }
-
-        .one-page {
-          #one-page-img {
-            opacity: 1;
-          }
-        }
-
-        .multi-page {
-          #multi-page-img {
-            opacity: 1;
-          }
-        }
-
-        .firmowe {
-          #firmowe-img {
-            opacity: 1;
-          }
-        }
-
-        .portfolio {
-          #portfolio-img {
-            opacity: 1;
-          }
-        }
-
-        .zaawansowane {
-          #zaawansowane-img {
-            opacity: 1;
-          }
-        }
-      }
-
-      .active-service {
-        display: flex;
-      }
-    }
-  }
-}
-
-@media (max-width: 2600px) {
-  .myService {
-    background-image: url("../../../images/tekstura-ciemna-betonowa-podloga-2k.webp");
-  }
-}
-
-@media (max-width: 1600px) {
-  .myService {
-    background-image: url("../../../images/tekstura-ciemna-betonowa-podloga-1600.webp");
-  }
-}
-
-@media (max-width: 1400px) {
-  .myService .container .wrapper {
-    .service-html,
-    .service-cms {
-      .myService-container .myService-cart .content {
         h3 {
-          font-size: 3rem;
+          font-size: 2.5rem;
+          color: $color-light;
+          letter-spacing: 3px;
         }
 
         p {
-          margin-left: 20%;
+          font-size: 1.3rem;
+          color: $color-primary;
+          letter-spacing: 2px;
+        }
+      }
+
+      .service-info-desription {
+        flex: 1.5;
+        padding-left: 20px;
+
+        p {
+          color: $color-grey;
+        }
+
+        & > .hide {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.7s ease-in-out;
+        }
+
+        .myService-button {
+          margin: 20px auto;
         }
       }
     }
-  }
-}
 
-@media (max-width: 1200px) {
-  .myService {
-    .container .wrapper {
-      .service-html,
-      .service-cms {
-        .myService-container {
+    .service-container {
+      display: flex;
+      flex-direction: column;
+      max-width: 2000px;
+      margin: 100px auto;
+      position: relative;
+
+      .cart {
+        flex: 1;
+        display: flex;
+        position: relative;
+        min-height: 170px;
+        border-top: 1px solid $color-grey;
+        cursor: pointer;
+
+        &:last-child {
+          border-bottom: 1px solid $color-grey;
+        }
+
+        .cart-title {
+          flex: 1;
+          align-items: center;
+          display: flex;
+
+          h3 {
+            color: $color-grey;
+            font-size: 2.2rem;
+            font-weight: $font-bold;
+            letter-spacing: 3px;
+            padding-left: 10px;
+            line-height: 45px;
+
+            .dot-hide {
+              opacity: 0;
+              color: $color-primary;
+              font-size: 3.5rem;
+            }
+          }
+        }
+
+        .cart-description {
+          flex: 2;
+          display: flex;
           flex-direction: column;
-          max-width: 750px;
-          margin-left: auto;
-          margin-right: auto;
+          justify-content: center;
+          opacity: 0;
 
-          .myService-cart {
-            flex-direction: column;
-
-            .cart-header {
-              min-height: 70px;
-              width: 100%;
-
-              h3 {
-                transform: rotate(0deg);
-                white-space: unset;
-                text-align: center;
-              }
-            }
-
-            .content {
-              width: 100%;
-              height: 0;
-              padding: 0;
-
-              h3 {
-                font-size: 3rem;
-                text-align: center;
-              }
-
-              p {
-                margin-left: 0;
-                text-align: center;
-                margin-bottom: 40px;
-              }
-
-              button {
-                margin: 30px auto 0;
-              }
-            }
-          }
-
-          .active {
-            .content {
-              height: auto;
-              opacity: 1;
-              padding: 20px 50px;
-            }
+          p {
+            color: $color-grey;
+            font-size: 1rem;
+            margin: 0;
+            margin-left: 40px;
           }
         }
-      }
-    }
-  }
-}
 
-@media (max-width: 992px) {
-  .myService {
-    background-image: url("../../../images/tekstura-ciemna-betonowa-podloga-mobile.webp");
-    .container .wrapper {
-      .service-html,
-      .service-cms {
-        .myService-container img {
-          width: auto;
-          height: 90%;
+        .cart-button {
+          flex: 0.2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+        }
+
+        &:hover {
+          .cart-title {
+            h3 {
+              font-size: 3rem;
+              margin-left: 20px;
+              transition: $transition;
+              color: $color-light;
+
+              .dot-hide {
+                opacity: 1;
+                transition: $transition;
+              }
+            }
+          }
+          .cart-description {
+            opacity: 1;
+            transition: $transition;
+          }
+
+          .image {
+            img {
+              opacity: 1;
+              transition: $transition;
+              z-index: 2;
+            }
+          }
+
+          .myService-cart-button {
+            right: 22%;
+          }
         }
       }
     }
@@ -424,19 +153,6 @@
           font-size: 1.5rem;
         }
       }
-
-      .service-html,
-      .service-cms {
-        .myService-container {
-          .myService-cart {
-            .content {
-              h3 {
-                font-size: 2rem;
-              }
-            }
-          }
-        }
-      }
     }
   }
 }
@@ -448,33 +164,6 @@
         h2 {
           font-size: 1.3rem;
         }
-      }
-
-      .service-html,
-      .service-cms {
-        .myService-container .myService-cart .content {
-          h3 {
-            font-size: 1.5rem;
-          }
-
-          p {
-            margin-left: 0;
-            text-align: center;
-            margin-bottom: 40px;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 492px) {
-  .myService .container .wrapper {
-    .service-html,
-    .service-cms {
-      .myService-container img {
-        width: 90%;
-        height: 90%;
       }
     }
   }
