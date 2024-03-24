@@ -26,6 +26,10 @@
       h2 {
         color: $color-dark;
       }
+
+      .background-text {
+        color: rgb(0 0 0 / 53%);
+      }
     }
 
     .carousel {
@@ -77,6 +81,92 @@
 
       & > button {
         box-shadow: unset;
+      }
+    }
+  }
+}
+
+@media (max-width: 1399px) {
+  .opinions {
+    .container .wrapper {
+      .carousel {
+        .carousel-indicators {
+          bottom: -110px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .opinions {
+    min-height: 550px;
+    .container .wrapper {
+      .carousel {
+        .carousel-indicators {
+          bottom: -150px;
+        }
+
+        .carousel-inner {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .opinions {
+    .container {
+      max-width: 100%;
+
+      .wrapper .carousel .carousel-inner .carousel-item .opinion {
+        p {
+          font-size: 1.1rem;
+        }
+
+        .author {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .opinions {
+    min-height: 620px;
+    .container .wrapper {
+      .carousel {
+        .carousel-indicators {
+          bottom: -240px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .opinions {
+    min-height: 700px;
+    .container .wrapper {
+      .carousel {
+        .carousel-indicators {
+          bottom: -280px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .opinions {
+    min-height: 750px;
+    .container .wrapper {
+      .carousel {
+        .carousel-indicators {
+          bottom: -360px;
+        }
       }
     }
   }

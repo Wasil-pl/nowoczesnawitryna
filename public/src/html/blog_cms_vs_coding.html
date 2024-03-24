@@ -66,7 +66,7 @@
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid container">
           <a class="navbar-brand" href="/">
-            <img src="../images/logo.svg" alt="logo">
+            <img src="../images/logo.svg" alt="logo" loading="lazy">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,15 +76,23 @@
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
                 <a class="nav-link" href="/">
-                  <span class="invisible-text"> Strona główna </span>
+                  <span class="invisible-text">Strona główna </span>
                   <i class="fa-solid fa-house"></i>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/#aboutMe">O mnie</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/oferta">Moja oferta</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Moja oferta
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/oferta">Strony HTML</a></li>
+                  <li><a class="dropdown-item" href="/oferta_wordpress">Strony z WordPress</a></li>
+                  <li><a class="dropdown-item" href="/oferta_sklepy">Sklepy internetowe</a></li>
+                </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/#portfolio">Portfolio</a>
@@ -93,15 +101,9 @@
                 <a class="nav-link" href="/#contact">Kontakt</a>
               </li>
               <li class="nav-item first-menu">
-                <a class="nav-link active-nav-item dropdown-toggle" href="/blog">
+                <a class="nav-link active-nav-item" href="/blog">
                   Blog
                 </a>
-                <ul class="second-menu">
-                  <li><a class="active-nav-item" href="/blog/CMS_vs_strona_pisana_od_podstaw">CMS vs strona pisana od
-                      podstaw</a></li>
-                  <li><a href="/blog/jak_wybrac_najlepszy_hosting_oraz_domene">Jak wybrać najlepszy hosting i domenę</a>
-                  </li>
-                </ul>
               </li>
             </ul>
           </div>
@@ -145,7 +147,7 @@
             CMS - co to jest?
           </h3>
           <p class="text_with_image">
-            <img src="../images/blog/cmsVsCoding/cms.webp" alt="CMS vs czysty kod">
+            <img src="../images/blog/cmsVsCoding/cms.webp" alt="CMS vs czysty kod" loading="lazy">
             CMS to skrót od Content Management System, czyli system zarządzania treścią. Jest to oprogramowanie, które
             umożliwia łatwe tworzenie i edycję stron internetowych, bez konieczności pisania kodu. CMS oferuje gotowe
             szablony, moduły i wtyczki, które można dostosować do własnych potrzeb i preferencji. Przykładami
@@ -210,7 +212,7 @@
             Kod pisany od podstaw - co to jest?
           </h3>
           <p class="text_with_image">
-            <img src="../images/blog/cmsVsCoding/html.webp" alt="CMS vs czysty kod">
+            <img src="../images/blog/cmsVsCoding/html.webp" alt="CMS vs czysty kod" loading="lazy">
             Kod pisany od podstaw to nic innego jak pisanie strony internetowej od zera, bez użycia gotowych szablonów i
             wtyczek. Programista tworzy stronę od podstaw, używając języków programowania, takich jak HTML, CSS,
             JavaScript, PHP, Python, Ruby, C# czy Java. Dzięki temu, strona internetowa jest unikalna, dopasowana do
@@ -308,7 +310,7 @@
     <div class="container">
       <div class="info">
         <div class="logo">
-          <img src="../images/logo.svg" alt="logo">
+          <img src="../images/logo.svg" alt="logo" loading="lazy">
         </div>
         <div class="footer-contact">
           <div class="title">Kontakt</div>
@@ -340,7 +342,9 @@
           <div class="menu-links">
             <a href="/">Strona główna</a>
             <a href="/#aboutMe">O mnie</a>
-            <a href="/oferta">Oferta</a>
+            <a href="/oferta">Strony HTML</a>
+            <a href="/oferta_wordpress">Strony WordPress</a>
+            <a href="/oferta_sklepy">Sklepy internetowe</a>
             <a href="/#portfolio">Portfolio</a>
             <a href="#contact">Kontakt</a>
             <a href="/blog">Blog</a>

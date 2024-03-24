@@ -122,6 +122,19 @@
   }
 }
 
+@media (max-width: 992px) {
+  .services {
+    .container {
+      .wrapper {
+        .carts-container::after {
+          top: 50%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .services {
     .container {

@@ -20,6 +20,10 @@
   <meta property="og:image" content="https://www.nowoczesnawitryna.pl/googleOg.jpg">
   <meta property="og:url" content="https://nowoczesnawitryna.pl/oferta">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nowoczesna Witryna">
+  <meta property="article:tag" content="oferta strony www">
+  <meta property="article:tag" content="Oferta">
+
   <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" alt="logo strony">
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -64,7 +68,7 @@
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid container">
           <a class="navbar-brand" href="/">
-            <img src="../images/logo.svg" alt="logo">
+            <img src="../images/logo.svg" alt="logo" loading="lazy">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,15 +78,23 @@
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
                 <a class="nav-link" href="/">
-                  <span class="invisible-text"> Strona główna </span>
+                  <span class="invisible-text">Strona główna </span>
                   <i class="fa-solid fa-house"></i>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/#aboutMe">O mnie</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active-nav-item" href="#services">Moja oferta</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Moja oferta
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item active-nav-item" href="/oferta">Strony HTML</a></li>
+                  <li><a class="dropdown-item" href="/oferta_wordpress">Strony z WordPress</a></li>
+                  <li><a class="dropdown-item" href="/oferta_sklepy">Sklepy internetowe</a></li>
+                </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/#portfolio">Portfolio</a>
@@ -91,14 +103,9 @@
                 <a class="nav-link" href="#contact">Kontakt</a>
               </li>
               <li class="nav-item first-menu">
-                <a class="nav-link dropdown-toggle" href="/blog">
+                <a class="nav-link" href="/blog">
                   Blog
                 </a>
-                <ul class="second-menu">
-                  <li><a href="/blog/CMS_vs_strona_pisana_od_podstaw">CMS vs strona pisany od podstaw</a></li>
-                  <li><a href="/blog/jak_wybrac_najlepszy_hosting_oraz_domene">Jak wybrać najlepszy hosting i domenę</a>
-                  </li>
-                </ul>
               </li>
             </ul>
           </div>
@@ -154,7 +161,7 @@
             </p>
           </div>
           <div class="picture">
-            <img src="../images/oferta/komputer_no_background_600.webp" alt="strona">
+            <img src="../images/oferta/komputer_no_background_600.webp" alt="strona" loading="lazy">
           </div>
         </div>
       </div>
@@ -174,7 +181,7 @@
                 ../images/oferta/wordpressX_350.webp 1200w,
                 ../images/oferta/wordpressX_200.webp 992w,
                 ../images/oferta/wordpressX_350.webp 768w,
-                " alt="wordpress">
+                " alt="wordpress" loading="lazy">
             </div>
             <div class="text">
               <h3>
@@ -186,7 +193,9 @@
                 elementem.
               </p>
               <p>
-                Chcesz dowiedzieć się więcej na ten temat? <a href="/blog/CMS_vs_strona_pisana_od_podstaw"><strong>Zajrzyj do mojego artykułu</strong></a>, gdzie omawiam różnice między CMS
+                Chcesz dowiedzieć się więcej na ten temat? <a
+                  href="/blog/CMS_vs_strona_pisana_od_podstaw"><strong>Zajrzyj do mojego artykułu</strong></a>, gdzie
+                omawiam różnice między CMS
                 a tworzeniem stron od podstaw.
               </p>
             </div>
@@ -199,7 +208,7 @@
                 ../images/oferta/wsparcie_350.webp 1200w,
                 ../images/oferta/wsparcie_200.webp 992w,
                 ../images/oferta/wsparcie_350.webp 768w,
-                " alt="wordpress">
+                " alt="wordpress" loading="lazy">
             </div>
             <div class="text">
               <h3>
@@ -220,7 +229,7 @@
                 ../images/oferta/komputer_350.webp 1200w,
                 ../images/oferta/komputer_200.webp 992w,
                 ../images/oferta/komputer_350.webp 768w,
-                " alt="rwd">
+                " alt="rwd" loading="lazy">
             </div>
             <div class="text">
               <h3>
@@ -241,7 +250,7 @@
                 ../images/oferta/design1_350.webp 1200w,
                 ../images/oferta/design1_200.webp 992w,
                 ../images/oferta/design1_350.webp 768w,
-                " alt="front-end">
+                " alt="front-end" loading="lazy">
             </div>
             <div class="text">
               <h3>
@@ -255,13 +264,54 @@
           </div>
           <div class="benefit animate-left">
             <div class="picture">
+              <img src="../images/oferta/freepik.webp"
+                sizes="(min-width: 1201px) 1201px, (max-width: 992px), (max-width: 768px)" srcset="
+                ../images/oferta/freepik.webp 1201w,
+                ../images/oferta/freepik_350.webp 1200w,
+                ../images/oferta/freepik_200.webp 992w,
+                ../images/oferta/freepik_350.webp 768w,
+                " alt="freepikLogo" loading="lazy">
+            </div>
+            <div class="text">
+              <h3>
+                Grafiki i Zdjęcia:
+              </h3>
+              <p>
+                Posiadam dostęp do szerokiej bazy grafik i zdjęć, które mogą
+                zostać wykorzystane na Twojej stronie. Dzięki temu Twoja witryna będzie wyglądać profesjonalnie i
+                atrakcyjnie.
+              </p>
+            </div>
+          </div>
+          <div class="benefit left animate-right">
+            <div class="picture">
+              <img src="../images/oferta/adobe.webp"
+                sizes="(min-width: 1201px) 1201px, (max-width: 992px), (max-width: 768px)" srcset="
+                ../images/oferta/adobe.webp 1201w,
+                ../images/oferta/adobe_350.webp 1200w,
+                ../images/oferta/adobe_200.webp 992w,
+                ../images/oferta/adobe_350.webp 768w,
+                " alt="adobe" loading="lazy">
+            </div>
+            <div class="text">
+              <h3>
+                Obróbka Grafiki:
+              </h3>
+              <p>
+                Posługuję się programami graficznymi, takimi jak Adobe Photoshop czy Illustrator, co pozwala mi na
+                profesjonalną obróbkę grafiki i zdjęć na Twojej stronie.
+              </p>
+            </div>
+          </div>
+          <div class="benefit animate-left">
+            <div class="picture">
               <img src="../images/oferta/kod_html.webp"
                 sizes="(min-width: 1201px) 1201px, (max-width: 992px), (max-width: 768px)" srcset="
                   ../images/oferta/kod_html.webp 1201w,
                   ../images/oferta/kod_html_350.webp 1200w,
                   ../images/oferta/kod_html_200.webp 992w,
                   ../images/oferta/kod_html_350.webp 768w,
-                  " alt="back-end">
+                  " alt="back-end" loading="lazy">
             </div>
             <div class="text">
               <h3>
@@ -282,7 +332,7 @@
                 ../images/oferta/współpraca_350.webp 1200w,
                 ../images/oferta/współpraca_200.webp 992w,
                 ../images/oferta/współpraca_350.webp 768w,
-                " alt="seo">
+                " alt="seo" loading="lazy">
             </div>
             <div class="text">
               <h3>
@@ -302,7 +352,7 @@
                 ../images/oferta/clock_350.webp 1200w,
                 ../images/oferta/clock_200.webp 992w,
                 ../images/oferta/clock_350.webp 768w,
-                " alt="seo">
+                " alt="seo" loading="lazy">
             </div>
             <div class="text">
               <h3>
@@ -312,6 +362,29 @@
                 Ponieważ każda strona jest tworzona od zera, czas realizacji może być
                 nieco dłuższy niż w przypadku korzystania z gotowych szablonów czy systemów zarządzania treścią. Jednak
                 gwarantuję, że efekt końcowy będzie warty oczekiwania.
+              </p>
+            </div>
+          </div>
+          <div class="benefit left animate-right">
+            <div class="picture">
+              <img src="../images/oferta/google.webp"
+                sizes="(min-width: 1201px) 1201px, (max-width: 992px), (max-width: 768px)" srcset="
+                ../images/oferta/google.webp 1201w,
+                ../images/oferta/google_350.webp 1200w,
+                ../images/oferta/google_200.webp 992w,
+                ../images/oferta/google_350.webp 768w,
+                " alt="google" loading="lazy">
+            </div>
+            <div class="text">
+              <h3>
+                Integracja z Google:
+              </h3>
+              <p>
+                Jeśli chcesz, mogę zintegrować Twoją stronę z narzędziami Google, takimi
+                jak Google Analytics czy Google Tag Manager.
+              </p>
+              <p>
+                Dodatkowo mogę dodać do Twojej strony cookie consent, aby spełnić wymogi RODO.
               </p>
             </div>
           </div>
@@ -545,7 +618,7 @@
     <div class="container">
       <div class="info">
         <div class="logo">
-          <img src="../images/logo.svg" alt="logo">
+          <img src="../images/logo.svg" alt="logo" loading="lazy">
         </div>
         <div class="footer-contact">
           <div class="title">Kontakt</div>
@@ -577,7 +650,9 @@
           <div class="menu-links">
             <a href="/">Strona główna</a>
             <a href="/#aboutMe">O mnie</a>
-            <a href="/oferta">Oferta</a>
+            <a href="/oferta">Strony HTML</a>
+            <a href="/oferta_wordpress">Strony WordPress</a>
+            <a href="/oferta_sklepy">Sklepy internetowe</a>
             <a href="/#portfolio">Portfolio</a>
             <a href="#contact">Kontakt</a>
             <a href="/blog">Blog</a>

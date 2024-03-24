@@ -26,6 +26,8 @@
   <meta property="article:tag" content="aplikacje webowe">
   <meta property="article:tag" content="strony www">
   <meta property="article:tag" content="budowa stron internetowych">
+  <meta property="article:tag" content="strony www Jastrzębie-Zdrój">
+  <meta property="article:tag" content="strony www Polska">
 
   <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" alt="logo strony">
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -70,7 +72,7 @@
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid container">
           <a class="navbar-brand" href="/">
-            <img src="../images/logo.svg" alt="logo">
+            <img src="../images/logo.svg" alt="logo" loading="lazy">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -87,8 +89,16 @@
               <li class="nav-item">
                 <a class="nav-link" href="#aboutMe">O mnie</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/oferta">Moja oferta</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Moja oferta
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/oferta">Strony HTML</a></li>
+                  <li><a class="dropdown-item" href="/oferta_wordpress">Strony z WordPress</a></li>
+                  <li><a class="dropdown-item" href="/oferta_sklepy">Sklepy internetowe</a></li>
+                </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#portfolio">Portfolio</a>
@@ -97,14 +107,9 @@
                 <a class="nav-link" href="#contact">Kontakt</a>
               </li>
               <li class="nav-item first-menu">
-                <a class="nav-link dropdown-toggle" href="/blog">
+                <a class="nav-link" href="/blog">
                   Blog
                 </a>
-                <ul class="second-menu">
-                  <li><a href="/blog/CMS_vs_strona_pisana_od_podstaw">CMS vs strona pisany od podstaw</a></li>
-                  <li><a href="/blog/jak_wybrac_najlepszy_hosting_oraz_domene">Jak wybrać najlepszy hosting i domenę</a>
-                  </li>
-                </ul>
               </li>
             </ul>
           </div>
@@ -140,7 +145,7 @@
         </div>
         <div class="aboutMe-container animate">
           <div class="image">
-            <img src="../images/home/aboutMe.webp" alt="myPicture">
+            <img src="../images/home/aboutMe.webp" alt="myPicture" loading="lazy">
           </div>
           <div class="text">
             <h3>Cześć</h3>
@@ -184,7 +189,7 @@
           <div class="row right">
             <div class="pictures last-picture">
               <img src="../images/ikony/OrgCoral_Ofc-01_Concept-04.webp"
-                srcset="../images/ikony/OrgCoral_Ofc-01_Concept-04-mobile.webp 800w" alt="nauka">
+                srcset="../images/ikony/OrgCoral_Ofc-01_Concept-04-mobile.webp 800w" alt="nauka" loading="lazy">
             </div>
             <div class="text text-4">
               <p><strong>Każdy projekt traktuję jako szansę na naukę czegoś nowego</strong>, dlatego zawsze jestem
@@ -195,10 +200,12 @@
           </div>
           <div class="row left">
             <div class="pictures">
-              <img src="../images/ikony/HTML5.webp" srcset="../images/ikony/HTML5-mobile.webp 800w" alt="html">
-              <img src="../images/ikony/css3.webp" srcset="../images/ikony/css3-mobile.webp 800w" alt="css">
+              <img src="../images/ikony/HTML5.webp" srcset="../images/ikony/HTML5-mobile.webp 800w" alt="html"
+                loading="lazy">
+              <img src="../images/ikony/css3.webp" srcset="../images/ikony/css3-mobile.webp 800w" alt="css"
+                loading="lazy">
               <img src="../images/ikony/Bootstrap.webp" srcset="../images/ikony/Bootstrap-mobile.webp 800w"
-                alt="bootstrap">
+                alt="bootstrap" loading="lazy">
             </div>
             <div class="text text-1">
               <p><strong>Jako profesjonalista w dziedzinie web developmentu, posiadam szeroki zakres umiejętności
@@ -210,10 +217,14 @@
           </div>
           <div class="row right">
             <div class="pictures">
-              <img src="../images/ikony/javascript.webp" srcset="../images/ikony/javascript-mobile.webp 800w" alt="js">
-              <img src="../images/ikony/react.webp" srcset="../images/ikony/react-mobile.webp 800w" alt="react">
-              <img src="../images/ikony/nodejs.webp" srcset="../images/ikony/nodejs-mobile.webp 800w" alt="node">
-              <img src="../images/ikony/mysql.webp" srcset="../images/ikony/mysql-mobile.webp 800w" alt="MySQL">
+              <img src="../images/ikony/javascript.webp" srcset="../images/ikony/javascript-mobile.webp 800w" alt="js"
+                loading="lazy">
+              <img src="../images/ikony/react.webp" srcset="../images/ikony/react-mobile.webp 800w" alt="react"
+                loading="lazy">
+              <img src="../images/ikony/nodejs.webp" srcset="../images/ikony/nodejs-mobile.webp 800w" alt="node"
+                loading="lazy">
+              <img src="../images/ikony/mysql.webp" srcset="../images/ikony/mysql-mobile.webp 800w" alt="MySQL"
+                loading="lazy">
             </div>
             <div class="text text-2">
               <p><strong>W zakresie programowania frontendowego, jestem biegły w JavaScript ES6</strong> oraz korzystam
@@ -226,10 +237,12 @@
           </div>
           <div class="row left">
             <div class="pictures">
-              <img src="../images/ikony/github.webp" srcset="../images/ikony/github-mobile.webp 800w" alt="git">
-              <img src="../images/ikony/npm.webp" srcset="../images/ikony/npm-mobile.webp 800w" alt="npm">
+              <img src="../images/ikony/github.webp" srcset="../images/ikony/github-mobile.webp 800w" alt="git"
+                loading="lazy">
+              <img src="../images/ikony/npm.webp" srcset="../images/ikony/npm-mobile.webp 800w" alt="npm"
+                loading="lazy">
               <img src="../images/ikony/typescript.webp" srcset="../images/ikony/typescript-mobile.webp 800w"
-                alt="typescript">
+                alt="typescript" loading="lazy">
             </div>
             <div class="text text-3">
               <p><strong>Znajomość narzędzi developerskich takich jak Git, WebSocket, Mongoose, NPM, Webpack,
@@ -247,105 +260,89 @@
 
   <section class="myService">
     <div class="container">
-    <div class="wrapper">
-      <div class="section-title">
-        <h2>Moja oferta</h2>
-        <div class="background-text">oferta</div>
+      <div class="wrapper">
+        <div class="section-title">
+          <h2>Moja oferta</h2>
+          <div class="background-text">oferta</div>
+        </div>
+
+        <div class="service-info">
+          <div class="service-info-title">
+            <p>Dlaczego <strong>Nowoczesna Witryna?</strong></p>
+            <h3>Poznaj moje usługi projektownia stron internetowych</h3>
+          </div>
+          <div class="service-info-desription">
+            <p>
+              <strong>Nowoczesna Witryna</strong> to miejsce, w którym znajdziesz kompleksowe rozwiązania dla swojej
+              strony internetowej. Oferuję profesjonalne usługi projektowania stron www, które spełniają
+              najwyższe standardy jakości i zadowalają wszelkie potrzeby klientów. Moje strony są responsywne,
+              funkcjonalne,
+              łatwe w zarządzaniu i zoptymalizowane pod kątem SEO. Niezależnie od tego, czy potrzebujesz prostej strony
+              wizytówki, sklepu internetowego, bloga, portfolio czy strony z systemem rezerwacji, mam dla ciebie idealne
+              rozwiązanie.
+            </p>
+            <p class="hide" id="myService-show-content">
+              <strong>Nie jestem kolejną agencją.</strong> Jako freelancer, oferuję spersonalizowane podejście,
+              elastyczność i zaangażowanie w
+              każdy projekt. Dzięki temu, mogę zapewnić wysoką jakość, szybkość realizacji i konkurencyjne ceny. Nie
+              zwlekaj, zobacz moją ofertę i skontaktuj się ze mną już dziś, aby dowiedzieć się, jak mogę pomóc Ci w
+              realizacji Twoich celów.
+            </p>
+            <button type="button" id="myService-button" class="myService-button">Czytaj więcej</button>
+          </div>
+        </div>
+
+        <div class="service-container">
+          <div class="cart">
+            <div class="cart-title">
+              <h3>Strony <br>internetowe<span class="dot-hide">.</span></h3>
+            </div>
+            <div class="cart-description">
+              <p>
+                Oferuję strony pisane od podstaw, które są unikalne, dopasowane do Twoich potrzeb i wyróżniają się na
+                tle
+                konkurencji.
+              </p>
+            </div>
+            <div class="cart-button">
+              <button type="button" class="myService-cart-button">&gt;</button>
+            </div>
+          </div>
+
+          <div class="cart">
+            <div class="cart-title">
+              <h3>Strony <br>WordPress<span class="dot-hide">.</span></h3>
+            </div>
+            <div class="cart-description">
+              <p>
+                Oferuję strony oparte na WordPressie, które są łatwe w zarządzaniu, elastyczne i pozwalają na
+                samodzielne dodawanie i edytowanie treści.
+              </p>
+            </div>
+            <div class="cart-button">
+              <button type="button" class="myService-cart-button">&gt;</button>
+            </div>
+          </div>
+
+          <div class="cart">
+            <div class="cart-title">
+              <h3>Sklepy <br>internetowe<span class="dot-hide">.</span></h3>
+            </div>
+            <div class="cart-description">
+              <p>
+                Oferuję sklepy internetowe oparte na WooCommerce, które są funkcjonalne i bezpieczne. Dzięki moim
+                rozwiązaniom
+                możesz sprzedawać swoje produkty online w sposób łatwy do zarządzania i zgodny z najnowszymi standardami
+                e-commerce.
+              </p>
+            </div>
+            <div class="cart-button">
+              <button type="button" class="myService-cart-button">&gt;</button>
+            </div>
+          </div>
+
+        </div>
       </div>
-
-      <div class="service-info">
-        <div class="service-info-title">
-          <p>Dlaczego <strong>Nowoczesna Witryna?</strong></p>
-          <h3>Poznaj moje usługi projektownia stron internetowych</h3>
-        </div>
-        <div class="service-info-desription">
-          <p>
-            <strong>Nowoczesna Witryna</strong> to miejsce, w którym znajdziesz kompleksowe rozwiązania dla swojej
-            strony internetowej. Oferuję profesjonalne usługi projektowania stron www, które spełniają
-            najwyższe standardy jakości i zadowalają wszelkie potrzeby klientów. Moje strony są responsywne,
-            funkcjonalne,
-            łatwe w zarządzaniu i zoptymalizowane pod kątem SEO. Niezależnie od tego, czy potrzebujesz prostej strony
-            wizytówki, sklepu internetowego, bloga, portfolio czy strony z systemem rezerwacji, mam dla ciebie idealne
-            rozwiązanie.
-          </p>
-          <p class="hide" id="myService-show-content">
-            <strong>Nie jestem kolejną agencją.</strong> Jako freelancer, oferuję spersonalizowane podejście,
-            elastyczność i zaangażowanie w
-            każdy projekt. Dzięki temu, mogę zapewnić wysoką jakość, szybkość realizacji i konkurencyjne ceny. Nie
-            zwlekaj, zobacz moją ofertę i skontaktuj się ze mną już dziś, aby dowiedzieć się, jak mogę pomóc Ci w
-            realizacji Twoich celów.
-          </p>
-          <button type="button" id="myService-button" class="myService-button">Czytaj więcej</button>
-        </div>
-      </div>
-
-      <div class="service-container">
-        <div class="cart">
-          <div class="cart-title">
-            <h3>Strony <br>internetowe<span class="dot-hide">.</span></h3>
-          </div>
-          <div class="cart-description">
-            <p>
-              Oferuję strony pisane od podstaw, które są unikalne, dopasowane do Twoich potrzeb i wyróżniają się na tle
-              konkurencji.
-            </p>
-          </div>
-          <div class="cart-button">
-            <button type="button" class="myService-cart-button">&gt;</button>
-          </div>
-        </div>
-
-        <div class="cart">
-          <div class="cart-title">
-            <h3>Strony <br>WordPress<span class="dot-hide">.</span></h3>
-          </div>
-          <div class="cart-description">
-            <p>
-              Oferuję strony oparte na WordPressie, które są łatwe w zarządzaniu, elastyczne i pozwalają na
-              samodzielne dodawanie i edytowanie treści.
-            </p>
-          </div>
-          <div class="cart-button">
-            <button type="button" class="myService-cart-button">&gt;</button>
-          </div>
-        </div>
-
-        <div class="cart">
-          <div class="cart-title">
-            <h3>Sklepy <br>internetowe<span class="dot-hide">.</span></h3>
-          </div>
-          <div class="cart-description">
-            <p>
-              Oferuję sklepy internetowe oparte na WooCommerce, które są funkcjonalne i bezpieczne. Dzięki moim
-              rozwiązaniom
-              możesz sprzedawać swoje produkty online w sposób łatwy do zarządzania i zgodny z najnowszymi standardami
-              e-commerce.
-            </p>
-          </div>
-          <div class="cart-button">
-            <button type="button" class="myService-cart-button">&gt;</button>
-          </div>
-        </div>
-
-        <div class="cart">
-          <div class="cart-title">
-            <h3>Opieka <br>techniczna<span class="dot-hide">.</span></h3>
-          </div>
-          <div class="cart-description">
-            <p>
-              Oferuję profesjonalną opiekę nad Twoją stroną internetową, która obejmuje m.in. aktualizacje, backupy,
-              optymalizację,
-              wsparcie techniczne i wiele innych. Dzięki moim usługom, możesz mieć pewność, że Twoja strona działa bez
-              zarzutu.
-            </p>
-          </div>
-          <div class="cart-button">
-            <button type="button" class="myService-cart-button">&gt;</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
     </div>
   </section>
 
@@ -365,46 +362,53 @@
                 <i class="fa-solid fa-quote-left"></i>
                 <p>Bardzo polecam współpracę z Dariuszem. Profesjonalne podejście do klienta, elastyczność w
                   realizacji projektu i wysoka jakość usług to cechy, które wyróżniają Nowoczesną Witrynę na tle
-                  konkurencji. Dziękuję za stworzenie dla nas strony internetowej, która spełniła nasze oczekiwania. Polecam!</p>
+                  konkurencji. Dziękuję za stworzenie dla nas strony internetowej, która spełniła nasze oczekiwania.
+                  Polecam!</p>
                 <p class="author">- Jan Kowalski</p>
               </div>
             </div>
             <div class="carousel-item">
               <div class="opinion">
                 <i class="fa-solid fa-quote-left"></i>
-                <p>Dariusz to profesjonalista w swoim fachu. Zaprojektował dla nas sklep internetowy, który przyniósł nam wiele korzyści. Jego podejście do klienta i elastyczność w realizacji projektu są godne podziwu. Polecam!</p>
+                <p>Dariusz to profesjonalista w swoim fachu. Zaprojektował dla nas sklep internetowy, który przyniósł
+                  nam wiele korzyści. Jego podejście do klienta i elastyczność w realizacji projektu są godne podziwu.
+                  Polecam!</p>
                 <p class="author">- Anna Nowak</p>
               </div>
             </div>
             <div class="carousel-item">
               <div class="opinion">
                 <i class="fa-solid fa-quote-left"></i>
-                <p>Nowoczesna Witryna to miejsce, w którym znajdziesz kompleksowe rozwiązania dla swojej strony internetowej. Dariusz jest profesjonalistą, który zawsze służy pomocą i doradztwem. Polecam!</p>
+                <p>Nowoczesna Witryna to miejsce, w którym znajdziesz kompleksowe rozwiązania dla swojej strony
+                  internetowej. Dariusz jest profesjonalistą, który zawsze służy pomocą i doradztwem. Polecam!</p>
                 <p class="author">- Adam Wiśniewski</p>
               </div>
 
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
           </div>
         </div>
 
       </div>
     </div>
   </section>
-
-
 
   <section id="portfolio" class="portfolio-section">
     <div class="container">
@@ -417,11 +421,11 @@
           <div class="row left">
             <div class="image-box">
               <img type="button" data-bs-toggle="modal" data-bs-target="#first-modal"
-                src="../images/projekty/fotografia1.webp" alt="fotografia">
+                src="../images/projekty/fotografia1.webp" alt="fotografia" loading="lazy">
             </div>
             <div class="text-box">
               <img class="hidden-image" type="button" data-bs-toggle="modal" data-bs-target="#first-modal"
-                src="../images/projekty/fotografia1_400.webp" alt="fotografia">
+                src="../images/projekty/fotografia1_400.webp" alt="fotografia" loading="lazy">
               <h3>Strona dla Fotografa</h3>
               <div>
                 <p>
@@ -458,11 +462,11 @@
           <div class="row right">
             <div class="image-box">
               <img type="button" data-bs-toggle="modal" data-bs-target="#second-modal"
-                src="../images/projekty/serwis-muzyczny.webp" alt="serwis muzyczny">
+                src="../images/projekty/serwis-muzyczny.webp" alt="serwis muzyczny" loading="lazy">
             </div>
             <div class="text-box">
               <img class="hidden-image" type="button" data-bs-toggle="modal" data-bs-target="#second-modal"
-                src="../images/projekty/serwis-muzyczny520.webp" alt="serwis muzyczny">
+                src="../images/projekty/serwis-muzyczny520.webp" alt="serwis muzyczny" loading="lazy">
               <h3>Strona Muzyczna</h3>
               <p>
                 <strong>Cel projektu:</strong>
@@ -501,11 +505,11 @@
           <div class="row left">
             <div class="image-box">
               <img type="button" data-bs-toggle="modal" data-bs-target="#third-modal"
-                src="../images/projekty/sklep-z-grami1.webp" alt="sklep z grami">
+                src="../images/projekty/sklep-z-grami1.webp" alt="sklep z grami" loading="lazy">
             </div>
             <div class="text-box">
               <img class="hidden-image" type="button" data-bs-toggle="modal" data-bs-target="#third-modal"
-                src="../images/projekty/sklep-z-grami1_520.webp" alt="sklep z grami">
+                src="../images/projekty/sklep-z-grami1_520.webp" alt="sklep z grami" loading="lazy">
               <h2>Sklep Internetowy</h2>
               <p>
                 Rozwój aplikacji e-commerce z front-endem React i back-endem Nest.js. Aplikacja składa się z czterech
@@ -554,7 +558,7 @@
             <div class="modal-body">
               <div class="image-box">
                 <img src="../images/projekty/fotografia1.webp" type="button" class="close" data-bs-dismiss="modal"
-                  aria-label="Close" alt="fotografia">
+                  aria-label="Close" alt="fotografia" loading="lazy">
               </div>
             </div>
           </div>
@@ -567,7 +571,7 @@
             <div class="modal-body">
               <div class="image-box">
                 <img src="../images/projekty/serwis-muzyczny.webp" alt="serwis muzyczny" type="button" class="close"
-                  data-bs-dismiss="modal" aria-label="Close">
+                  data-bs-dismiss="modal" aria-label="Close" loading="lazy">
               </div>
             </div>
           </div>
@@ -580,7 +584,7 @@
             <div class="modal-body">
               <div class="image-box">
                 <img src="../images/projekty/sklep-z-grami1.webp" alt="sklep z grami" type="button" class="close"
-                  data-bs-dismiss="modal" aria-label="Close">
+                  data-bs-dismiss="modal" aria-label="Close" loading="lazy">
               </div>
             </div>
           </div>
@@ -666,7 +670,7 @@
     <div class="container">
       <div class="info">
         <div class="logo">
-          <img src="../images/logo.svg" alt="logo">
+          <img src="../images/logo.svg" alt="logo" loading="lazy">
         </div>
         <div class="footer-contact">
           <div class="title">Kontakt</div>
@@ -698,7 +702,9 @@
           <div class="menu-links">
             <a href="/">Strona główna</a>
             <a href="#aboutMe">O mnie</a>
-            <a href="/oferta">Oferta</a>
+            <a href="/oferta">Strony HTML</a>
+            <a href="/oferta_wordpress">Strony WordPress</a>
+            <a href="/oferta_sklepy">Sklepy internetowe</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#contact">Kontakt</a>
             <a href="/blog">Blog</a>

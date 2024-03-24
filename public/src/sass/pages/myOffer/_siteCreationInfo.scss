@@ -2,6 +2,9 @@
   margin-top: 100px;
   padding: 100px 0;
   background-color: $color-background-darker;
+  background-image: url("../../../images/lines5_landscape.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   .container {
     position: relative;
@@ -25,10 +28,11 @@
       margin-bottom: 1rem;
       overflow-x: hidden;
       padding: 0 20px;
+      overflow-y: hidden;
 
       .benefit {
         display: flex;
-        max-height: 300px;
+        max-height: 350px;
         flex-direction: row-reverse;
 
         .picture {
@@ -46,6 +50,12 @@
         .text {
           flex: 50%;
           padding: 50px;
+          transition: $transition;
+
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+          }
 
           h3 {
             font-size: 1.5rem;
