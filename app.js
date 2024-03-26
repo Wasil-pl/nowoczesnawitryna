@@ -21,6 +21,16 @@ app.get("/oferta", function (req, res) {
   res.sendFile(path.join(__dirname + "/public/dist/html/oferta.html"));
 });
 
+app.get("/oferta_wordpress", function (req, res) {
+  res.sendFile(
+    path.join(__dirname + "/public/dist/html/oferta_wordpress.html")
+  );
+});
+
+app.get("/oferta_sklepy", function (req, res) {
+  res.sendFile(path.join(__dirname + "/public/dist/html/oferta_sklep.html"));
+});
+
 app.get("/blog", function (req, res) {
   res.sendFile(path.join(__dirname + "/public/dist/html/blog.html"));
 });

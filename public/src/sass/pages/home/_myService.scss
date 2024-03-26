@@ -184,6 +184,24 @@
 @media (max-width: 768px) {
   .myService {
     .container .wrapper {
+      .service-container {
+        .cart {
+          .cart-title {
+            h3 {
+              font-size: 1.6rem;
+              line-height: 30px;
+            }
+          }
+        }
+      }
+
+      .service-container .cart:hover {
+        .cart-title h3 {
+          margin-left: 0;
+          font-size: 2rem;
+        }
+      }
+
       .myService-title {
         h2 {
           font-size: 1.5rem;
