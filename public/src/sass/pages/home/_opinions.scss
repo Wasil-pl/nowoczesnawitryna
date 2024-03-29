@@ -133,6 +133,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .opinions {
+    background-image: none;
+  }
+}
+
 @media (max-width: 600px) {
   .opinions {
     min-height: 620px;

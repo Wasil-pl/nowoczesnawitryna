@@ -11,6 +11,10 @@
     "init:gitignore:custom": "echo \"dist\" >> .gitignore",
     "test": "npm-run-all test:*",
     "test:html": "html-validate src/html/*.html",
+    "build:css": "npm-run-all build:sass build:autoprefixer minify:css",
+    "build:js": "npm-run-all build:js minify:js",
+    "minify:css": "clean-css  dist/css/style.min.css dist/css/style.css",
+    "minify:js": "uglifyjs src/js/script.js  dist/js/script.min.js",
     "build": "npm-run-all build:* test",
     "build:clean": "rimraf dist && mkdirp dist",
     "build:copy": "copyfiles -a -u 1 -e \"**/sass/**/*\" -e \"**/.gitkeep\" \"src/**/*\" dist",
@@ -29,6 +33,7 @@
   "devDependencies": {
     "autoprefixer": "^10.2.4",
     "browser-sync": "^3.0.2",
+    "clean-css": "^5.3.3",
     "copyfiles": "^2.1.0",
     "eslint": "^8.57.0",
     "globstar": "^1.0.0",
@@ -44,6 +49,7 @@
   },
   "dependencies": {
     "json-server": "^1.0.0-alpha.23",
-    "sass": "^1.35.1"
+    "sass": "^1.35.1",
+    "uglify-js": "^3.17.4"
   }
 }
