@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import { API_URL, emailRegex } from "../settings.js";
+import { API_URL, emailRegex } from "../settings.min.js";
 
 class ContactForm {
   constructor() {

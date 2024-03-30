@@ -70,11 +70,16 @@
 
           a {
             margin-right: 10px;
-            font-size: 1.5rem;
-            transition: all 0.3s ease-in-out;
 
-            &:hover {
-              color: $color-primary;
+            svg {
+              width: 30px;
+              height: auto;
+              fill: $color-light;
+              transition: all 0.3s ease-in-out;
+            }
+
+            &:hover svg {
+              fill: $color-primary;
             }
           }
         }
@@ -124,8 +129,8 @@
 
         .footer-contact {
           .social-Links {
-            a {
-              font-size: 1.8rem;
+            svg {
+              width: 25px;
             }
           }
         }

@@ -10,9 +10,7 @@ const server = app.listen(process.env.PORT || 8000, () => {
   console.log(`Server is running... ${server.address().port}`);
 });
 
-app.use(express.static(path.join(__dirname, "/public/dist/html")));
 app.use(express.static(path.join(__dirname, "/public/dist")));
-app.use(express.static(path.join(__dirname, "/public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 app.use(express.json());

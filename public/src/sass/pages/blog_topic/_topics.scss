@@ -66,46 +66,49 @@
         margin: 0 0 10px 0;
         position: relative;
 
-        .bi-check2 {
+        .bi-check {
           position: absolute;
-          left: -30px;
+          left: -33px;
+          top: 0;
           color: $color-success;
           margin-right: 10px;
+          width: 25px;
+          height: auto;
         }
 
         .bi-x {
           position: absolute;
           left: -30px;
+          top: 3px;
           color: $color-error;
           margin-right: 13px;
-          font-size: 1.3rem;
+          width: 20px;
+          height: auto;
         }
 
-        .fa-minus {
-          position: absolute;
-          left: -30px;
-          color: $color-primary;
-          margin-right: 13px;
-          font-size: 1.3rem;
-        }
-
-        .fa-1,
-        .fa-2,
-        .fa-3,
-        .fa-4,
-        .fa-5 {
+        .bi-dash {
           position: absolute;
           left: -30px;
           top: 3px;
           color: $color-primary;
           margin-right: 13px;
-          font-size: 1.1rem;
+          width: 20px;
+          height: auto;
         }
 
-        .fa-circle {
+        .numbers {
           position: absolute;
           left: -30px;
-          top: 8px;
+          top: -10px;
+          color: $color-primary;
+          margin-right: 13px;
+          font-size: 1.6rem;
+        }
+
+        .bi-circle-fill {
+          position: absolute;
+          left: -30px;
+          top: 4px;
           color: $color-primary;
           margin-right: 13px;
           font-size: 0.6rem;

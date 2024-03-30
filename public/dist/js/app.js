@@ -1,9 +1,9 @@
-import { blogDescriptions, myServiceDescriptions } from "./settings.js";
-import ContactForm from "./components/ContactForm.js";
-import Scroll from "./components/Scrool.js";
-import showSection from "./components/SectionDisplay.js";
-import TypingWriter from "./components/TypingWriter.js";
-import ShowText from "./components/ShowText.js";
+import { blogDescriptions, myServiceDescriptions } from "./settings.min.js";
+import ContactForm from "./components/ContactForm.min.js";
+import Scroll from "./components/Scrool.min.js";
+import showSection from "./components/SectionDisplay.min.js";
+import TypingWriter from "./components/TypingWriter.min.js";
+import ShowText from "./components/ShowText.min.js";
 
 const app = {
   initContactForm: function () {

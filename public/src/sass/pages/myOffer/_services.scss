@@ -80,15 +80,18 @@
               list-style: none;
               margin: 0 0 10px 0;
 
-              .fa-check {
-                color: $color-success;
+              .bi-check {
+                fill: $color-success;
                 margin-right: 10px;
+                width: 20px;
+                height: auto;
               }
 
-              .fa-xmark {
-                color: $color-error;
+              .bi-x {
+                fill: $color-error;
                 margin-right: 13px;
-                font-size: 1.3rem;
+                width: 20px;
+                height: auto;
               }
             }
 

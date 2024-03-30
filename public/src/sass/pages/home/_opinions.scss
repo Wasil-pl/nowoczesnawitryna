@@ -55,12 +55,13 @@
           .opinion {
             position: relative;
 
-            i {
-              font-size: 3rem;
-              color: $color-dark;
+            svg {
+              width: 30px;
+              height: auto;
               position: absolute;
               top: -50px;
               left: 0;
+              fill: $color-dark;
             }
 
             p {
