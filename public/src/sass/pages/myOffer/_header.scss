@@ -1,6 +1,6 @@
 .header {
   height: 800px;
-  background-image: url("../../../images/oferta/background_4k.webp");
+  background-image: url("../../../images/oferta/chmura-slowa-na-czarnym-tle-z-tekstem-projektowanie-stron-internetowych-witten-zlotymi-literami-koncepcja-komunikacji-wizualnej-ilustracja-3d.jpg");
 
   &::before {
     opacity: 70%;
@@ -31,7 +31,7 @@
 
 @media (max-width: 2048px) {
   .header {
-    background-image: url("../../../images/oferta/background_2k.webp");
+    background-image: url("../../../images/oferta/oferta_background_2k.webp");
   }
 }
 
@@ -45,13 +45,6 @@
   .header {
     background-image: url("../../../images/oferta/background_mobile.webp");
     background-attachment: scroll;
-  }
-}
-
-@media (max-width: 1200px) {
-  .header {
-    .navbar-expand-lg .navbar-collapse {
-    }
   }
 }
 

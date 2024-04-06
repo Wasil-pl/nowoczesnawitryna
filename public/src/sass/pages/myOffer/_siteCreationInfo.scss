@@ -88,6 +88,18 @@
   }
 }
 
+@media (max-width: 1400px) {
+  .site-creation-info {
+    .wrapper {
+      .benefits-container {
+        .benefit {
+          max-height: 390px;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 992px) {
   .site-creation-info {
     .wrapper {
